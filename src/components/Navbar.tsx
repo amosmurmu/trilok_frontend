@@ -7,7 +7,8 @@ import {
 } from "./ui/navigation-menu"
 import { Link, useLocation } from "react-router-dom"
 import { cn } from "@/lib/utils"
-import { ChevronDown, CircleDot } from "lucide-react"
+import { ChevronDown, CircleDot, Menu, X } from "lucide-react"
+import { useState } from "react"
 
 const navItems = [
   { name: "Home", href: "/", hasDropdown: false },
@@ -21,6 +22,11 @@ const navItems = [
 
 export function NavBar() {
   const location = useLocation()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
 
   return (
     <nav className="w-full shadow-sm bg-white fixed top-0 left-0 z-50">
@@ -33,7 +39,7 @@ export function NavBar() {
           />
         </div>
 
-        <NavigationMenu>
+        <NavigationMenu className="hidden md:block">
           <NavigationMenuList className="flex items-center space-x-6">
             {navItems.map((item) => {
               const isActive = location.pathname === item.href
@@ -62,7 +68,53 @@ export function NavBar() {
             })}
           </NavigationMenuList>
         </NavigationMenu>
+
+        <button
+          onClick={toggleMobileMenu}
+          className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+          aria-label="Toggle mobile menu"
+        >
+          {isMobileMenuOpen ? (
+            <X className="h-6 w-6 text-gray-800" />
+          ) : (
+            <Menu className="h-6 w-6 text-gray-800" />
+          )}
+        </button>
+
       </div>
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-white border-t shadow-lg">
+          <div className="max-w-screen-2xl mx-auto px-6 py-4 space-y-3">
+            {navItems.map((item) => {
+              const isActive = location.pathname === item.href
+
+              return (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={cn(
+                    "flex flex-row items-center justify-between py-3 px-4 rounded-lg text-sm font-medium transition-colors",
+                    isActive
+                      ? "text-blue-600 bg-blue-50"
+                      : "text-gray-800 hover:text-blue-500 hover:bg-gray-50"
+                  )}
+                >
+                  <span>{item.name}</span>
+                  <div className="flex items-center gap-2">
+                    {item.hasDropdown && (
+                      <ChevronDown className="h-4 w-4 text-muted-foreground" />
+                    )}
+                    {isActive && (
+                      <CircleDot className="h-3 w-3 text-blue-600" />
+                    )}
+                  </div>
+                </Link>
+              )
+            })}
+          </div>
+        </div>
+      )}
     </nav>
   )
 }
