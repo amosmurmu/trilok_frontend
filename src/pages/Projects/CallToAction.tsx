@@ -1,0 +1,44 @@
+import { Button } from "@/components/ui/button";
+
+export const CallToActionSection = () => {
+  return (
+    <section className="relative w-full bg-[#032534] py-12 overflow-hidden">
+      <div className="container relative mx-auto px-4">
+        {/* Background decorative images */}
+        <img
+          className="absolute w-auto h-[280px] bottom-0 left-0"
+          alt="Decorative background"
+          src="https://c.animaapp.com/mdahcrcekTrHmF/img/group.png"
+        />
+
+        <img
+          className="absolute w-auto h-[334px] top-0 right-0"
+          alt="Decorative background"
+          src="https://c.animaapp.com/mdahcrcekTrHmF/img/group-1.png"
+        />
+
+        {/* Content container */}
+        <div className="flex flex-col items-center justify-center text-center relative z-10 max-w-4xl mx-auto">
+          <h2 className="font-['Mulish',Helvetica] font-semibold text-white text-[32px] mb-6">
+            Ready to Secure Your Space with Strength &amp; Style?
+          </h2>
+
+          <p className="font-['Mulish',Helvetica] font-semibold text-white text-[28px] leading-9 mb-10">
+            Let&apos;s build your boundary with durable, fast-installing precast
+            walls tailored to your needs.
+            <br />
+            Contact us today for expert guidance, pricing, and quick
+            installation support.
+          </p>
+
+          <Button
+            variant="outline"
+            className="bg-white text-[#1a1a1a] text-2xl font-['Mulish',Helvetica] font-semibold px-8 py-3 rounded-md border-2 border-[#1f8ccc] hover:bg-[#f8f8f8]"
+          >
+            Contact Us
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};

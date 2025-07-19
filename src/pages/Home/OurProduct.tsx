@@ -1,0 +1,136 @@
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+
+export const OurProductsSection = () => {
+  const productCards = [
+    {
+      id: 1,
+      title: "Security Cabin",
+      image: "./HomePage/product_1.png",
+      isActive: true,
+    },
+    {
+      id: 2,
+      title: "Compound Wall",
+      image: "./HomePage/product_2.png",
+      isActive: false,
+    },
+    {
+      id: 3,
+      title: "Labor Quarter",
+      image: "./HomePage/product_3.png",
+      isActive: false,
+    },
+    {
+      id: 4,
+      title: "Precast Foundation",
+      image: "./HomePage/product_4.png",
+      isActive: false,
+    },
+  ];
+
+  return (
+    <section className="relative w-full bg-[#fbfbfb] py-12">
+      <div className="mx-auto max-w-[1616px] px-4 bg-[100%_100%]">
+        {/* Section Header */}
+        <div className="flex justify-between items-center mb-12">
+          <h2 className="font-['Mulish',Helvetica] font-extrabold text-[#032534] text-[42px] leading-[62px]">
+            Our Products
+          </h2>
+          <Button className="bg-[#1f8ccc] text-white hover:bg-[#1a7ab3] rounded-md px-4 py-2 md:px-8 md:py-3">
+            <span className="font-['Mulish',Helvetica] font-semibold text-lg md:text-2xl">
+              Explore Our Products
+            </span>
+          </Button>
+        </div>
+
+        <div className="mb-12">
+          <p className="font-['Mulish',Helvetica] text-xl leading-[30px] text-justify mb-4">
+            <span className="font-semibold text-[#1a1a1a]">
+              Trilok Precast brings you India&apos;s most trusted range of RCC
+              precast construction solutions,{" "}
+            </span>
+            <span className="font-extrabold text-[#1f8ccc]">
+              built for strength, speed, and scale
+            </span>
+            <span className="font-semibold text-[#1a1a1a]">.</span>
+          </p>
+
+          <p className="font-['Mulish',Helvetica] font-semibold text-[#1a1a1a] text-xl leading-[30px] text-justify mb-4">
+            Explore our RCC Compound Wall &amp; Boundary Wall Solutions,
+            designed for fast installation and long-term durability. Our precast
+            fencing walls, retaining walls, and readymade cement walls are used
+            across residential, industrial, and commercial sites.
+          </p>
+
+          <p className="font-['Mulish',Helvetica] text-xl leading-[30px] text-justify">
+            <span className="font-semibold text-[#1a1a1a]">
+              Discover our Precast Modular Building Units like precast labour
+              quarters, security cabins, precast toilets, and portable site
+              offices – factory-finished and{" "}
+            </span>
+            <span className="font-extrabold text-[#1f8ccc]">
+              100% ready to install at project sites across India
+            </span>
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {productCards.map((product) => (
+            <Card
+              key={product.id}
+              className={`rounded-xl overflow-hidden shadow-[0px_0px_25.34px_#0000001f] ${product.isActive ? "bg-[#032534]" : "bg-white"
+                }`}
+            >
+              <CardContent className="p-4">
+                <div className="bg-white rounded-[9px] overflow-hidden shadow-[0px_0px_25.34px_#0000001f] mb-8">
+                  <img
+                    className="w-full h-[242px] object-cover"
+                    alt={product.title}
+                    src={product.image}
+                  />
+                </div>
+                <div className="flex justify-between items-center">
+                  <span
+                    className={`font-['Mulish',Helvetica] font-semibold text-base ${product.isActive ? "text-white" : "text-[#1f8ccc]"
+                      }`}
+                  >
+                    {product.title}
+                  </span>
+                  <div className="w-7 h-7 bg-white rounded-full shadow-[0px_0px_25.34px_#0000001f] flex items-center justify-center">
+                    <img
+                      className="w-[13px] h-2.5"
+                      alt="Icon"
+                      src="https://c.animaapp.com/mda3wbuoE58tBx/img/icon-2.svg"
+                    />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Navigation Controls */}
+        <div className="flex justify-center gap-6 mb-6">
+          <Button
+            variant="outline"
+            size="icon"
+            className="w-[54px] h-[54px] p-0 rounded-full"
+          >
+            <ChevronLeftIcon className="h-6 w-6" />
+            <span className="sr-only">Previous</span>
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            className="w-[54px] h-[54px] p-0 rounded-full"
+          >
+            <ChevronRightIcon className="h-6 w-6" />
+            <span className="sr-only">Next</span>
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};

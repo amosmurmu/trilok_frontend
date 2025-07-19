@@ -2,8 +2,16 @@ import { Mail, MapPin, Phone } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-white text-black py-10 w-full border-t border-gray-300">
-      <div className="max-w-screen-2xl mx-auto px-6 ">
+    <footer
+      className="text-black py-10 w-full border-t border-gray-300 bg-no-repeat relative"
+      style={{
+        backgroundImage: "url('./trilok_footer.png')",
+        backgroundPosition: "bottom right",
+        backgroundSize: "auto"
+      }}
+    >
+      <div className="max-w-screen-2xl mx-auto px-6 "
+      >
         <div className="flex flex-row justify-between items-center mb-8">
           <img
             src="/trilok_logo.png"
@@ -32,8 +40,8 @@ export function Footer() {
               <li><a href="/about" className="hover:text-blue-500">About us</a></li>
               <li><a href="/products" className="hover:text-blue-500">Products</a></li>
               <li><a href="/projects" className="hover:text-blue-500">Projects</a></li>
-              <li><a href="/resources" className="hover:text-blue-500">Resources</a></li>
-              <li><a href="/career" className="hover:text-blue-500">Career</a></li>
+              <li><a href="/#" className="hover:text-blue-500">Resources</a></li>
+              <li><a href="/#" className="hover:text-blue-500">Career</a></li>
               <li><a href="/contact" className="hover:text-blue-500">Contact us</a></li>
             </ul>
           </div>
@@ -80,3 +88,5 @@ export function Footer() {
     </footer>
   );
 }
+
+
