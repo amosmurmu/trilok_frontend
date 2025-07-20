@@ -33,9 +33,12 @@ export const ContactUsSection = () => {
           We're just a click away—reach out now!
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row justify-center gap-8 px-10">
+
+
+
+      <div className="flex flex-col xl:flex-row justify-center gap-6 md:gap-8 px-4 md:px-6 lg:px-10">
         {/* Map Card */}
-        <Card className="w-[788px] h-[494px] rounded-xl overflow-hidden shadow-[0px_0px_24px_#0000000f] relative">
+        <Card className="w-full max-w-[788px] h-[300px] md:h-[400px] lg:h-[494px] rounded-xl overflow-hidden shadow-[0px_0px_24px_#0000000f] relative">
           <CardContent className="p-0 h-full">
             <div className="relative w-full h-full">
               <img
@@ -49,12 +52,12 @@ export const ContactUsSection = () => {
         </Card>
 
         {/* Contact Form Card */}
-        <Card className="w-[788px] h-[494px] rounded-xl overflow-hidden shadow-[0px_0px_24px_#0000000f]">
-          <CardContent className="p-6 relative">
-            <div className="grid grid-cols-3 gap-4">
+        <Card className="w-full max-w-[788px] min-h-[494px] rounded-xl overflow-hidden shadow-[0px_0px_24px_#0000000f]">
+          <CardContent className="p-4 md:p-6 relative">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* First Name */}
-              <div className="relative">
-                <div className="absolute -top-3 left-[17px] bg-white px-1">
+              <div className="relative md:col-span-1">
+                <div className="absolute -top-3 left-[17px] bg-white px-1 z-10">
                   <div className="inline-flex items-center gap-[3px]">
                     <span className="[font-family:'Mulish',Helvetica] font-medium text-[#032534] text-sm">
                       First Name
@@ -71,7 +74,7 @@ export const ContactUsSection = () => {
               </div>
 
               {/* Last Name */}
-              <div className="relative">
+              <div className="relative md:col-span-1">
                 <Input
                   className="h-[46px] [font-family:'Mulish',Helvetica] font-medium text-[#727272] text-sm"
                   placeholder="Last Name"
@@ -79,7 +82,7 @@ export const ContactUsSection = () => {
               </div>
 
               {/* Select Your Role */}
-              <div className="relative">
+              <div className="relative md:col-span-1">
                 <Select>
                   <SelectTrigger className="h-[46px] [font-family:'Mulish',Helvetica] font-medium text-[#727272] text-sm">
                     <SelectValue placeholder="Select Your Role" />
@@ -100,7 +103,7 @@ export const ContactUsSection = () => {
               </div>
 
               {/* Email */}
-              <div className="col-span-2 relative">
+              <div className="col-span-1 md:col-span-2 relative">
                 <Input
                   className="h-[46px] [font-family:'Mulish',Helvetica] font-medium text-[#727272] text-sm"
                   placeholder="Email"
@@ -108,7 +111,7 @@ export const ContactUsSection = () => {
               </div>
 
               {/* Contact No. */}
-              <div className="relative">
+              <div className="relative md:col-span-1">
                 <Input
                   className="h-[46px] [font-family:'Mulish',Helvetica] font-medium text-[#727272] text-sm"
                   placeholder="Contact No. *"
@@ -116,7 +119,7 @@ export const ContactUsSection = () => {
               </div>
 
               {/* State */}
-              <div className="relative">
+              <div className="relative md:col-span-1">
                 <Input
                   className="h-[46px] [font-family:'Mulish',Helvetica] font-medium text-[#727272] text-sm"
                   placeholder="State *"
@@ -124,7 +127,7 @@ export const ContactUsSection = () => {
               </div>
 
               {/* City */}
-              <div className="relative">
+              <div className="relative md:col-span-1">
                 <Input
                   className="h-[46px] [font-family:'Mulish',Helvetica] font-medium text-[#727272] text-sm"
                   placeholder="City *"
@@ -132,7 +135,7 @@ export const ContactUsSection = () => {
               </div>
 
               {/* Pincode */}
-              <div className="relative">
+              <div className="relative md:col-span-1">
                 <Input
                   className="h-[46px] [font-family:'Mulish',Helvetica] font-medium text-[#727272] text-sm"
                   placeholder="Pincode *"
@@ -140,7 +143,7 @@ export const ContactUsSection = () => {
               </div>
 
               {/* Product Category */}
-              <div className="col-span-3 relative">
+              <div className="col-span-1 md:col-span-3 relative">
                 <Select>
                   <SelectTrigger className="h-[46px] w-full [font-family:'Mulish',Helvetica] font-medium text-[#727272] text-sm">
                     <SelectValue placeholder="Select Product Category *" />
@@ -157,7 +160,7 @@ export const ContactUsSection = () => {
               </div>
 
               {/* Message */}
-              <div className="col-span-3 relative">
+              <div className="col-span-1 md:col-span-3 relative">
                 <Textarea
                   className="h-[100px] resize-none [font-family:'Mulish',Helvetica] font-medium text-[#727272] text-sm"
                   placeholder="Enter Message"
@@ -165,7 +168,7 @@ export const ContactUsSection = () => {
               </div>
 
               {/* Submit Button */}
-              <div className="col-span-3 mt-2">
+              <div className="col-span-1 md:col-span-3 mt-2">
                 <Button className="w-full h-[42px] bg-[#1f8ccc] hover:bg-[#1a7ab3] [font-family:'Mulish',Helvetica] font-semibold text-white text-xl">
                   Submit
                 </Button>
@@ -173,6 +176,7 @@ export const ContactUsSection = () => {
             </div>
           </CardContent>
         </Card>
+
       </div>
 
       {/* Contact Information Card */}
