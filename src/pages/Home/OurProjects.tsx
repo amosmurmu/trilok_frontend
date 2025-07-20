@@ -5,14 +5,15 @@ import { Card, CardContent } from "@/components/ui/card";
 export const OurProjectsSection = () => {
   // Star rating data
   const stars = Array(5).fill({
-    src: "https://c.animaapp.com/mda3wbuoE58tBx/img/star-9.svg",
+    src: "./homepage/star.png",
     alt: "Star",
   });
 
   return (
     <section className="relative w-full py-12 bg-[#fbfbfb]">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center mb-6">
+        <div className=
+          "flex flex-col gap-4 md:flex-row md:justify-between md:items-center mb-12">
           <h2 className="font-['Mulish',Helvetica] font-semibold text-[#032534] text-[42px] leading-[62px]">
             Our Recent Projects
           </h2>
@@ -38,7 +39,7 @@ export const OurProjectsSection = () => {
                 <img
                   className="w-full h-full object-cover"
                   alt="Empty road by building against sky"
-                  src="https://c.animaapp.com/mda3wbuoE58tBx/img/empty-road-by-building-against-sky--1--1-1.png"
+                  src="./homepage/product_1.png"
                 />
               </div>
 
@@ -69,7 +70,7 @@ export const OurProjectsSection = () => {
                     <img
                       className="w-28 h-[86px] object-cover"
                       alt="Godrej logo"
-                      src="https://c.animaapp.com/mda3wbuoE58tBx/img/image-12-2.png"
+                      src="./homepage/logo_7.png"
                     />
                   </div>
                 </div>

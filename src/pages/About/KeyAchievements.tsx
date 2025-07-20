@@ -3,25 +3,25 @@ import { Card } from "@/components/ui/card";
 export const KeyAchievementsSection = () => {
   const achievements = [
     {
-      icon: "https://c.animaapp.com/mdajl2rutaPJ37/img/vector-2.svg",
+      icon: "./aboutus/achievement_1.png",
       title: "82,00,000+ RMT Wall Manufactured",
       description:
         "TRILOK has delivered over 82 lakh running meters of RCC precast walls across India — a testament to our consistency and capability",
     },
     {
-      icon: "https://c.animaapp.com/mdajl2rutaPJ37/img/component-10.svg",
+      icon: "./aboutus/achievement_2.png",
       title: "Presence in 70+ Indian Cities",
       description:
         "With over 70 manufacturing units nationwide, we ensure faster delivery, localized execution, and seamless project coordination.",
     },
     {
-      icon: "https://c.animaapp.com/mdajl2rutaPJ37/img/vector-3.svg",
+      icon: "./aboutus/achievement_3.png",
       title: "4,50,000+ MT Concrete Casted",
       description:
         "Our cumulative production has surpassed 4.5 lakh metric tonnes of concrete — reinforcing our position as a large-scale infrastructure enabler.",
     },
     {
-      icon: "https://c.animaapp.com/mdajl2rutaPJ37/img/objects.svg",
+      icon: "./aboutus/achievement_4.png",
       title: "Pan-India Precast Product Portfolio",
       description:
         "From compound walls and security cabins to full-scale precast homes, swimming pools, and road systems — we build for every sector and every need",

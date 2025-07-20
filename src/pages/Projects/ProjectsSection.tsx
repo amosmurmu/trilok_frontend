@@ -10,7 +10,7 @@ export const ProjectsSection = () => {
     {
       id: 1,
       image:
-        "https://c.animaapp.com/mdahcrcekTrHmF/img/empty-road-by-building-against-sky--1--1.png",
+        "./projects/project_1.png",
       imageAlt: "Empty road by building against sky",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-12.png",
       logoAlt: "Godrej logo",
@@ -35,7 +35,7 @@ export const ProjectsSection = () => {
     },
     {
       id: 2,
-      image: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-3.png",
+      image: "./projects/project_2.png",
       imageAlt: "Reliance Industries project",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-10.png",
       logoAlt: "Reliance logo",
@@ -58,7 +58,7 @@ export const ProjectsSection = () => {
     },
     {
       id: 3,
-      image: "https://c.animaapp.com/mdahcrcekTrHmF/img/111.png",
+      image: "./projects/project_3.png",
       imageAlt: "Adani Wilmar project",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-8.png",
       logoAlt: "Adani Wilmar logo",
@@ -83,7 +83,7 @@ export const ProjectsSection = () => {
     {
       id: 4,
       image:
-        "https://c.animaapp.com/mdahcrcekTrHmF/img/concrete-wall-block-with-trees.png",
+        "./projects/project_4.png",
       imageAlt: "Concrete wall block with trees",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-9.png",
       logoAlt: "TATA Motors logo",
@@ -106,7 +106,7 @@ export const ProjectsSection = () => {
     },
     {
       id: 5,
-      image: "https://c.animaapp.com/mdahcrcekTrHmF/img/2149207756-1.png",
+      image: "./projects/project_5.png",
       imageAlt: "NTPC project",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-11.png",
       logoAlt: "NTPC logo",
@@ -130,7 +130,7 @@ export const ProjectsSection = () => {
     },
     {
       id: 6,
-      image: "https://c.animaapp.com/mdahcrcekTrHmF/img/1630.png",
+      image: "./projects/project_6.png",
       imageAlt: "Hindustan Petroleum project",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-14.png",
       logoAlt: "Hindustan Petroleum logo",

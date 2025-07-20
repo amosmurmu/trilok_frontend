@@ -6,14 +6,14 @@ export function HeroSection() {
     <section
       className="relative w-full h-[100vh] min-h-[600px] max-h-[900px] bg-cover bg-center"
       style={{
-        backgroundImage: `url('./HomePage/bg_hero.png')`
+        backgroundImage: `url('./homepage/bg_hero.png')`
       }}
     >
       {/* Responsive rectangle background shape */}
       <img
         className="absolute w-full max-w-[1373px] h-auto bottom-[200px] left-0 object-cover"
         alt="Rectangle background shape"
-        src="https://c.animaapp.com/mda3wbuoE58tBx/img/rectangle-3.svg"
+        src="./rectangle_cutout.svg"
         style={{ aspectRatio: '1373/230' }}
       />
 

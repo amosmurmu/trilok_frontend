@@ -25,7 +25,7 @@ export const OurJourneySection = () => {
       highlighted: false,
     },
     {
-      year: "2011",
+      year: "2010",
       position: "left-[1430px] top-[331px]",
       highlighted: false,
       isBold: true,
@@ -33,7 +33,7 @@ export const OurJourneySection = () => {
   ];
 
   return (
-    <section className="relative w-full py-12 bg-white overflow-hidden">
+    <section className="relative w-full py-2 bg-white overflow-hidden">
       <div className="container mx-auto">
         <div className="flex flex-col items-center">
           {/* Section Heading */}
@@ -74,7 +74,7 @@ export const OurJourneySection = () => {
             <img
               className="w-full max-w-[1489px] h-[420px] mx-auto relative"
               alt="Timeline path"
-              src="./AboutUs/obj_1.svg"
+              src="./aboutus/obj_1.svg"
             />
 
             {/* Timeline Points */}

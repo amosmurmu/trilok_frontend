@@ -4,7 +4,7 @@ export const HeroSection = () => {
       {/* Hero Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="./AboutUs/about_us_bg.png"
+          src="./aboutus/about_us_bg.png"
           alt="About Us"
           className="w-full h-full object-cover"
         />

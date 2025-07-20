@@ -8,25 +8,25 @@ export const TwoDecades = () => {
       number: "82",
       unit: "Lakh + RMT",
       description: "Precast Wall Installed Across India",
-      iconSrc: "./HomePage/about_1.png",
+      iconSrc: "./aboutus/about_1.png",
     },
     {
       number: "70+",
       unit: "Cities",
       description: "Nationwide Manufacturing Presence",
-      iconSrc: "./HomePage/about_2.png",
+      iconSrc: "./aboutus/about_2.png",
     },
     {
       number: "4.5",
       unit: "Lakh + MTT",
       description: "Concrete Casted for Infra Projects",
-      iconSrc: "./HomePage/about_3.png",
+      iconSrc: "./aboutus/about_3.png",
     },
     {
       number: "15+",
       unit: "Precast Products",
       description: "Modular Solutions for Every Sector",
-      iconSrc: "./HomePage/about_4.png ",
+      iconSrc: "./aboutus/about_4.png ",
     },
   ];
 

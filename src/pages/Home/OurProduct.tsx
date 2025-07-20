@@ -7,25 +7,25 @@ export const OurProductsSection = () => {
     {
       id: 1,
       title: "Security Cabin",
-      image: "./HomePage/product_1.png",
+      image: "./products/product_1.png",
       isActive: true,
     },
     {
       id: 2,
       title: "Compound Wall",
-      image: "./HomePage/product_2.png",
+      image: "./products/product_2.png",
       isActive: false,
     },
     {
       id: 3,
       title: "Labor Quarter",
-      image: "./HomePage/product_3.png",
+      image: "./products/product_3.png",
       isActive: false,
     },
     {
       id: 4,
       title: "Precast Foundation",
-      image: "./HomePage/product_4.png",
+      image: "./products/product_4.png",
       isActive: false,
     },
   ];
@@ -34,7 +34,7 @@ export const OurProductsSection = () => {
     <section className="relative w-full bg-[#fbfbfb] py-12">
       <div className="mx-auto max-w-[1616px] px-4 bg-[100%_100%]">
         {/* Section Header */}
-        <div className="flex justify-between items-center mb-12">
+        <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center mb-12">
           <h2 className="font-['Mulish',Helvetica] font-extrabold text-[#032534] text-[42px] leading-[62px]">
             Our Products
           </h2>

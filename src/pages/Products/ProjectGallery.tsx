@@ -17,7 +17,7 @@ export function ProjectGallery() {
                   <img
                     className="w-full h-full object-cover"
                     alt="Gallery image 1"
-                    src="./HomePage/product_1.png"
+                    src="./products/product_1.png"
                   />
                 </div>
               </CarouselItem>
@@ -27,7 +27,7 @@ export function ProjectGallery() {
                   <img
                     className="w-full h-full object-cover"
                     alt="Gallery image 2"
-                    src="./HomePage/product_2.png"
+                    src="./products/product_2.png"
                   />
                 </div>
               </CarouselItem>
@@ -37,7 +37,7 @@ export function ProjectGallery() {
                   <img
                     className="w-full h-full object-cover"
                     alt="Gallery image 3"
-                    src="./HomePage/product_3.png"
+                    src="./products/product_3.png"
                   />
                 </div>
               </CarouselItem>

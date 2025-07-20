@@ -5,52 +5,52 @@ export const OurClientsSection = () => {
   const clients = [
     {
       id: 1,
-      imgSrc: "https://c.animaapp.com/mda3wbuoE58tBx/img/image-10-1.png",
+      imgSrc: "./homepage/logo_1.png",
       cardPosition: "md:col-start-1 md:row-start-1",
     },
     {
       id: 2,
-      imgSrc: "https://c.animaapp.com/mda3wbuoE58tBx/img/image-5.png",
+      imgSrc: "./homepage/logo_2.png",
       cardPosition: "md:col-start-2 md:row-start-1",
     },
     {
       id: 3,
-      imgSrc: "https://c.animaapp.com/mda3wbuoE58tBx/img/image-6-1.png",
+      imgSrc: "./homepage/logo_3.png",
       cardPosition: "md:col-start-3 md:row-start-1",
     },
     {
       id: 4,
-      imgSrc: "https://c.animaapp.com/mda3wbuoE58tBx/img/image-8.png",
+      imgSrc: "./homepage/logo_4.png",
       cardPosition: "md:col-start-4 md:row-start-1",
     },
     {
       id: 5,
-      imgSrc: "https://c.animaapp.com/mda3wbuoE58tBx/img/image-9.png",
+      imgSrc: "./homepage/logo_5.png",
       cardPosition: "md:col-start-5 md:row-start-1",
     },
     {
       id: 6,
-      imgSrc: "https://c.animaapp.com/mda3wbuoE58tBx/img/image-11.png",
+      imgSrc: "./homepage/logo_6.png",
       cardPosition: "md:col-start-1 md:row-start-2",
     },
     {
       id: 7,
-      imgSrc: "https://c.animaapp.com/mda3wbuoE58tBx/img/image-12-2.png",
+      imgSrc: "./homepage/logo_7.png",
       cardPosition: "md:col-start-2 md:row-start-2",
     },
     {
       id: 8,
-      imgSrc: "https://c.animaapp.com/mda3wbuoE58tBx/img/image-13.png",
+      imgSrc: "./homepage/logo_8.png",
       cardPosition: "md:col-start-3 md:row-start-2",
     },
     {
       id: 9,
-      imgSrc: "https://c.animaapp.com/mda3wbuoE58tBx/img/image-14.png",
+      imgSrc: "./homepage/logo_9.png",
       cardPosition: "md:col-start-4 md:row-start-2",
     },
     {
       id: 10,
-      imgSrc: "https://c.animaapp.com/mda3wbuoE58tBx/img/image-15.png",
+      imgSrc: "./homepage/logo_10.png",
       cardPosition: "md:col-start-5 md:row-start-2",
     },
   ];

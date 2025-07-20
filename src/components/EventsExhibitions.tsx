@@ -7,19 +7,19 @@ export const EventsExhibitions = () => {
     {
       id: 1,
       image:
-        "https://c.animaapp.com/mda3wbuoE58tBx/img/497885382-18278266387269245-9200894546528564230-n-1.png",
+        "./homepage/event/event_1.png",
       location: "Ahmedabad",
       date: "25-6-2025",
       hasOverlay: true,
     },
     {
       id: 2,
-      image: "https://c.animaapp.com/mda3wbuoE58tBx/img/image-16-2.png",
+      image: "./homepage/event/event_2.png",
       hasOverlay: false,
     },
     {
       id: 3,
-      image: "https://c.animaapp.com/mda3wbuoE58tBx/img/image-16-2.png",
+      image: "./homepage/event/event_3.png",
       hasOverlay: false,
     },
   ];
@@ -27,12 +27,12 @@ export const EventsExhibitions = () => {
   const bottomRowGalleryItems = [
     {
       id: 1,
-      image: "https://c.animaapp.com/mda3wbuoE58tBx/img/image-16-2.png",
+      image: "./homepage/event/event_3.png",
     },
     {
       id: 2,
       image:
-        "https://c.animaapp.com/mda3wbuoE58tBx/img/501654424-17860619895420635-3122959277937071388-n-1.png",
+        "./homepage/event/event_5.png",
     },
   ];
 

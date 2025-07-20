@@ -9,7 +9,7 @@ export const MissionVisionSection = () => {
       title: "Our Mission",
       description:
         "Trilok Precast is committed to provide high Quality Products and Services in an environment friendly manner, achieving the zenith level in the Cement Product Industry, meeting the needs of customers and employees whilst adding value to the community.",
-      iconSrc: "https://c.animaapp.com/mdajl2rutaPJ37/img/vector.svg",
+      iconSrc: "./aboutus/mission.png",
       iconWidth: "w-[150px]",
       iconHeight: "h-[124px]",
       iconTop: "top-[13px]",
@@ -20,7 +20,7 @@ export const MissionVisionSection = () => {
       title: "Our Vision",
       description:
         "To be recognized globally as the epitome of excellence in the Cement Product Industry, setting benchmarks for quality, innovation, and responsible business practices",
-      iconSrc: "https://c.animaapp.com/mdajl2rutaPJ37/img/vector-1.svg",
+      iconSrc: "./aboutus/vision.png",
       iconWidth: "w-[135px]",
       iconHeight: "h-[150px]",
       iconTop: "top-0",

@@ -84,7 +84,7 @@ export function NavBar() {
 
       </div>
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t shadow-lg">
+        <div className="md:hidden bg-white border-t shadow-lg max-h-[calc(100vh-80px)] overflow-y-auto">
           <div className="max-w-screen-2xl mx-auto px-6 py-4 space-y-3">
             {navItems.map((item) => {
               const isActive = location.pathname === item.href

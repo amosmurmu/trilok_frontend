@@ -10,7 +10,7 @@ export function WhyTrilok() {
           {/* Image Section */}
           <div className="flex-shrink-0 w-full md:w-auto max-w-xs md:max-w-sm">
             <img
-              src="./AboutUs/why_trilok.png"
+              src="./aboutus/why_trilok.png"
               alt="TRILOK Precast"
               className="w-full h-auto object-cover rounded-lg"
             />

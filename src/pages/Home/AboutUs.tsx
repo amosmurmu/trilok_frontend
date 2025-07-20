@@ -53,11 +53,11 @@ export function AboutUs() {
               </Button>
             </div>
           </div>
-          <img src="./HomePage/map.svg">
+          <img src="./homepage/map.svg">
           </img>
         </div>
       </div>
-    </section>
+    </section >
   )
 }
 

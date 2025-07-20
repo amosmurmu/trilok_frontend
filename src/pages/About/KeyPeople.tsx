@@ -7,32 +7,32 @@ export const KeyPeopleSection = () => {
     {
       name: "Mr. Sanjay Shingala",
       title: "Director",
-      image: "https://c.animaapp.com/mdajl2rutaPJ37/img/rectangle-34.svg",
+      image: "./aboutus/pfp_dummy.png",
     },
     {
       name: "Mr. Piyush Shingala",
       title: "Director",
-      image: "https://c.animaapp.com/mdajl2rutaPJ37/img/rectangle-34.svg",
+      image: "./aboutus/pfp_dummy.png",
     },
     {
       name: "Mr. Ajay Shingala",
       title: "Director",
-      image: "https://c.animaapp.com/mdajl2rutaPJ37/img/rectangle-34.svg",
+      image: "./aboutus/pfp_dummy.png",
     },
   ];
 
   // Social media icons
   const socialIcons = [
     {
-      src: "https://c.animaapp.com/mdajl2rutaPJ37/img/component-18.svg",
+      src: "./linkedin.svg",
       alt: "LinkedIn",
     },
     {
-      src: "https://c.animaapp.com/mdajl2rutaPJ37/img/component-19.svg",
+      src: "./instagram.svg",
       alt: "Instagram",
     },
     {
-      src: "https://c.animaapp.com/mdajl2rutaPJ37/img/social-icon.svg",
+      src: "./facebook.svg",
       alt: "Facebook",
     },
   ];
@@ -49,7 +49,7 @@ export const KeyPeopleSection = () => {
             <div key={index} className="relative">
               {/* Profile Image - positioned above the card */}
               <div className="flex justify-center mb-8">
-                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg bg-white relative z-10">
+                <div className="w-32 h-32 overflow-hidden border-4 rounded-lg border-white shadow-lg bg-white relative z-10">
                   <img
                     className="w-full h-full object-cover"
                     alt={`${person.name} profile`}

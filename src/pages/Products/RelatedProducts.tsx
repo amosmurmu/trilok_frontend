@@ -7,25 +7,25 @@ export function RelatedProductsSubsection() {
     {
       id: 1,
       title: "Security Cabin",
-      imageUrl: "./HomePage/product_1.png",
+      imageUrl: "./products/product_1.png",
       featured: true,
     },
     {
       id: 2,
       title: "Compound Wall",
-      imageUrl: "./HomePage/product_2.png",
+      imageUrl: "./products/product_2.png",
       featured: false,
     },
     {
       id: 3,
       title: "Labor Quarter",
-      imageUrl: "./HomePage/product_3.png",
+      imageUrl: "./products/product_3.png",
       featured: false,
     },
     {
       id: 4,
       title: "Precast Foundation",
-      imageUrl: "./HomePage/product_4.png",
+      imageUrl: "./products/product_4.png",
       featured: false,
     },
   ];

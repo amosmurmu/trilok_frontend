@@ -7,7 +7,7 @@ export const ClientTestimonialsSection = () => {
       id: 1,
       text: "Working with Trilok Precast was a seamless experience. Their precast products are of exceptional quality and met all our site requirements. The team was professional, responsive, and delivered on time. We look forward to future collaborations.",
       company: "Astral Pipes",
-      logoSrc: "https://c.animaapp.com/mda3wbuoE58tBx/img/image-10-1.png",
+      logoSrc: "./homepage/logo_1.png",
       logoWidth: "108px",
       logoHeight: "68px",
       logoTop: "43px",
@@ -17,7 +17,7 @@ export const ClientTestimonialsSection = () => {
       id: 2,
       text: "Working with Trilok Precast was a seamless experience. Their precast products are of exceptional quality and met all our site requirements. The team was professional, responsive, and delivered on time. We look forward to future collaborations.",
       company: "RFL",
-      logoSrc: "https://c.animaapp.com/mda3wbuoE58tBx/img/image-12-2.png",
+      logoSrc: "./homepage/logo_7.png",
       logoWidth: "146px",
       logoHeight: "97px",
       logoTop: "28px",
@@ -27,7 +27,7 @@ export const ClientTestimonialsSection = () => {
       id: 3,
       text: "Working with Trilok Precast was a seamless experience. Their precast products are of exceptional quality and met all our site requirements. The team was professional, responsive, and delivered on time. We look forward to future collaborations.",
       company: "HIL",
-      logoSrc: "https://c.animaapp.com/mda3wbuoE58tBx/img/image-6-1.png",
+      logoSrc: "./homepage/logo_3.png",
       logoWidth: "105px",
       logoHeight: "69px",
       logoTop: "42px",
@@ -48,7 +48,6 @@ export const ClientTestimonialsSection = () => {
 
         <Carousel className="w-full">
 
-
           <CarouselContent>
             {testimonials.map((testimonial) => (
               <CarouselItem
@@ -57,17 +56,16 @@ export const ClientTestimonialsSection = () => {
               >
                 {/* Wrapper div to handle the quote and logo positioning */}
                 <div className="relative h-[450px] mb-20 mt-16"> {/* Added mt-16 for quote space */}
-
-                  {/* Quote icon - positioned above the card */}
+                  {/* I have svg qoute */}
                   <img
                     className="absolute w-[80px] h-[64px] -top-16 left-1/2 -translate-x-1/2 z-20"
                     alt="Quote icon"
-                    src="https://c.animaapp.com/mda3wbuoE58tBx/img/vector-73.svg"
+                    src="./homepage/qoute.png"
                   />
 
                   <Card className="h-full rounded-xl shadow-[0px_0px_24px_#00000026] relative overflow-visible"> {/* Added overflow-visible */}
                     <CardContent className="p-0 h-full">
-                      <div className="pt-[40px] px-[73px] flex flex-col items-center h-full">
+                      <div className="pt-[40px] px-[73px] flex flex-col items-center justify-even h-full">
 
                         {/* Testimonial text */}
                         <p className="font-['Mulish',Helvetica] font-normal text-[#1a1a1a] text-xl text-center leading-7 mt-8">
@@ -81,13 +79,13 @@ export const ClientTestimonialsSection = () => {
                               key={index}
                               className="w-[26px] h-[25px] mx-1"
                               alt="Star rating"
-                              src="https://c.animaapp.com/mda3wbuoE58tBx/img/vector-60.svg"
+                              src="./homepage/star.png"
                             />
                           ))}
                         </div>
 
                         {/* Company name */}
-                        <div className="font-['Aleo',Helvetica] font-medium text-[#1a1a1a] text-2xl text-center">
+                        <div className="font-['Aleo',Helvetica] font-medium text-[#1a1a1a] mb-[20px] text-2xl text-center">
                           {testimonial.company}
                         </div>
                       </div>
