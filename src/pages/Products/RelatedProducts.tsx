@@ -33,7 +33,7 @@ export function RelatedProductsSubsection() {
   return (
     <section className="w-full bg-white rounded-3xl overflow-hidden py-12">
       <div className="container mx-auto">
-        <h2 className="text-[42px] font-extrabold text-[#1f8ccc] text-center leading-[54px] mb-10 font-['Mulish',Helvetica]">
+        <h2 className="text-[42px] font-extrabold text-[#1f8ccc] text-center leading-[54px] mb-10 ">
           Related Products
         </h2>
 
@@ -60,7 +60,7 @@ export function RelatedProductsSubsection() {
 
                 <div className="flex justify-between items-center px-6 py-4">
                   <span
-                    className={`font-['Mulish',Helvetica] font-semibold text-base ${product.featured ? "text-white" : "text-[#1f8ccc]"
+                    className={` font-semibold text-base ${product.featured ? "text-white" : "text-[#1f8ccc]"
                       }`}
                   >
                     {product.title}

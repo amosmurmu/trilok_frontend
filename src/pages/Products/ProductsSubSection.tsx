@@ -12,7 +12,7 @@ export const ProductsSubsection = () => {
   return (
     <section className="w-full py-12 bg-white">
       <div className="container mx-auto px-4">
-        <h1 className="text-[42px] font-extrabold text-[#1f8ccc] text-center leading-[54px] font-['Mulish',Helvetica] mb-12">
+        <h1 className="text-[42px] font-extrabold text-[#1f8ccc] text-center leading-[54px]  mb-12">
           Compound Wall
         </h1>
 
@@ -28,7 +28,7 @@ export const ProductsSubsection = () => {
                     className={`w-[124px] h-${thumbnail.isMore ? "72px" : "124px"} rounded-md ${thumbnail.isMore ? "border border-solid border-[#032534] flex items-center justify-center" : "bg-cover bg-[50%_50%]"}`}
                   >
                     {thumbnail.isMore && (
-                      <span className="font-['Mulish',Helvetica] font-medium text-[#1a1a1a] text-3xl text-center leading-[54px]">
+                      <span className=" font-medium text-[#1a1a1a] text-3xl text-center leading-[54px]">
                         {thumbnail.id}
                       </span>
                     )}
@@ -51,11 +51,11 @@ export const ProductsSubsection = () => {
 
           {/* Description */}
           <div className="w-full lg:w-1/2">
-            <h2 className="font-['Mulish',Helvetica] font-extrabold text-[#032534] text-[32px] mb-6">
+            <h2 className=" font-extrabold text-[#032534] text-[32px] mb-6">
               Description
             </h2>
 
-            <p className="font-['Mulish',Helvetica] font-medium text-[#032534] text-lg text-justify leading-[26px] mb-6">
+            <p className=" font-medium text-[#032534] text-lg text-justify leading-[26px] mb-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
               ut ultricies orci. Pellentesque ut arcu ac dui placerat maximus et
               sed massa. Pellentesque cursus consectetur urna at aliquam. Cras
@@ -72,7 +72,7 @@ export const ProductsSubsection = () => {
               blandit, placerat lobortis est.
             </p>
 
-            <div className="font-['Mulish',Helvetica] text-lg text-justify leading-[26px]">
+            <div className=" text-lg text-justify leading-[26px]">
               <span className="font-medium text-[#032534]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Phasellus ut ultricies orci. Pellentesque ut arcu ac dui

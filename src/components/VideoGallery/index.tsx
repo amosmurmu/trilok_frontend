@@ -39,7 +39,7 @@ export const VideoGallery: React.FC<VideoGalleryProps> = ({ title, videos }) => 
     <section className="w-full py-12 bg-[#fbfbfb]">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-          <h2 className="font-extrabold text-[#032534] text-3xl md:text-[42px] font-['Mulish',Helvetica]">
+          <h2 className="font-extrabold text-[#032534] text-3xl md:text-[42px] ">
             {title}
           </h2>
 
@@ -68,7 +68,7 @@ export const VideoGallery: React.FC<VideoGalleryProps> = ({ title, videos }) => 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button className="bg-[#1f8ccc] text-white px-6 md:px-8 py-2 md:py-3 rounded-md text-xl md:text-2xl font-semibold font-['Mulish',Helvetica]">
+              <Button className="bg-[#1f8ccc] text-white px-6 md:px-8 py-2 md:py-3 rounded-md text-xl md:text-2xl font-semibold ">
                 Explore More
               </Button>
             </motion.div>

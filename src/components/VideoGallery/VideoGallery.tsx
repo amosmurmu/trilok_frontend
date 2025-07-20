@@ -14,7 +14,7 @@ export const VideoGallery: React.FC<VideoGalleryProps> = ({ title }) => {
       <div className="container mx-auto px-3 md:px-4">
         {/* Header section - stacked on mobile */}
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center mb-6 md:mb-8 gap-4">
-          <h2 className="font-extrabold text-[#032534] text-2xl md:text-3xl lg:text-[42px] font-['Mulish',Helvetica] text-center lg:text-left">
+          <h2 className="font-extrabold text-[#032534] text-2xl md:text-3xl lg:text-[42px]  text-center lg:text-left">
             {title}
           </h2>
 
@@ -39,7 +39,7 @@ export const VideoGallery: React.FC<VideoGalleryProps> = ({ title }) => {
             </div>
 
             {/* Explore button */}
-            <Button className="bg-[#1f8ccc] text-white px-4 md:px-8 py-2 md:py-3 rounded-md text-base md:text-xl lg:text-2xl font-semibold font-['Mulish',Helvetica] whitespace-nowrap">
+            <Button className="bg-[#1f8ccc] text-white px-4 md:px-8 py-2 md:py-3 rounded-md text-base md:text-xl lg:text-2xl font-semibold  whitespace-nowrap">
               Explore More
             </Button>
           </div>

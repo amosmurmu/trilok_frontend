@@ -36,7 +36,7 @@ export const FeaturesSubsection = () => {
 
   return (
     <section className="w-full bg-[#fbfbfb] rounded-3xl p-12 relative">
-      <h2 className="text-[42px] text-[#1f8ccc] font-extrabold text-center mb-10 font-['Mulish',Helvetica] leading-[54px]">
+      <h2 className="text-[42px] text-[#1f8ccc] font-extrabold text-center mb-10  leading-[54px]">
         Features
       </h2>
 

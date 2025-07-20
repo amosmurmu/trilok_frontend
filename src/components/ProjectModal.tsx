@@ -52,26 +52,26 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                       key={i}
                       className="w-[27.45px] h-[26.24px]"
                       alt="Star"
-                      src="https://c.animaapp.com/mdahcrcekTrHmF/img/star-10.svg"
+                      src="./homepage/star.png"
                     />
                   ))}
                 </div>
-                <h3 className="font-['Mulish',Helvetica] font-medium text-[#032534] text-[22px] leading-[30px]">
+                <h3 className=" font-medium text-[#032534] text-[22px] leading-[30px]">
                   {project.company}
                 </h3>
               </div>
             </div>
 
             <div className="mt-4 flex-grow">
-              <p className="font-['Mulish',Helvetica] text-base text-justify leading-[30px] text-[#1a1a1a]">
+              <p className=" text-base text-justify leading-[30px] text-[#1a1a1a]">
                 We've proudly partnered with <span className="font-black">{project.company}</span>, providing robust and customized precast solutions that meet their large-scale infrastructure demands.
               </p>
 
-              <p className="font-['Mulish',Helvetica] text-base text-justify leading-[30px] text-[#1a1a1a] mt-4">
+              <p className=" text-base text-justify leading-[30px] text-[#1a1a1a] mt-4">
                 This collaboration highlights our ability to deliver complex requirements with precision and efficiency, solidifying our position as a trusted partner in the infrastructure and construction sector.
               </p>
 
-              <p className="font-['Mulish',Helvetica] text-base text-justify leading-[30px] text-[#1a1a1a] mt-4">
+              <p className=" text-base text-justify leading-[30px] text-[#1a1a1a] mt-4">
                 From design to execution, every aspect was aligned with their vision and goals. Our partnership with {project.company} stands as a testament to our commitment to quality and innovation.
               </p>
             </div>
@@ -88,7 +88,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                   <img
                     className="w-[18px] h-3"
                     alt="Arrow"
-                    src="https://c.animaapp.com/mdahcrcekTrHmF/img/vector-9.svg"
+                    src="./projects/vector-9.svg"
                   />
                 </div>
               </Button>

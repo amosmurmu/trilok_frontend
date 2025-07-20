@@ -58,13 +58,14 @@ export const OurClientsSection = () => {
   return (
     <section className="w-full py-12 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="font-['Mulish',Helvetica] font-semibold text-[#032534] text-[42px] leading-[62px] mb-4">
+        <h2 className="font-semibold text-[#032534] text-[32px] sm:text-[36px] md:text-[42px] lg:text-[48px] xl:text-[54px] leading-tight mb-4">
           Honoring Relationships
         </h2>
-        <p className="font-['Mulish',Helvetica] font-semibold text-[#1a1a1a] text-xl leading-[30px] mb-8">
+        <p className="font-semibold text-[#1a1a1a] text-base sm:text-lg md:text-xl lg:text-2xl leading-snug mb-8">
           Trusted precast partner for builders, contractors, and infrastructure
           projects across India.
         </p>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
           {clients.map((client) => (
             <Card

@@ -5,7 +5,7 @@ export function ProjectGallery() {
     <>
       {/* Project Gallery Section */}
       < section className="w-full bg-[#fbfbfb] rounded-3xl py-12 px-10" >
-        <h2 className="text-center font-['Mulish',Helvetica] font-extrabold text-[#1f8ccc] text-[42px] leading-[54px] mb-10">
+        <h2 className="text-center  font-extrabold text-[#1f8ccc] text-[42px] leading-[54px] mb-10">
           Project Gallery
         </h2>
 

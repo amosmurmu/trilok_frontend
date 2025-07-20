@@ -5,7 +5,7 @@ export const HeroSection = () => {
       <div className="absolute inset-0 w-full h-full">
         <img
           src="./projects/projects_bg_trilok.png"
-          alt="Contact Us Hero"
+          alt="Projects Hero"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50"></div>
@@ -21,7 +21,7 @@ export const HeroSection = () => {
       <img
         className="absolute hidden lg:block bottom-[10px] sm:bottom-[15px] md:bottom-[18px] lg:bottom-[20px] left-0 object-cover"
         alt="Rectangle background shape"
-        src="https://c.animaapp.com/mda3wbuoE58tBx/img/rectangle-3.svg"
+        src="./rectangle_cutout.svg"
         style={{
           aspectRatio: '1373/230',
           minHeight: '40px',

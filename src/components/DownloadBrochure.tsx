@@ -8,22 +8,22 @@ export const DownloadBrochure = () => {
         <img
           className="absolute left-0 h-[250px] w-auto max-w-none"
           alt="Decorative background"
-          src="https://c.animaapp.com/mda3wbuoE58tBx/img/group.png"
+          src="./homepage/group_1.png"
         />
 
         {/* Content container */}
         <div className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto">
-          <h2 className="font-['Mulish',Helvetica] font-semibold text-white text-[32px] mb-4">
+          <h2 className=" font-semibold text-white text-[32px] mb-4">
             Want to Explore TRILOK Precast?
           </h2>
 
-          <p className="font-['Mulish',Helvetica] font-semibold text-white text-[28px] leading-9 mb-8">
+          <p className="font-semibold text-white text-[28px] leading-9 mb-8">
             Download Our Company Profile &amp; Product Brochure
           </p>
 
           <Button
             variant="outline"
-            className="bg-white text-[#1a1a1a] text-2xl font-['Mulish',Helvetica] font-semibold px-8 py-3 rounded-md border-2 border-[#1f8ccc] hover:bg-gray-100"
+            className="bg-white text-[#1a1a1a] text-2xl  font-semibold px-8 py-3 rounded-md border-2 border-[#1f8ccc] hover:bg-gray-100"
           >
             Download Brochure
           </Button>
@@ -33,7 +33,7 @@ export const DownloadBrochure = () => {
         <img
           className="absolute right-0 h-[298px] w-auto max-w-none"
           alt="Decorative background"
-          src="https://c.animaapp.com/mda3wbuoE58tBx/img/group-1.png"
+          src="./homepage/group_2.png"
         />
       </div>
     </section>

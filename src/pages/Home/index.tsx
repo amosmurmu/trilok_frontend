@@ -9,6 +9,7 @@ import { OurProjectsSection } from "./OurProjects";
 import { AboutUs } from "./AboutUs";
 import { ClientTestimonialsSection } from "./Testimonials";
 import { OurClientsSection } from "./HonorRelationship";
+import VideoGallery from "./VideoGallery";
 
 export function HomePage() {
 
@@ -21,6 +22,7 @@ export function HomePage() {
       <OurProductsSection />
       <AboutUs />
       {/* <VideoGallery title="Video Gallery" /> */}
+      <VideoGallery />
       <OurClientsSection />
       <ClientTestimonialsSection />
       <DownloadBrochure />

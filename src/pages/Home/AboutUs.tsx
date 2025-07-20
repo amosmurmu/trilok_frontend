@@ -7,12 +7,12 @@ export function AboutUs() {
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="lg:w-2/3">
-            <h2 className="font-['Mulish',Helvetica] font-extrabold text-[#032534] text-4xl lg:text-[42px] leading-tight mb-8">
+            <h2 className=" font-extrabold text-[#032534] text-4xl lg:text-[42px] leading-tight mb-8">
               Who We Are - Trilok Precast Pvt. Ltd.
             </h2>
 
             <div className="space-y-8 max-w-3xl">
-              <p className="font-['Mulish',Helvetica] text-xl text-justify leading-[30px]">
+              <p className=" text-xl text-justify leading-[30px]">
                 <span className="font-extrabold text-[#1f8ccc]">
                   Trilok Precast Pvt. Ltd.{" "}
                 </span>
@@ -31,7 +31,7 @@ export function AboutUs() {
                 </span>
               </p>
 
-              <p className="font-['Mulish',Helvetica] text-xl text-justify leading-[30px]">
+              <p className=" text-xl text-justify leading-[30px]">
                 <span className="font-semibold text-[#1a1a1a]">
                   Established in the year{" "}
                 </span>

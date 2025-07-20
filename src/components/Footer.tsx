@@ -25,7 +25,7 @@ export function Footer() {
               We are the leaders in precast industry in India since 2005. With 74 manufacturing units across India. We are committed to provide the highest quality.
             </p>
 
-            <h4 className="text-sm font-semibold mb-2">Follow Us</h4>
+            <h4 className="text-sm font-bold mb-2">Follow Us</h4>
             <div className="flex space-x-3">
               <a href="#"><img src="/linkedin.svg" alt="LinkedIn" className="h-5 w-5" /></a>
               <a href="#"><img src="/instagram.svg" alt="Instagram" className="h-5 w-5" /></a>

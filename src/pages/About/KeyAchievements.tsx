@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 
 export const KeyAchievementsSection = () => {
@@ -31,31 +32,39 @@ export const KeyAchievementsSection = () => {
   return (
     <section className="w-full py-12 bg-white">
       <div className="container mx-auto">
-        <div className="flex flex-col items-center mb-8">
-          <h2 className="font-['Mulish',Helvetica] font-extrabold text-[#032534] text-[42px] leading-[62px] text-center">
+        {/* Heading */}
+        <div className="flex flex-col items-center mb-10 text-center px-4">
+          <h2 className="font-extrabold text-[#032534] text-[32px] md:text-[42px] leading-tight">
             Key Achievements
           </h2>
-          <p className="font-['Mulish',Helvetica] font-semibold text-[#1f8ccc] text-[32px] text-center mt-4 max-w-4xl">
+          <p className="font-semibold text-[#1f8ccc] text-[20px] md:text-[28px] mt-4 max-w-4xl">
             TRILOK Group&apos;s milestones that showcase our strength, scale,
-            and leadership in India&apos;s precast industry.
+            and leadership in India’s precast industry.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
+        {/* Achievements Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-4">
           {achievements.map((achievement, index) => (
-            <div key={index} className="relative">
-              <div className="absolute w-[100px] h-[100px] top-[38px] left-[-50px] bg-[#1f8ccc] rounded-[13.33px] overflow-hidden flex items-center justify-center">
+            <div
+              key={index}
+              className="flex flex-col md:flex-row items-center md:items-center"
+            >
+              {/* Icon Box */}
+              <div className="flex-shrink-0 w-[80px] h-[80px] md:w-[100px] md:h-[100px] bg-[#1f8ccc] rounded-[13px] flex items-center justify-center shadow-md -mt-10 md:mt-0 md:mr-6 z-10">
                 <img
-                  className="w-20 h-20 object-contain"
-                  alt={`Achievement icon ${index + 1}`}
                   src={achievement.icon}
+                  alt={`Icon ${index + 1}`}
+                  className="w-10 h-10 md:w-14 md:h-14 object-contain"
                 />
               </div>
-              <Card className="ml-12 border border-solid border-[#032534] rounded-xl shadow-[0px_0px_24px_#0000000f] p-6">
-                <h3 className="font-['Mulish',Helvetica] font-bold text-[#032534] text-2xl mb-4">
+
+              {/* Card */}
+              <Card className="w-full -mt-6 md:mt-0 pt-10 md:pt-6 border border-[#032534] rounded-xl shadow-[0px_0px_24px_#0000000f] p-6 md:pl-8 md:pr-8 text-center md:text-left">
+                <h3 className="text-xl md:text-2xl font-bold text-[#032534] mb-4">
                   {achievement.title}
                 </h3>
-                <p className="font-['Mulish',Helvetica] font-medium text-[#032534] text-lg">
+                <p className="text-base md:text-lg font-medium text-[#032534]">
                   {achievement.description}
                 </p>
               </Card>

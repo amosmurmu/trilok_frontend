@@ -14,6 +14,15 @@ export const MissionVisionSection = () => {
       iconHeight: "h-[124px]",
       iconTop: "top-[13px]",
       iconLeft: "left-0",
+      // Responsive icon styles
+      mobileIconWidth: "w-[80px]",
+      mobileIconHeight: "h-[66px]",
+      mobileIconTop: "top-[7px]",
+      mobileIconLeft: "left-0",
+      tabletIconWidth: "w-[120px]",
+      tabletIconHeight: "h-[99px]",
+      tabletIconTop: "top-[10px]",
+      tabletIconLeft: "left-0",
     },
     {
       id: "vision",
@@ -25,33 +34,74 @@ export const MissionVisionSection = () => {
       iconHeight: "h-[150px]",
       iconTop: "top-0",
       iconLeft: "left-2",
+      // Responsive icon styles
+      mobileIconWidth: "w-[72px]",
+      mobileIconHeight: "h-[80px]",
+      mobileIconTop: "top-0",
+      mobileIconLeft: "left-1",
+      tabletIconWidth: "w-[108px]",
+      tabletIconHeight: "h-[120px]",
+      tabletIconTop: "top-0",
+      tabletIconLeft: "left-1.5",
     },
   ];
 
   return (
-    <section className="w-full py-12 md:py-20 lg:py-[100px] bg-[#fbfbfb] flex justify-center">
-      <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 px-4 max-w-7xl w-full justify-center">
+    <section className="w-full py-8 sm:py-12 md:py-16 lg:py-20 xl:py-[100px] bg-[#fbfbfb] flex justify-center">
+      <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-12 px-4 max-w-7xl w-full justify-center">
         {cards.map((card) => (
           <Card
             key={card.id}
-            className="w-full lg:w-[788px] min-h-[400px] lg:h-[570px] relative rounded-3xl shadow-[0px_0px_24px_#0000000f] border-none mx-auto"
+            className="w-full lg:w-[788px] min-h-[350px] sm:min-h-[380px] md:min-h-[420px] lg:h-[570px] relative rounded-2xl sm:rounded-3xl shadow-[0px_0px_16px_#0000000a] sm:shadow-[0px_0px_24px_#0000000f] border-none mx-auto"
           >
-            {/* Icon - Hidden on mobile and small tablets */}
-            <div className="hidden lg:block absolute w-[218px] h-[218px] top-[-52px] left-1/2 transform -translate-x-1/2 bg-white rounded-xl overflow-hidden border border-solid border-[#032534]">
-              <div className="relative w-[150px] h-[150px] top-[34px] left-[34px] overflow-hidden">
+            {/* Icon Container - Now visible on all screen sizes with responsive positioning */}
+            <div className="absolute 
+              w-[120px] h-[120px] top-[-28px] 
+              sm:w-[150px] sm:h-[150px] sm:top-[-35px] 
+              md:w-[180px] md:h-[180px] md:top-[-42px] 
+              lg:w-[218px] lg:h-[218px] lg:top-[-52px] 
+              left-1/2 transform -translate-x-1/2 
+              bg-white rounded-lg sm:rounded-xl 
+              overflow-hidden border border-solid border-[#032534]"
+            >
+              <div className="relative 
+                w-[80px] h-[80px] top-[20px] left-[20px] 
+                sm:w-[100px] sm:h-[100px] sm:top-[25px] sm:left-[25px] 
+                md:w-[120px] md:h-[120px] md:top-[30px] md:left-[30px] 
+                lg:w-[150px] lg:h-[150px] lg:top-[34px] lg:left-[34px] 
+                overflow-hidden"
+              >
                 <img
-                  className={`absolute ${card.iconWidth} ${card.iconHeight} ${card.iconTop} ${card.iconLeft}`}
+                  className={`absolute 
+                    ${card.mobileIconWidth} ${card.mobileIconHeight} ${card.mobileIconTop} ${card.mobileIconLeft}
+                    sm:${card.tabletIconWidth} sm:${card.tabletIconHeight} sm:${card.tabletIconTop} sm:${card.tabletIconLeft}
+                    lg:${card.iconWidth} lg:${card.iconHeight} lg:${card.iconTop} lg:${card.iconLeft}
+                  `}
                   alt={card.title}
                   src={card.iconSrc}
                 />
               </div>
             </div>
 
-            <CardContent className="pt-8 lg:pt-[198px] px-6 md:px-8 flex flex-col items-center h-full">
-              <h2 className="font-['Mulish',Helvetica] font-extrabold text-[#032534] text-2xl lg:text-[28px] mb-6 lg:mb-[38px] text-center">
+            <CardContent className="
+              pt-16 sm:pt-20 md:pt-24 lg:pt-[198px] 
+              px-4 sm:px-6 md:px-8 
+              pb-6 sm:pb-8 
+              flex flex-col items-center h-full"
+            >
+              <h2 className="font-extrabold text-[#032534] 
+                text-xl sm:text-2xl lg:text-[28px] 
+                mb-4 sm:mb-6 lg:mb-[38px] 
+                text-center"
+              >
                 {card.title}
               </h2>
-              <p className="font-['Mulish',Helvetica] font-medium text-[#1a1a1a] text-lg lg:text-xl text-justify leading-7 lg:leading-[30px] w-full flex-1 flex items-center">
+              <p className="font-normal text-[#1a1a1a] 
+                text-base sm:text-lg lg:text-xl 
+                text-justify 
+                leading-6 sm:leading-7 lg:leading-[30px] 
+                w-full flex-1 flex items-center"
+              >
                 {card.description}
               </p>
             </CardContent>

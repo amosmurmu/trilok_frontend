@@ -14,17 +14,17 @@ export const OurProjectsSection = () => {
       <div className="container mx-auto px-4">
         <div className=
           "flex flex-col gap-4 md:flex-row md:justify-between md:items-center mb-12">
-          <h2 className="font-['Mulish',Helvetica] font-semibold text-[#032534] text-[42px] leading-[62px]">
+          <h2 className=" font-bold text-[#032534] text-[42px] leading-[62px]">
             Our Recent Projects
           </h2>
           <Button className="bg-[#1f8ccc] text-white hover:bg-[#1a7ab3] rounded-md px-4 py-2 md:px-8 md:py-3">
-            <span className="font-['Mulish',Helvetica] font-semibold text-lg md:text-2xl">
+            <span className=" font-semibold text-lg md:text-2xl">
               Explore Our Products
             </span>
           </Button>
         </div>
 
-        <p className="font-['Mulish',Helvetica] font-semibold text-[#1a1a1a] text-xl text-justify leading-[30px] mb-8">
+        <p className="font-medium text-[#1a1a1a] text-xl text-justify leading-[30px] mb-8">
           From residential developments to large-scale industrial installations,
           our recent projects reflect the strength, quality, and versatility of
           Trilok Precast solutions. Each project is a testament to our
@@ -60,7 +60,7 @@ export const OurProjectsSection = () => {
                     </div>
 
                     {/* Client Name */}
-                    <h3 className="font-['Mulish',Helvetica] font-medium text-[#032534] text-[22px] leading-[30px]">
+                    <h3 className=" font-medium text-[#032534] text-[22px] leading-[30px]">
                       Godrej Enterprises
                     </h3>
                   </div>
@@ -76,13 +76,13 @@ export const OurProjectsSection = () => {
                 </div>
 
                 {/* Project Description */}
-                <div className="mt-8 font-['Mulish',Helvetica] text-[#1a1a1a] text-xl text-justify leading-[30px]">
-                  <span className="font-semibold">
+                <div className="mt-8  text-[#1a1a1a] text-xl text-justify leading-[30px]">
+                  <span className="font-normal">
                     We&apos;ve had the privilege of working with some of the
                     most respected names in the industry — including{" "}
                   </span>
-                  <span className="font-black">Godrej</span>
-                  <span className="font-semibold">
+                  <span className="font-medium">Godrej</span>
+                  <span className="font-normal">
                     {" "}
                     — delivering high-quality precast solutions tailored to
                     their infrastructure needs. From residential to industrial
@@ -103,7 +103,7 @@ export const OurProjectsSection = () => {
               <div className="relative w-11 h-[42px] rotate-180">
                 <div className="relative w-[42px] h-[42px] bg-[#1f8ccc] rounded-[37px] shadow-[0px_0px_38.59px_#0000001f]">
                   <div className="absolute w-[30px] h-[30px] top-1.5 left-1.5 bg-[#032534] rounded-[15px] shadow-[0px_0px_32.16px_#0000001f]" />
-                  <div className="absolute top-2.5 left-4 rotate-180 font-['Mulish',Helvetica] font-semibold text-white text-base text-justify leading-[20.8px] whitespace-nowrap">
+                  <div className="absolute top-2.5 left-4 rotate-180  font-semibold text-white text-base text-justify leading-[20.8px] whitespace-nowrap">
                     1
                   </div>
                 </div>

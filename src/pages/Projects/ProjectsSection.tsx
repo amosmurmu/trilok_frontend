@@ -204,13 +204,13 @@ export const ProjectsSection = () => {
                         />
                       ))}
                     </div>
-                    <h3 className="font-['Mulish',Helvetica] font-medium text-[#032534] text-[22px] leading-[30px]">
+                    <h3 className=" font-medium text-[#032534] text-[22px] leading-[30px]">
                       {project.company}
                     </h3>
                   </div>
                 </div>
 
-                <p className="font-['Mulish',Helvetica] text-base text-justify leading-[30px] text-[#1a1a1a] mt-6 mb-auto">
+                <p className=" text-base text-justify leading-[30px] text-[#1a1a1a] mt-6 mb-auto">
                   {project.description}
                 </p>
 

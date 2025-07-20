@@ -11,7 +11,7 @@ export function HeroSection() {
     >
       {/* Responsive rectangle background shape */}
       <img
-        className="absolute w-full max-w-[1373px] h-auto bottom-[200px] left-0 object-cover"
+        className="absolute hidden lg:block bottom-[10px] sm:bottom-[15px] md:bottom-[18px] lg:bottom-[80px] left-0 object-cover"
         alt="Rectangle background shape"
         src="./rectangle_cutout.svg"
         style={{ aspectRatio: '1373/230' }}
@@ -19,7 +19,7 @@ export function HeroSection() {
 
       <div className="container relative h-full flex flex-col justify-end px-4 sm:px-6 lg:px-8 xl:ml-20 pb-16 sm:pb-24 lg:pb-36">
         {/* Main heading - responsive text sizes */}
-        <h1 className="font-extrabold text-white text-3xl sm:text-4xl md:text-5xl lg:text-[60px] leading-tight mb-2 sm:mb-4 max-w-4xl">
+        <h1 className="font-extrabold text-white text-3xl sm:text-4xl md:text-5xl lg:text-[62px] leading-tight mb-2 sm:mb-4 max-w-4xl">
           India&apos;s Fastest Precast Wall Builder
         </h1>
 
@@ -30,13 +30,13 @@ export function HeroSection() {
 
         {/* Responsive button container */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
-          <Button className="bg-[#1f8ccc] hover:bg-[#1a7db8] text-white text-base sm:text-lg lg:text-2xl font-['Mulish',Helvetica] font-semibold py-4 sm:py-6 lg:py-[30px] px-8 sm:px-16 lg:px-24 rounded-md h-auto w-full sm:w-auto">
+          <Button className="bg-[#1f8ccc] hover:bg-[#1a7db8] text-white text-base sm:text-lg lg:text-2xl  font-semibold py-4 sm:py-6 lg:py-[30px] px-8 sm:px-16 lg:px-24 rounded-md h-auto w-full sm:w-auto">
             Get A Free Quote
           </Button>
 
           <Button
             variant="outline"
-            className="bg-white text-[#1a1a1a] text-base sm:text-lg lg:text-2xl font-['Mulish',Helvetica] font-semibold py-4 sm:py-6 lg:py-[30px] px-8 sm:px-16 lg:px-24 rounded-md h-auto border-2 border-[#1f8ccc] hover:bg-gray-50 w-full sm:w-auto"
+            className="bg-white text-[#1a1a1a] text-base sm:text-lg lg:text-2xl  font-semibold py-4 sm:py-6 lg:py-[30px] px-8 sm:px-16 lg:px-24 rounded-md h-auto border-2 border-[#1f8ccc] hover:bg-gray-50 w-full sm:w-auto"
           >
             Book Free Site Visit
           </Button>

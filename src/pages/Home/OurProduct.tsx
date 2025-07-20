@@ -35,18 +35,18 @@ export const OurProductsSection = () => {
       <div className="mx-auto max-w-[1616px] px-4 bg-[100%_100%]">
         {/* Section Header */}
         <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center mb-12">
-          <h2 className="font-['Mulish',Helvetica] font-extrabold text-[#032534] text-[42px] leading-[62px]">
+          <h2 className=" font-extrabold text-[#032534] text-[42px] leading-[62px]">
             Our Products
           </h2>
           <Button className="bg-[#1f8ccc] text-white hover:bg-[#1a7ab3] rounded-md px-4 py-2 md:px-8 md:py-3">
-            <span className="font-['Mulish',Helvetica] font-semibold text-lg md:text-2xl">
+            <span className=" font-semibold text-lg md:text-2xl">
               Explore Our Products
             </span>
           </Button>
         </div>
 
         <div className="mb-12">
-          <p className="font-['Mulish',Helvetica] text-xl leading-[30px] text-justify mb-4">
+          <p className=" text-xl leading-[30px] text-justify mb-4">
             <span className="font-semibold text-[#1a1a1a]">
               Trilok Precast brings you India&apos;s most trusted range of RCC
               precast construction solutions,{" "}
@@ -57,14 +57,14 @@ export const OurProductsSection = () => {
             <span className="font-semibold text-[#1a1a1a]">.</span>
           </p>
 
-          <p className="font-['Mulish',Helvetica] font-semibold text-[#1a1a1a] text-xl leading-[30px] text-justify mb-4">
+          <p className=" font-semibold text-[#1a1a1a] text-xl leading-[30px] text-justify mb-4">
             Explore our RCC Compound Wall &amp; Boundary Wall Solutions,
             designed for fast installation and long-term durability. Our precast
             fencing walls, retaining walls, and readymade cement walls are used
             across residential, industrial, and commercial sites.
           </p>
 
-          <p className="font-['Mulish',Helvetica] text-xl leading-[30px] text-justify">
+          <p className=" text-xl leading-[30px] text-justify">
             <span className="font-semibold text-[#1a1a1a]">
               Discover our Precast Modular Building Units like precast labour
               quarters, security cabins, precast toilets, and portable site
@@ -93,7 +93,7 @@ export const OurProductsSection = () => {
                 </div>
                 <div className="flex justify-between items-center">
                   <span
-                    className={`font-['Mulish',Helvetica] font-semibold text-base ${product.isActive ? "text-white" : "text-[#1f8ccc]"
+                    className={` font-semibold text-base ${product.isActive ? "text-white" : "text-[#1f8ccc]"
                       }`}
                   >
                     {product.title}

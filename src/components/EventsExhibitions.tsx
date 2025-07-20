@@ -39,7 +39,14 @@ export const EventsExhibitions = () => {
   return (
     <section className="w-full bg-[#fbfbfb] py-12">
       <div className="container mx-auto px-10">
-        <h2 className="font-['Mulish',Helvetica] font-semibold text-[#032534] text-[42px] leading-[62px] mb-10">
+        <h2 className="
+        font-semibold text-[#032534]
+  text-[28px] leading-[38px]          // base
+  sm:text-[32px] sm:leading-[46px]    // small screens ≥640px
+  md:text-[36px] md:leading-[52px]    // medium screens ≥768px
+  lg:text-[42px] lg:leading-[62px]    // large screens ≥1024px
+  mb-10">
+
           Event &amp; Exhibitions
         </h2>
 
@@ -66,7 +73,7 @@ export const EventsExhibitions = () => {
                         <div className="relative w-6 h-6">
                           <MapPinIcon className="w-[17px] h-[21px] absolute top-0.5 left-1 text-white" />
                         </div>
-                        <span className="font-['Mulish',Helvetica] font-semibold text-white text-xl">
+                        <span className="font-normal text-white text-xl">
                           {item.location}
                         </span>
                       </div>
@@ -75,7 +82,7 @@ export const EventsExhibitions = () => {
                         <div className="relative w-6 h-6">
                           <CalendarIcon className="w-[19px] h-[21px] absolute top-0.5 left-0.5 text-white" />
                         </div>
-                        <span className="font-['Mulish',Helvetica] font-semibold text-white text-xl">
+                        <span className="font-normal text-white text-xl">
                           {item.date}
                         </span>
                       </div>

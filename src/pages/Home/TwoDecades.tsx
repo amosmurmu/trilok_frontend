@@ -1,6 +1,4 @@
-
 import { Card, CardContent } from "@/components/ui/card";
-import React from "react";
 
 export const TwoDecades = () => {
   const statsData = [
@@ -26,54 +24,58 @@ export const TwoDecades = () => {
       number: "15+",
       unit: "Precast Products",
       description: "Modular Solutions for Every Sector",
-      iconSrc: "./aboutus/about_4.png ",
+      iconSrc: "./aboutus/about_4.png",
     },
   ];
 
   return (
-    <section className="relative w-full py-8 sm:py-12 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="mb-8 sm:mb-12 text-center">
-          <h2 className="font-['Mulish',Helvetica] font-extrabold text-[#032534] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] leading-tight">
+    <section className="w-full py-10 bg-white">
+      <div className="max-w-screen-xl mx-auto px-4">
+        {/* Heading */}
+        <div className="text-center mb-10">
+          <h2 className="font-extrabold text-[#032534] text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
             Two Decades of Precast Innovation
           </h2>
-          <p className="font-['Mulish',Helvetica] font-semibold text-[#1f8ccc] text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[32px] leading-normal mt-4">
-            Transforming infrastructure with faster, smarter, and stronger
-            precast solutions
+          <p className="font-semibold text-[#1f8ccc] text-lg sm:text-xl md:text-2xl mt-4">
+            Transforming infrastructure with faster, smarter, and stronger precast solutions
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row flex-wrap lg:flex-nowrap justify-center items-center gap-4 sm:gap-0">
+        {/* Grid of Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {statsData.map((stat, index) => (
-            <React.Fragment key={index}>
-              <Card className="w-full sm:w-[300px] md:w-[350px] lg:w-[382px] h-auto min-h-[250px] lg:h-[290px] rounded-[14px] border-none shadow-none">
-                <CardContent className="p-4 sm:p-0 relative h-full flex flex-col items-center justify-center">
-                  <div className="mt-0 sm:mt-[25px] text-center">
-                    <span className="font-['Mulish',Helvetica] font-black text-[#1f8ccc] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[84.8px] leading-tight">
-                      {stat.number}
-                    </span>
-                    <span className="font-['Mulish',Helvetica] font-black text-[#032534] text-lg sm:text-xl md:text-2xl leading-tight">
-                      {" "}
-                      {stat.unit}
-                    </span>
-                  </div>
-                  <img
-                    className="w-[60px] h-[60px] sm:w-[76px] sm:h-[76px] mt-6 sm:mt-[49px]"
-                    alt="Component icon"
-                    src={stat.iconSrc}
-                  />
-                  <p className="mt-4 sm:mt-6 lg:mt-10 lg:relative lg:bottom-[25px] px-4 sm:px-0 font-['Mulish',Helvetica] font-semibold text-[#032534] text-sm sm:text-base lg:text-lg text-center leading-normal">
-                    {stat.description}
-                  </p>
-                </CardContent>
-              </Card>
-              {index < statsData.length - 1 && (
-                <div className="hidden lg:block w-[4px] h-[172px] bg-blue-300 my-auto" />
-              )}
-            </React.Fragment>
+            <Card
+              key={index}
+              className="flex flex-col items-center border-none shadow-none text-center"
+            >
+              <CardContent className="flex flex-col items-center justify-between h-full">
+                {/* Number + Unit in one row, centered */}
+                <div className="flex items-baseline justify-center space-x-2">
+                  <span className="text-[#1f8ccc] font-extrabold text-5xl sm:text-6xl lg:text-7xl">
+                    {stat.number}
+                  </span>
+                  <span className="text-[#032534] font-extrabold text-base sm:text-lg md:text-xl">
+                    {stat.unit}
+                  </span>
+                </div>
+
+                {/* Icon */}
+                <img
+                  src={stat.iconSrc}
+                  alt="icon"
+                  className="mt-6 w-[60px] h-[60px] sm:w-[76px] sm:h-[76px]"
+                />
+
+                {/* Description */}
+                <p className="mt-4 text-[#032534] font-medium text-sm sm:text-base">
+                  {stat.description}
+                </p>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
     </section>
   );
 };
+

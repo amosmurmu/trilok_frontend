@@ -26,10 +26,10 @@ export const ContactUsSection = () => {
   return (
     <section className="relative w-full bg-white rounded-3xl overflow-hidden py-12">
       <div className="flex flex-col items-center mb-6">
-        <h2 className="[font-family:'Mulish',Helvetica] font-extrabold text-[#1f8ccc] text-[42px] text-center tracking-[0] leading-10">
+        <h2 className="font-extrabold text-[#1f8ccc] text-[42px] text-center tracking-[0] leading-10">
           Have inquiries or suggestions?
         </h2>
-        <p className="mt-2 [font-family:'Mulish',Helvetica] font-semibold text-[#032534] text-2xl text-center tracking-[0] leading-10">
+        <p className="mt-2 font-semibold text-[#032534] text-2xl text-center tracking-[0] leading-10">
           We're just a click away—reach out now!
         </p>
       </div>
@@ -59,24 +59,34 @@ export const ContactUsSection = () => {
               <div className="relative md:col-span-1">
                 <div className="absolute -top-3 left-[17px] bg-white px-1 z-10">
                   <div className="inline-flex items-center gap-[3px]">
-                    <span className="[font-family:'Mulish',Helvetica] font-medium text-[#032534] text-sm">
+                    <span className="font-medium text-[#032534] text-sm">
                       First Name
                     </span>
-                    <span className="[font-family:'Mulish',Helvetica] font-medium text-[#1f8ccc] text-sm">
+                    <span className="font-medium text-[#1f8ccc] text-sm">
                       *
                     </span>
                   </div>
                 </div>
                 <Input
-                  className="h-[46px] border border-[#1f8ccc] [font-family:'Mulish',Helvetica] font-medium text-[#1f8ccc] text-base"
+                  className="h-[46px] border border-[#1f8ccc] font-medium text-[#1f8ccc] text-base"
                   defaultValue="Jack"
                 />
               </div>
 
               {/* Last Name */}
               <div className="relative md:col-span-1">
+                <div className="absolute -top-3 left-[17px] bg-white px-1 z-10">
+                  <div className="inline-flex items-center gap-[3px]">
+                    <span className="font-medium text-[#032534] text-sm">
+                      Last Name
+                    </span>
+                    <span className="font-medium text-[#1f8ccc] text-sm">
+                      *
+                    </span>
+                  </div>
+                </div>
                 <Input
-                  className="h-[46px] [font-family:'Mulish',Helvetica] font-medium text-[#727272] text-sm"
+                  className="h-[46px] font-medium text-[#727272] text-sm"
                   placeholder="Last Name"
                 />
               </div>
@@ -84,7 +94,7 @@ export const ContactUsSection = () => {
               {/* Select Your Role */}
               <div className="relative md:col-span-1">
                 <Select>
-                  <SelectTrigger className="h-[46px] [font-family:'Mulish',Helvetica] font-medium text-[#727272] text-sm">
+                  <SelectTrigger className="font-medium text-[#727272] text-sm">
                     <SelectValue placeholder="Select Your Role" />
                   </SelectTrigger>
                   <SelectContent>
@@ -105,7 +115,7 @@ export const ContactUsSection = () => {
               {/* Email */}
               <div className="col-span-1 md:col-span-2 relative">
                 <Input
-                  className="h-[46px] [font-family:'Mulish',Helvetica] font-medium text-[#727272] text-sm"
+                  className="h-[46px]  font-medium text-[#727272] text-sm"
                   placeholder="Email"
                 />
               </div>
@@ -113,7 +123,7 @@ export const ContactUsSection = () => {
               {/* Contact No. */}
               <div className="relative md:col-span-1">
                 <Input
-                  className="h-[46px] [font-family:'Mulish',Helvetica] font-medium text-[#727272] text-sm"
+                  className="h-[46px]  font-medium text-[#727272] text-sm"
                   placeholder="Contact No. *"
                 />
               </div>
@@ -121,7 +131,7 @@ export const ContactUsSection = () => {
               {/* State */}
               <div className="relative md:col-span-1">
                 <Input
-                  className="h-[46px] [font-family:'Mulish',Helvetica] font-medium text-[#727272] text-sm"
+                  className="h-[46px]  font-medium text-[#727272] text-sm"
                   placeholder="State *"
                 />
               </div>
@@ -129,7 +139,7 @@ export const ContactUsSection = () => {
               {/* City */}
               <div className="relative md:col-span-1">
                 <Input
-                  className="h-[46px] [font-family:'Mulish',Helvetica] font-medium text-[#727272] text-sm"
+                  className="h-[46px]  font-medium text-[#727272] text-sm"
                   placeholder="City *"
                 />
               </div>
@@ -137,7 +147,7 @@ export const ContactUsSection = () => {
               {/* Pincode */}
               <div className="relative md:col-span-1">
                 <Input
-                  className="h-[46px] [font-family:'Mulish',Helvetica] font-medium text-[#727272] text-sm"
+                  className="h-[46px] font-medium text-[#727272] text-sm"
                   placeholder="Pincode *"
                 />
               </div>
@@ -145,7 +155,7 @@ export const ContactUsSection = () => {
               {/* Product Category */}
               <div className="col-span-1 md:col-span-3 relative">
                 <Select>
-                  <SelectTrigger className="h-[46px] w-full [font-family:'Mulish',Helvetica] font-medium text-[#727272] text-sm">
+                  <SelectTrigger className="h-[46px] w-full  font-medium text-[#727272] text-sm">
                     <SelectValue placeholder="Select Product Category *" />
                   </SelectTrigger>
                   <SelectContent>
@@ -162,14 +172,14 @@ export const ContactUsSection = () => {
               {/* Message */}
               <div className="col-span-1 md:col-span-3 relative">
                 <Textarea
-                  className="h-[100px] resize-none [font-family:'Mulish',Helvetica] font-medium text-[#727272] text-sm"
+                  className="h-[100px] resize-none  font-medium text-[#727272] text-sm"
                   placeholder="Enter Message"
                 />
               </div>
 
               {/* Submit Button */}
               <div className="col-span-1 md:col-span-3 mt-2">
-                <Button className="w-full h-[42px] bg-[#1f8ccc] hover:bg-[#1a7ab3] [font-family:'Mulish',Helvetica] font-semibold text-white text-xl">
+                <Button className="w-full h-[42px] bg-[#1f8ccc] hover:bg-[#1a7ab3]  font-semibold text-white text-xl">
                   Submit
                 </Button>
               </div>
@@ -189,7 +199,7 @@ export const ContactUsSection = () => {
                   {item.icon}
                 </div>
                 <div className="px-2 py-1">
-                  <span className="text-[#032534] [font-family:'Mulish',Helvetica] font-semibold text-xl">
+                  <span className="text-[#032534]  font-semibold text-xl">
                     {item.text}
                   </span>
                 </div>

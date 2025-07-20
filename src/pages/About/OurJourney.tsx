@@ -1,10 +1,10 @@
+
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const OurJourneySection = () => {
   const [selectedYear, setSelectedYear] = useState(2005);
 
-  // Timeline data for mapping
   const timelinePoints = [
     {
       year: "2005",
@@ -43,24 +43,24 @@ export const OurJourneySection = () => {
   const descriptionList = [
     {
       year: 2005,
-      text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora provident molestias officia, fuga animi, nemo, deserunt soluta numquam hic repellat dolores. Aliquam beatae, nihil ullam accusantium, illum alias tenetur ipsa nisi vero reiciendis eius dolorum soluta? Perspiciatis non earum voluptatem, quod ut voluptas praesentium vero repudiandae autem beatae libero at molestiae odit fuga nisi dolorem corrupti asperiores ullam, nemo dicta, animi tempore explicabo? Eum ratione fugit ipsam voluptatem impedit debitis nesciunt reiciendis quia necessitatibus, minus ipsa tempore inventore corrupti non deleniti cupiditate, culpa sit autem ex? Natus, odit? Beatae, quis!"
+      text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit...",
     },
     {
       year: 2009,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur amet maxime ipsam quibusdam fugiat ipsa, nisi consectetur numquam quam ex voluptatibus rerum sed distinctio quo. Tempore provident veniam aut nihil ipsam. Aut, non autem reprehenderit quidem voluptas eaque voluptates dolore!"
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
     },
     {
       year: 2010,
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti sunt vero unde optio temporibus magni iusto pariatur. Ab distinctio dolorem alias aut nemo voluptas quasi? Unde autem explicabo omnis."
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
     },
     {
       year: 2011,
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti sunt vero unde optio temporibus magni iusto pariatur. Ab distinctio dolorem alias aut nemo voluptas quasi? Unde autem explicabo omnis."
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
     },
     {
       year: 2012,
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti sunt vero unde optio temporibus magni iusto pariatur. Ab distinctio dolorem alias aut nemo voluptas quasi? Unde autem explicabo omnis."
-    }
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit...",
+    },
   ];
 
   const handleYearClick = (year: number) => {
@@ -73,50 +73,48 @@ export const OurJourneySection = () => {
   };
 
   return (
-    <section className="relative w-full py-2 bg-white overflow-hidden">
-      <div className="container mx-auto">
-        <div className="flex flex-col items-center">
+    <section className="relative w-full py-6 bg-white overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center text-center">
           {/* Section Heading */}
-          <h2 className="font-['Mulish',Helvetica] font-extrabold text-[#032534] text-[42px] leading-[62px] mb-6">
+          <h2 className="font-extrabold text-[#032534] text-3xl sm:text-4xl lg:text-[42px] leading-tight mb-4">
             Our Journey
           </h2>
+
           {/* Subtitle */}
-          <div className="font-['Mulish',Helvetica] font-semibold text-[#1f8ccc] text-[32px] text-center mb-4">
+          <div className="font-semibold text-[#1f8ccc] text-xl sm:text-2xl lg:text-[32px] mb-3">
             Precision. Progress. Precast — The Journey of Trilok Group
           </div>
+
           {/* Secondary Subtitle */}
-          <div className="font-['Mulish',Helvetica] font-semibold text-[#032534] text-2xl text-center mb-8">
+          <div className="font-semibold text-[#032534] text-lg sm:text-xl lg:text-2xl mb-6">
             From One City to 70+ Locations Across India
           </div>
+
           {/* Information Card */}
-          <Card className="w-full max-w-[787px] mb-10 border border-solid border-[#032534] shadow-[0px_0px_24px_#0000000f] rounded-xl">
-            <CardContent className="p-4">
-              <p className="font-['Mulish',Helvetica] font-medium text-[#032534] text-lg">
+          <Card className="w-full max-w-[787px] mb-8 border border-[#032534] shadow-[0_0_24px_#0000000f] rounded-xl">
+            <CardContent className="p-4 sm:p-6">
+              <p className="font-medium text-[#032534] text-base sm:text-lg">
                 TRILOK Cement Products was born in Surat, with a bold vision —
                 to revolutionize India&apos;s infrastructure through durable
                 precast innovation.
               </p>
             </CardContent>
           </Card>
+
           {/* Foundation Label */}
-          <div className="font-['Mulish',Helvetica] text-xl mb-12">
+          <div className="text-base sm:text-lg lg:text-xl mb-8">
             <span className="font-bold text-[#1f8ccc]">The Foundation </span>
             <span className="font-black text-[#1f8ccc]">Surat, Gujarat</span>
           </div>
-          {/* Timeline */}
+
+          {/* Timeline - Only visible on lg and up */}
           <div className="relative hidden lg:block w-full h-[420px] mb-8">
-            {/* Timeline Path */}
             <img
               className="w-full max-w-[1489px] h-[420px] mx-auto relative"
               alt="Timeline path"
               src="./aboutus/obj_1.svg"
             />
-            {/* I can add visual globe man for effect */}
-            {/* <img
-              className="w-full max-w-[1489px] h-[420px] mx-auto relative"
-              alt="background globe"
-              src="./aboutus/obj_2.svg"
-            /> */}
 
             {/* Timeline Points */}
             {timelinePoints.map((point, index) => {
@@ -128,21 +126,18 @@ export const OurJourneySection = () => {
                   onClick={() => handleYearClick(point.yearNum)}
                 >
                   {isSelected ? (
-                    // Highlighted point (selected year)
                     <div className="absolute w-[66px] h-[66px] top-0 left-2 bg-[#032534] rounded-[33px] shadow-lg">
                       <div className="relative w-[34px] h-[34px] top-4 left-4 bg-[#1f8ccc] rounded-[17px]" />
                     </div>
                   ) : (
-                    // Regular points
-                    <div className="absolute w-12 h-12 top-0 left-[17px] bg-white rounded-3xl shadow-[0px_0px_24px_#0000000f] hover:shadow-lg transition-shadow">
+                    <div className="absolute w-12 h-12 top-0 left-[17px] bg-white rounded-3xl shadow-[0px_0px_24px_#0000000f] hover:shadow-lg">
                       <div className="relative w-5 h-5 top-3.5 left-3.5 bg-[#032534] rounded-[10px]" />
                     </div>
                   )}
-                  {/* Year Label */}
                   <div
-                    className={`absolute top-16 left-0 font-['Mulish',Helvetica] ${point.isBold ? "font-extrabold" : "font-semibold"
+                    className={`absolute top-16 left-0 ${point.isBold ? "font-extrabold" : "font-semibold"
                       } ${isSelected ? "text-[#1f8ccc]" : "text-[#032534]"
-                      } text-[34px] transition-colors duration-300`}
+                      } text-[28px] xl:text-[34px] transition-colors duration-300`}
                   >
                     {point.year}
                   </div>
@@ -151,9 +146,9 @@ export const OurJourneySection = () => {
             })}
           </div>
 
-          {/* Description Section */}
-          <div className="w-full max-w-4xl">
-            <Card className="border border-solid border-[#1f8ccc] shadow-lg rounded-xl">
+          {/* Description Section - Only on lg and up */}
+          <div className="hidden lg:block md:w-full max-w-4xl">
+            <Card className="border border-[#1f8ccc] shadow-lg rounded-xl">
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h3 className="font-bold text-[#1f8ccc] text-2xl">
