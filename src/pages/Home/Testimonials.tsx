@@ -52,7 +52,7 @@ export const ClientTestimonialsSection = () => {
                 className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3"
               >
                 {/* Wrapper div to handle the quote and logo positioning */}
-                <div className="relative h-[450px] mb-20 mt-16">
+                <div className="relative h-[600px] mb-20 mt-16">
                   <Card className="h-full rounded-xl shadow-[0px_0px_24px_#00000026] relative overflow-visible">
                     {/* Quote icon positioned at the top center overlapping the card */}
                     <div className="absolute w-[80px] h-[64px] -top-8 left-1/2 -translate-x-1/2 z-20">
@@ -62,15 +62,15 @@ export const ClientTestimonialsSection = () => {
                         src="./homepage/qoute_2.svg"
                       />
                     </div>
-                    <CardContent className="p-0 h-full">
-                      <div className="pt-[40px] px-[30px] md:px-[50px] lg:px-[73px] flex flex-col items-center justify-between h-full">
+                    <CardContent className="p-0 h-full mb-30">
+                      <div className="px-[15x] md:px-[50px] lg:px-[73px] flex flex-col items-center justify-between h-full">
                         {/* Testimonial text */}
                         <p className="font-normal text-[#1a1a1a] text-[18px] md:text-[19px] lg:text-[20px] text-center leading-[28px] mt-8">
                           {testimonial.text}
                         </p>
 
                         {/* Star ratings */}
-                        <div className="flex mt-12 mb-5">
+                        <div className="flex">
                           {[...Array(5)].map((_, index) => (
                             <img
                               key={index}
@@ -82,7 +82,7 @@ export const ClientTestimonialsSection = () => {
                         </div>
 
                         {/* Company name */}
-                        <div className="font-medium text-[#1a1a1a] mb-[20px] text-[22px] md:text-[23px] lg:text-[24px] text-center">
+                        <div className="font-medium text-[#1a1a1a] text-[22px] md:text-[23px] lg:text-[24px] text-center">
                           {testimonial.company}
                         </div>
                       </div>
