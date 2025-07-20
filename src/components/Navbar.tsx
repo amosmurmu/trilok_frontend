@@ -54,13 +54,14 @@ export function NavBar() {
                         isActive ? "text-blue-600" : "text-gray-800 hover:text-blue-500"
                       )}
                     >
+                      {isActive && (
+                        <CircleDot className="ml-2 h-3 w-3 text-blue-600" />
+                      )}
                       <span>{item.name}</span>
                       {item.hasDropdown && (
                         <ChevronDown className="ml-2 h-4 w-4 text-muted-foreground" />
                       )}
-                      {isActive && (
-                        <CircleDot className="ml-2 h-3 w-3 text-blue-600" />
-                      )}
+
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
