@@ -1,7 +1,31 @@
+/* CDN will not use it lol  */
+/* @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap'); */
+
 @import 'tailwindcss';
 @import 'tw-animate-css';
 /* @import './custom.css'; */
+/* custom try karte hai saale aukat me reh */
 
+@font-face {
+  font-family: 'Mulish';
+  src: url('./assets/fonts/Mulish-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./assets/fonts/Mulish-Italic-VariableFont_wght.ttf')
+    format('truetype');
+  font-weight: 200 1000;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  --font-family-mulish: 'Mulish', sans-serif;
+}
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

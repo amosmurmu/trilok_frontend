@@ -19,12 +19,12 @@ export function HeroSection() {
 
       <div className="container relative h-full flex flex-col justify-end px-4 sm:px-6 lg:px-8 xl:ml-20 pb-16 sm:pb-24 lg:pb-36">
         {/* Main heading - responsive text sizes */}
-        <h1 className="font-['Mulish',Helvetica] font-semibold text-white text-3xl sm:text-4xl md:text-5xl lg:text-[60px] leading-tight mb-2 sm:mb-4 max-w-4xl">
+        <h1 className="font-extrabold text-white text-3xl sm:text-4xl md:text-5xl lg:text-[60px] leading-tight mb-2 sm:mb-4 max-w-4xl">
           India&apos;s Fastest Precast Wall Builder
         </h1>
 
         {/* Subheading - responsive text sizes */}
-        <h2 className="font-['Mulish',Helvetica] font-semibold text-white text-lg sm:text-xl md:text-2xl lg:text-[32px] leading-normal mb-6 sm:mb-8 lg:mb-10 max-w-3xl">
+        <h2 className="font-semibold text-white text-lg sm:text-xl md:text-2xl lg:text-[32px] leading-normal mb-6 sm:mb-8 lg:mb-10 max-w-3xl">
           From foundation to finish, we deliver strength that lasts.
         </h2>
 
