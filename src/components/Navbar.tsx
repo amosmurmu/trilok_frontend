@@ -50,7 +50,7 @@ export function NavBar() {
                     <Link
                       to={item.href}
                       className={cn(
-                        "flex flex-row items-center text-sm font-medium transition-colors",
+                        "flex flex-row items-center text-xl font-medium transition-colors",
                         isActive ? "text-blue-600" : "text-gray-800 hover:text-blue-500"
                       )}
                     >
