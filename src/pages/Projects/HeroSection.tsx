@@ -18,16 +18,13 @@ export const HeroSection = () => {
       </div>
 
       {/* Responsive Rectangle Shape */}
-      <img
-        className="absolute hidden lg:block bottom-[10px] sm:bottom-[15px] md:bottom-[18px] lg:bottom-[20px] left-0 object-cover"
-        alt="Rectangle background shape"
-        src="./rectangle_cutout.svg"
-        style={{
-          aspectRatio: '1373/230',
-          minHeight: '40px',
-          maxHeight: '230px'
-        }}
-      />
+      <div className="absolute hidden lg:block left-0 bottom-[10px] sm:bottom-[15px] md:bottom-[18px] lg:bottom-[20px] w-full max-h-[230px] min-h-[40px] aspect-[1373/230]">
+        <img
+          className="w-full h-full object-cover"
+          alt="Rectangle background shape"
+          src="./rectangle_cutout.svg"
+        />
+      </div>
     </section>
   );
 };
