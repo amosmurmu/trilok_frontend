@@ -10,7 +10,6 @@ import { AboutUs } from "./AboutUs";
 import { ClientTestimonialsSection } from "./Testimonials";
 import { OurClientsSection } from "./HonorRelationship";
 import VideoGallery from "./VideoGallery";
-import { FontTest } from "./FontTest";
 
 export function HomePage() {
 
@@ -22,7 +21,7 @@ export function HomePage() {
       <TwoDecades />
       <OurProductsSection />
       <AboutUs />
-      <FontTest />
+      {/* <FontTest /> */}
       {/* <VideoGallery title="Video Gallery" /> */}
       <VideoGallery />
       <OurClientsSection />
