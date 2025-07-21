@@ -4,7 +4,7 @@ export function AboutUs() {
   return (
 
     <section className="relative w-full bg-white py-12">
-      <div className="container mx-auto">
+      <div className="max-w-screen-2xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="lg:w-2/3">
             <h2 className=" font-extrabold text-[#032534] text-4xl lg:text-[42px] leading-tight mb-8">

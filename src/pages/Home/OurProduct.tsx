@@ -32,7 +32,7 @@ export const OurProductsSection = () => {
 
   return (
     <section className="relative w-full bg-[#fbfbfb] py-12">
-      <div className="mx-auto max-w-[1616px] px-4 bg-[100%_100%]">
+      <div className="max-w-screen-2xl mx-auto px-6">
         {/* Section Header */}
         <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center mb-12">
           <h2 className=" font-extrabold text-[#032534] text-[42px] leading-[62px]">
