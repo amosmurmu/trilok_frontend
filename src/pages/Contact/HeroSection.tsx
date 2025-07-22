@@ -13,7 +13,7 @@ export const HeroSection = () => {
       </div>
 
       {/* Heading */}
-      <div className="absolute left-[140px] bottom-[80px] sm:bottom-[90px] md:bottom-[95px] lg:bottom-[100px] w-full px-4 sm:px-6 md:px-8 lg:px-20">
+      <div className="absolute left-0 lg:left-[140px] bottom-[80px] sm:bottom-[90px] md:bottom-[95px] lg:bottom-[100px] w-full px-4 sm:px-6 md:px-8 lg:px-20">
         <div className="flex justify-center lg:justify-start">
           <h1 className="text-white text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] font-semibold leading-tight text-center lg:text-left">
             Contact Us

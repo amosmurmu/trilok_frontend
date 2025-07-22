@@ -8,11 +8,12 @@ export const HeroSection = () => {
           alt="About Us"
           className="w-full h-full object-cover"
         />
+
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
-      <div className="absolute left-[140px] inset-0 flex items-end justify-center lg:justify-start px-4 sm:px-6 md:px-8 lg:px-10 pb-[80px] sm:pb-[90px] md:pb-[95px] lg:pb-[100px]">
-        <h1 className="text-white text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] font-semibold leading-tight text-center lg:text-left max-w-screen-xl w-full">
+      <div className="absolute left-0 lg:left-[140px] inset-0 flex items-end justify-center lg:justify-start px-4 sm:px-6 md:px-8 lg:px-10 pb-[80px] sm:pb-[90px] md:pb-[95px] lg:pb-[100px]">
+        <h1 className="text-white text-[24px] sm:text-[32px] md:text-[40px] lg:text-[60px] font-semibold leading-tight text-center lg:text-left max-w-screen-xl w-full">
           About Us
         </h1>
       </div>

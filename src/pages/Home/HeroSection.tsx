@@ -19,29 +19,28 @@ export function HeroSection() {
 
       {/* Main content */}
       <div className="absolute inset-0 flex items-end justify-center lg:justify-start px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24 lg:pb-36 top-12">
-        <div className="relative left-[180px] w-full max-w-screen-2xl flex flex-col items-center lg:items-start text-center lg:text-left">
+        <div className="relative left-0 lg:left-[180px] w-full max-w-screen-2xl flex flex-col items-center lg:items-start text-center lg:text-left">
           {/* Heading */}
-          <h1 className="font-semibold text-white text-2xl sm:text-3xl md:text-4xl lg:text-[46px] leading-tight mb-1 sm:mb-2 lg:mb-3 max-w-3xl">
+          <h1 className="font-semibold text-white text-xl sm:text-2xl md:text-3xl lg:text-[46px] leading-tight mb-2 sm:mb-2 lg:mb-3 max-w-3xl">
             India&apos;s Fastest Precast Wall Builder
           </h1>
 
           {/* Subheading */}
-          <h2 className="font-medium text-white text-lg sm:text-base md:text-lg lg:text-[24px] leading-normal mb-4 sm:mb-5 lg:mb-6 max-w-2xl">
+          <h2 className="font-medium text-white text-base sm:text-lg md:text-xl lg:text-[24px] leading-normal mb-6 sm:mb-8 lg:mb-12 max-w-2xl">
             From foundation to finish, we deliver strength that lasts.
           </h2>
 
-          {/* Button group */}
-          <div className="absolute -bottom-26 flex sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+          {/* Button group - restore absolute positioning for lg screens */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto lg:absolute lg:-bottom-26">
             <Button
-              className="bg-[#1f8ccc] hover:bg-[#1a7db8] text-white text-base sm:text-lg lg:text-2xl font-semibold py-2 sm:py-2 lg:px-11 lg:py-9 px-8 sm:px-8 rounded-md sm:w-auto"
+              className="bg-[#1f8ccc] hover:bg-[#1a7db8] text-white text-sm sm:text-base lg:text-2xl font-semibold py-3 sm:py-3 lg:py-9 px-6 sm:px-8 lg:px-11 rounded-md w-full sm:w-auto"
             >
               Get A Free Quote
             </Button>
 
             <Button
               variant="outline"
-              // className="bg-white text-[#1a1a1a] text-base sm:text-lg lg:text-2xl font-semibold py-2 sm:py-6 lg:py-[30px] px-8 sm:px-16 lg:px-24 rounded-md h-auto border-2 border-[#1f8ccc] hover:bg-gray-50 w-full sm:w-auto"
-              className="bg-white text-[#1a1a1a] text-base sm:text-lg lg:text-2xl font-semibold py-2 sm:py-2 lg:px-11 lg:py-9 px-8 sm:px-8 rounded-md sm:w-auto"
+              className="bg-white text-[#1a1a1a] text-sm sm:text-base lg:text-2xl font-semibold py-3 sm:py-3 lg:py-9 px-6 sm:px-8 lg:px-11 rounded-md w-full sm:w-auto border-2 border-[#1f8ccc] hover:bg-gray-50"
             >
               Book Free Site Visit
             </Button>
