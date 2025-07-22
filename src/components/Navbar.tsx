@@ -5,7 +5,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "./ui/navigation-menu"
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import { cn } from "@/lib/utils"
 import { ChevronDown, CircleDot, Menu, X } from "lucide-react"
 import { useState } from "react"
@@ -28,10 +28,14 @@ export function NavBar() {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
+  const navigate = useNavigate()
+
   return (
     <nav className="w-full shadow-sm bg-white fixed top-0 left-0 z-50">
       <div className="max-w-screen-2xl mx-auto px-6 py-3 flex justify-between items-center">
-        <div className="flex items-center space-x-3">
+        <div
+          onClick={() => navigate("/")}
+          className="flex items-center space-x-3 cursor-pointer">
           <img
             src="/trilok_logo.png"
             alt="Trilok Logo"
