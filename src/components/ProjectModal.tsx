@@ -1,6 +1,7 @@
 import React from "react";
 import { Dialog, DialogContent } from "./ui/dialog";
 import { Button } from "./ui/button";
+import { useNavigate } from "react-router-dom";
 
 interface ProjectModalProps {
   isOpen: boolean;
@@ -21,6 +22,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
   onClose,
   project,
 }) => {
+  const navigate = useNavigate()
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="max-w-4xl p-0 overflow-hidden">
@@ -76,10 +78,11 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
               </p>
             </div>
 
-            <div className="mt-6 flex justify-end">
+            <div className="mt-6 flex justify-end ">
               <Button
                 variant="outline"
-                className="w-[218px] h-[42px] rounded-lg relative border-[#1f8ccc]"
+                onClick={() => navigate("/contact")}
+                className="w-[218px] h-[42px] rounded-lg relative border-[#1f8ccc] cursor-pointer"
               >
                 <span className="font-['Roboto',Helvetica] text-base text-justify leading-[18px] text-[#1f8ccc]">
                   Contact Us

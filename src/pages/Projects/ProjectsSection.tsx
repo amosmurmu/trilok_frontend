@@ -217,7 +217,7 @@ export const ProjectsSection = () => {
                 <div className="mt-4">
                   <Button
                     variant="outline"
-                    className={`w-[218px] h-[42px] rounded-lg relative ${project.hasBorder ? "border-[#1f8ccc]" : "border-[#e5e5e5]"}`}
+                    className={`w-[218px] h-[42px] rounded-lg relative ${project.hasBorder ? "border-[#1f8ccc]" : "border-[#e5e5e5]"} cursor-pointer`}
                     onClick={() => openProjectModal(project.id)}
                   >
                     <span
