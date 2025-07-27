@@ -55,25 +55,28 @@ const VideoGallery: React.FC = () => {
 
   return (
     <div className="w-full min-h-fit bg-gray-50 p-4 md:p-6 lg:p-8">
-      {/* Header */}
-      <div className="flex flex-col sm:flex-row items-center justify-between mb-8 gap-4">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
-          Video Gallery
-        </h1>
 
-        {/* Social icons and button */}
-        <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-[40px] h-[40px] md:w-[54px] md:h-[54px] bg-[#1f8ccc] rounded-full flex items-center justify-center">
-              <img className="w-6 h-6 md:w-8 md:h-8" alt="Instagram" src="./instagram.svg" />
+      {/* Header */}
+      <div className="px-4 sm:px-6 md:px-8 lg:px-10 xl:px-[140px] mb-8">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
+            Video Gallery
+          </h1>
+
+          {/* Social icons and button */}
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+            <div className="flex items-center gap-3">
+              <div className="w-[40px] h-[40px] md:w-[54px] md:h-[54px] bg-[#1f8ccc] rounded-full flex items-center justify-center">
+                <img className="w-6 h-6 md:w-8 md:h-8" alt="Instagram" src="./instagram.svg" />
+              </div>
+              <div className="w-[40px] h-[40px] md:w-[54px] md:h-[54px]">
+                <img className="w-full h-full" alt="YouTube" src="./homepage/group-3510.png" />
+              </div>
             </div>
-            <div className="w-[40px] h-[40px] md:w-[54px] md:h-[54px]">
-              <img className="w-full h-full" alt="YouTube" src="./homepage/group-3510.png" />
-            </div>
+            <button className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-medium">
+              Explore More
+            </button>
           </div>
-          <button className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-medium">
-            Explore More
-          </button>
         </div>
       </div>
 

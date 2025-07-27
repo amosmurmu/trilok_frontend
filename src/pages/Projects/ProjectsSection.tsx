@@ -5,12 +5,12 @@ import { useState } from "react";
 
 export const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
+
   // Project data for mapping
   const projects = [
     {
       id: 1,
-      image:
-        "./projects/project_1.png",
+      image: "./projects/project_1.png",
       imageAlt: "Empty road by building against sky",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-12.png",
       logoAlt: "Godrej logo",
@@ -82,8 +82,7 @@ export const ProjectsSection = () => {
     },
     {
       id: 4,
-      image:
-        "./projects/project_4.png",
+      image: "./projects/project_4.png",
       imageAlt: "Concrete wall block with trees",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-9.png",
       logoAlt: "TATA Motors logo",
@@ -167,14 +166,15 @@ export const ProjectsSection = () => {
   return (
     <section className="w-full py-12 bg-white">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project) => (
             <Card
               key={project.id}
-              className="flex flex-col md:flex-row h-[406px] rounded-2xl overflow-hidden shadow-[0px_0px_34.3px_#0000001f] border-0"
+              className="flex flex-col lg:flex-row min-h-[406px] lg:h-[406px] rounded-2xl overflow-hidden shadow-[0px_0px_34.3px_#0000001f] border-0"
             >
-              <CardContent className="p-6 flex-1">
-                <div className="relative w-full h-[358px] bg-white rounded-xl overflow-hidden shadow-[0px_0px_34.3px_#0000001f]">
+              {/* Image Section - Hidden on tablets, shown on mobile and desktop */}
+              <CardContent className="p-6 flex-1 md:hidden lg:flex">
+                <div className="relative w-full h-[250px] lg:h-[358px] bg-white rounded-xl overflow-hidden shadow-[0px_0px_34.3px_#0000001f]">
                   <img
                     className="w-full h-full object-cover"
                     alt={project.imageAlt}
@@ -183,50 +183,61 @@ export const ProjectsSection = () => {
                 </div>
               </CardContent>
 
-              <div className="flex flex-col p-6 flex-1">
-                <div className="flex items-start mb-4">
-                  <div className="w-[72px] h-[72px] bg-white rounded overflow-hidden border-[0.65px] border-solid border-[#1f8ccc] flex items-center justify-center">
-                    <img
-                      className="max-w-full max-h-full object-contain"
-                      alt={project.logoAlt}
-                      src={project.logo}
-                    />
+              {/* Content Section */}
+              <div className="flex flex-col p-6 flex-1 justify-between">
+                <div>
+                  <div className="flex items-start mb-4">
+                    <div className="w-[72px] h-[72px] bg-white rounded overflow-hidden border-[0.65px] border-solid border-[#1f8ccc] flex items-center justify-center flex-shrink-0">
+                      <img
+                        className="max-w-full max-h-full object-contain"
+                        alt={project.logoAlt}
+                        src={project.logo}
+                      />
+                    </div>
+
+                    <div className="ml-6">
+                      <div className="flex items-center gap-[3.51px] mb-2">
+                        {[...Array(5)].map((_, i) => (
+                          <img
+                            key={i}
+                            className="w-[27.45px] h-[26.24px]"
+                            alt="Star"
+                            src="https://c.animaapp.com/mdahcrcekTrHmF/img/star-10.svg"
+                          />
+                        ))}
+                      </div>
+                      <h3 className="font-medium text-[#032534] text-[22px] leading-[30px]">
+                        {project.company}
+                      </h3>
+                    </div>
                   </div>
 
-                  <div className="ml-6">
-                    <div className="flex items-center gap-[3.51px] mb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <img
-                          key={i}
-                          className="w-[27.45px] h-[26.24px]"
-                          alt="Star"
-                          src="https://c.animaapp.com/mdahcrcekTrHmF/img/star-10.svg"
-                        />
-                      ))}
-                    </div>
-                    <h3 className=" font-medium text-[#032534] text-[22px] leading-[30px]">
-                      {project.company}
-                    </h3>
-                  </div>
+                  <p className="text-base text-justify leading-[30px] text-[#1a1a1a] mt-6">
+                    {project.description}
+                  </p>
                 </div>
 
-                <p className=" text-base text-justify leading-[30px] text-[#1a1a1a] mt-6 mb-auto">
-                  {project.description}
-                </p>
-
-                <div className="mt-4">
+                <div className="mt-6">
                   <Button
                     variant="outline"
-                    className={`w-[218px] h-[42px] rounded-lg relative ${project.hasBorder ? "border-[#1f8ccc]" : "border-[#e5e5e5]"} cursor-pointer`}
-                    onClick={() => openProjectModal(project.id)}
+                    className={`w-[218px] h-[42px] rounded-lg relative ${project.hasBorder ? "border-[#1f8ccc]" : "border-[#e5e5e5]"
+                      } cursor-pointer`}
+                    onClick={() => {
+                      // Only open modal on large screens (lg and above)
+                      if (window.innerWidth >= 1024) {
+                        openProjectModal(project.id);
+                      }
+                    }}
                   >
                     <span
-                      className={`font-['Roboto',Helvetica] text-base text-justify leading-[18px] text-${project.buttonTextColor}`}
+                      className={`font-['Roboto',Helvetica] text-base text-justify leading-[18px]`}
+                      style={{ color: project.buttonTextColor }}
                     >
                       Read More
                     </span>
                     <div
-                      className={`absolute w-[30px] h-[30px] top-1.5 right-1.5 rounded flex items-center justify-center ${project.hasBorder ? "bg-[#1f8ccc]" : "bg-transparent"}`}
+                      className={`absolute w-[30px] h-[30px] top-1.5 right-1.5 rounded flex items-center justify-center ${project.hasBorder ? "bg-[#1f8ccc]" : "bg-transparent"
+                        }`}
                     >
                       <img
                         className="w-[18px] h-3"

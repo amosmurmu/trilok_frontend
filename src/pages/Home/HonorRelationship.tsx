@@ -25,12 +25,12 @@ export const OurClientsSection = () => {
     },
     {
       id: 5,
-      imgSrc: "./homepage/logo_5.png",
+      imgSrc: "./homepage/tata-logo.svg",
       cardPosition: "md:col-start-5 md:row-start-1",
     },
     {
       id: 6,
-      imgSrc: "./homepage/logo_6.png",
+      imgSrc: "./homepage/ntpc_logo.png",
       cardPosition: "md:col-start-1 md:row-start-2",
     },
     {

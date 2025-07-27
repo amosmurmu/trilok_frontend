@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
@@ -36,63 +37,61 @@ export const ClientTestimonialsSection = () => {
   ];
 
   return (
-    <section className="w-full py-12 bg-white">
-      <div className="container mx-auto px-4 md:px-6 lg:px-10">
-        <h2 className="font-semibold text-[#032534] text-[28px] md:text-[36px] lg:text-[42px] leading-[42px] md:leading-[54px] lg:leading-[62px] mb-4">
-          Testimonials
-        </h2>
-        <p className="font-semibold text-[#1a1a1a] text-[18px] md:text-[19px] lg:text-[20px] mb-12">
-          Proven trust, shared by our pan-India project partners.
-        </p>
+    <section className="w-full py-8 sm:py-10 md:py-12 lg:py-16 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+        {/* Header Section */}
+        <div className="text-center sm:text-left mb-6 sm:mb-8 md:mb-10">
+          <h2 className="font-semibold text-[#032534] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[42px] leading-tight mb-2 sm:mb-3">
+            Testimonials
+          </h2>
+          <p className="font-semibold text-[#1a1a1a] text-base sm:text-lg md:text-xl lg:text-xl">
+            Proven trust, shared by our pan-India project partners.
+          </p>
+        </div>
+
+        {/* Carousel Section */}
         <Carousel className="w-full">
-          <CarouselContent className="-ml-2 md:-ml-4">
+          <CarouselContent className="-ml-2 sm:-ml-3 md:-ml-4">
             {testimonials.map((testimonial) => (
               <CarouselItem
                 key={testimonial.id}
-                className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3"
+                className="pl-2 sm:pl-3 md:pl-4 basis-full sm:basis-1/2 md:basis-1/2 lg:basis-1/3"
               >
-                {/* Wrapper div to handle the quote and logo positioning */}
-                <div className="relative h-[600px] mb-20 mt-16">
-                  <Card className="h-full rounded-xl shadow-[0px_0px_24px_#00000026] relative overflow-visible">
-                    {/* Quote icon positioned at the top center overlapping the card */}
-                    <div className="absolute w-[80px] h-[64px] -top-8 left-1/2 -translate-x-1/2 z-20">
+                <div className="relative h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[500px] mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16 mt-8 sm:mt-10 md:mt-12">
+                  <Card className="h-full rounded-xl sm:rounded-2xl shadow-[0px_0px_20px_#00000020] relative overflow-visible">
+                    <div className="absolute w-20 h-16 md:w-24 md:h-18 lg:w-28 lg:h-20 xl:w-32 xl:h-22 -top-6 md:-top-8 lg:-top-10 xl:-top-12 left-1/2 -translate-x-1/2 z-20">
                       <img
                         className="w-full h-full object-contain"
                         alt="Quote icon"
                         src="./homepage/qoute_2.svg"
                       />
                     </div>
-                    <CardContent className="p-0 h-full mb-30">
-                      <div className="px-[15px] md:px-[50px] lg:px-[73px] flex flex-col items-center justify-between h-full">
-                        {/* Testimonial text */}
-                        <p className="font-normal text-[#1a1a1a] text-[18px] md:text-[19px] lg:text-[20px] text-center leading-[28px] mt-8">
-                          {testimonial.text}
-                        </p>
-
-                        {/* Star ratings */}
+                    <CardContent className="p-0 h-full">
+                      <div className="px-2 md:px-4 lg:px-6 xl:px-8 flex flex-col items-center justify-center h-full py-3 md:py-6 lg:py-8 xl:py-10 space-y-2 md:space-y-4 lg:space-y-6">
+                        <div className="w-full">
+                          <p className="font-normal text-[#1a1a1a] text-sm md:text-lg lg:text-xl text-center leading-[1.3] md:leading-relaxed px-1 md:px-2">
+                            {testimonial.text}
+                          </p>
+                        </div>
                         <div className="flex">
                           {[...Array(5)].map((_, index) => (
                             <img
                               key={index}
-                              className="w-[26px] h-[25px] mx-1"
+                              className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 mx-0.5 md:mx-1"
                               alt="Star rating"
                               src="./homepage/star.png"
                             />
                           ))}
                         </div>
-
-                        {/* Company name */}
-                        <div className="font-medium text-[#1a1a1a] text-[22px] md:text-[23px] lg:text-[24px] text-center">
+                        <div className="font-medium text-[#1a1a1a] text-lg md:text-xl lg:text-2xl xl:text-3xl text-center">
                           {testimonial.company}
                         </div>
                       </div>
                     </CardContent>
                   </Card>
-
-                  {/* Company logo - positioned outside and below the card */}
-                  <div className="absolute w-[154px] h-[154px] -bottom-[77px] left-1/2 -translate-x-1/2 bg-white rounded-full border border-solid border-[#1f8ccc] shadow-[4px_4px_12px_#00000026,-4px_-4px_12px_#00000026] flex items-center justify-center z-10">
+                  <div className="absolute w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36 -bottom-8 md:-bottom-10 lg:-bottom-12 xl:-bottom-14 left-1/2 -translate-x-1/2 bg-white rounded-full border-2 border-solid border-[#1f8ccc] shadow-[4px_4px_12px_#00000026,-4px_-4px_12px_#00000026] flex items-center justify-center z-10">
                     <img
-                      className="object-contain max-w-[80%] max-h-[80%]"
+                      className="object-contain max-w-[70%] max-h-[70%] sm:max-w-[75%] sm:max-h-[75%] md:max-w-[80%] md:max-h-[80%]"
                       alt={`${testimonial.company} logo`}
                       src={testimonial.logoSrc}
                     />
@@ -101,9 +100,9 @@ export const ClientTestimonialsSection = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="flex justify-center mt-24">
-            <CarouselPrevious className="relative static mr-4 h-[54px] w-[54px] rounded-full" />
-            <CarouselNext className="relative static ml-4 h-[54px] w-[54px] rounded-full" />
+          <div className="flex justify-center mt-8 sm:mt-10 md:mt-12 lg:mt-14 xl:mt-16">
+            <CarouselPrevious className="relative static mr-2 sm:mr-3 md:mr-4 h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-[54px] xl:w-[54px] rounded-full" />
+            <CarouselNext className="relative static ml-2 sm:ml-3 md:ml-4 h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-[54px] xl:w-[54px] rounded-full" />
           </div>
         </Carousel>
       </div>
