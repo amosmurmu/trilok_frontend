@@ -92,9 +92,10 @@ export const ContactUsSection = () => {
               </div>
 
               {/* Select Your Role */}
-              <div className="relative md:col-span-1">
+              <div className="relative md:col-span-1"
+              >
                 <Select>
-                  <SelectTrigger className="font-medium text-[#727272] text-sm">
+                  <SelectTrigger className="w-full font-medium text-[#727272] text-sm">
                     <SelectValue placeholder="Select Your Role" />
                   </SelectTrigger>
                   <SelectContent>
@@ -199,7 +200,7 @@ export const ContactUsSection = () => {
                   {item.icon}
                 </div>
                 <div className="px-2 py-1">
-                  <span className="text-[#032534]  font-semibold text-xl">
+                  <span className="font-semibold text-sm sm:text-base md:text-lg lg:text-xl text-[#032534]">
                     {item.text}
                   </span>
                 </div>

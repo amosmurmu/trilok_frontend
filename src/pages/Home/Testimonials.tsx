@@ -63,7 +63,7 @@ export const ClientTestimonialsSection = () => {
                       />
                     </div>
                     <CardContent className="p-0 h-full mb-30">
-                      <div className="px-[15x] md:px-[50px] lg:px-[73px] flex flex-col items-center justify-between h-full">
+                      <div className="px-[15px] md:px-[50px] lg:px-[73px] flex flex-col items-center justify-between h-full">
                         {/* Testimonial text */}
                         <p className="font-normal text-[#1a1a1a] text-[18px] md:text-[19px] lg:text-[20px] text-center leading-[28px] mt-8">
                           {testimonial.text}
