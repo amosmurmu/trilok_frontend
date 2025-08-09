@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 
 export const OurClientsSection = () => {
@@ -6,54 +5,47 @@ export const OurClientsSection = () => {
     {
       id: 1,
       imgSrc: "./homepage/logo_1.png",
-      cardPosition: "md:col-start-1 md:row-start-1",
     },
     {
       id: 2,
       imgSrc: "./homepage/logo_2.png",
-      cardPosition: "md:col-start-2 md:row-start-1",
     },
     {
       id: 3,
       imgSrc: "./homepage/logo_3.png",
-      cardPosition: "md:col-start-3 md:row-start-1",
     },
     {
       id: 4,
       imgSrc: "./homepage/logo_4.png",
-      cardPosition: "md:col-start-4 md:row-start-1",
     },
     {
       id: 5,
       imgSrc: "./homepage/tata-logo.svg",
-      cardPosition: "md:col-start-5 md:row-start-1",
     },
     {
       id: 6,
       imgSrc: "./homepage/ntpc_logo.png",
-      cardPosition: "md:col-start-1 md:row-start-2",
     },
     {
       id: 7,
       imgSrc: "./homepage/logo_7.png",
-      cardPosition: "md:col-start-2 md:row-start-2",
     },
     {
       id: 8,
       imgSrc: "./homepage/logo_8.png",
-      cardPosition: "md:col-start-3 md:row-start-2",
     },
     {
       id: 9,
       imgSrc: "./homepage/logo_9.png",
-      cardPosition: "md:col-start-4 md:row-start-2",
     },
     {
       id: 10,
       imgSrc: "./homepage/logo_10.png",
-      cardPosition: "md:col-start-5 md:row-start-2",
     },
   ];
+
+  const row1Clients = clients.slice(0, 5);
+  const row2Clients = clients.slice(5, 10);
 
   return (
     <section className="w-full py-12 bg-white">
@@ -66,21 +58,39 @@ export const OurClientsSection = () => {
           projects across India.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
-          {clients.map((client) => (
-            <Card
-              key={client.id}
-              className={`relative h-[164px] border border-solid border-[#03253466] shadow-[0px_0px_24px_#0000000f] ${client.cardPosition}`}
-            >
-              <CardContent className="p-0 h-full flex items-center justify-center overflow-hidden">
-                <img
-                  className="max-w-full max-h-full object-contain"
-                  alt="Client logo"
-                  src={client.imgSrc}
-                />
-              </CardContent>
-            </Card>
-          ))}
+        <div className="overflow-hidden space-y-4">
+          <div className="flex animate-scroll-rtl">
+            {[...row1Clients, ...row1Clients].map((client, index) => (
+              <Card
+                key={index}
+                className="relative flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 h-[164px] border border-solid border-[#03253466] shadow-[0px_0px_24px_#0000000f] mx-2"
+              >
+                <CardContent className="p-0 h-full flex items-center justify-center overflow-hidden">
+                  <img
+                    className="max-w-full max-h-full object-contain p-4"
+                    alt="Client logo"
+                    src={client.imgSrc}
+                  />
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="flex animate-scroll-ltr">
+            {[...row2Clients, ...row2Clients].map((client, index) => (
+              <Card
+                key={index}
+                className="relative flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 h-[164px] border border-solid border-[#03253466] shadow-[0px_0px_24px_#0000000f] mx-2"
+              >
+                <CardContent className="p-0 h-full flex items-center justify-center overflow-hidden">
+                  <img
+                    className="max-w-full max-h-full object-contain p-4"
+                    alt="Client logo"
+                    src={client.imgSrc}
+                  />
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>

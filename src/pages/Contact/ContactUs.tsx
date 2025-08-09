@@ -57,37 +57,17 @@ export const ContactUsSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* First Name */}
               <div className="relative md:col-span-1">
-                <div className="absolute -top-3 left-[17px] bg-white px-1 z-10">
-                  <div className="inline-flex items-center gap-[3px]">
-                    <span className="font-medium text-[#032534] text-sm">
-                      First Name
-                    </span>
-                    <span className="font-medium text-[#1f8ccc] text-sm">
-                      *
-                    </span>
-                  </div>
-                </div>
                 <Input
                   className="h-[46px] border border-[#1f8ccc] font-medium text-[#1f8ccc] text-base"
-                  defaultValue="Jack"
+                  placeholder="First Name *"
                 />
               </div>
 
               {/* Last Name */}
               <div className="relative md:col-span-1">
-                <div className="absolute -top-3 left-[17px] bg-white px-1 z-10">
-                  <div className="inline-flex items-center gap-[3px]">
-                    <span className="font-medium text-[#032534] text-sm">
-                      Last Name
-                    </span>
-                    <span className="font-medium text-[#1f8ccc] text-sm">
-                      *
-                    </span>
-                  </div>
-                </div>
                 <Input
                   className="h-[46px] font-medium text-[#727272] text-sm"
-                  placeholder="Last Name"
+                  placeholder="Last Name *"
                 />
               </div>
 

@@ -73,10 +73,10 @@ export const KeyPeopleSection = () => {
                     {socialIcons.map((icon, iconIndex) => (
                       <button
                         key={iconIndex}
-                        className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                        className="group w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
                       >
                         <img
-                          className="w-5 h-5"
+                          className="w-5 h-5 filter grayscale brightness-0 group-hover:filter-none"
                           alt={icon.alt}
                           src={icon.src}
                         />

@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react"
+import { Mail, MapPin, Phone, Linkedin, Instagram, Facebook } from "lucide-react"
 
 export function Footer() {
   return (
@@ -27,22 +27,28 @@ export function Footer() {
 
             <h4 className="text-sm font-bold mb-2">Follow Us</h4>
             <div className="flex space-x-3">
-              <a href="#"><img src="/linkedin.svg" alt="LinkedIn" className="h-5 w-5" /></a>
-              <a href="#"><img src="/instagram.svg" alt="Instagram" className="h-5 w-5" /></a>
-              <a href="#"><img src="/facebook.svg" alt="Facebook" className="h-5 w-5" /></a>
+              <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 transition-colors">
+                <Linkedin className="h-5 w-5 text-gray-700" />
+              </a>
+              <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 transition-colors">
+                <Instagram className="h-5 w-5 text-gray-700" />
+              </a>
+              <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 transition-colors">
+                <Facebook className="h-5 w-5 text-gray-700" />
+              </a>
             </div>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold text-blue-800 mb-2">Quick Links</h3>
             <ul className="space-y-1 text-sm">
-              <li><a href="/" className="hover:text-blue-500">Home</a></li>
-              <li><a href="/about" className="hover:text-blue-500">About us</a></li>
-              <li><a href="/products" className="hover:text-blue-500">Products</a></li>
-              <li><a href="/projects" className="hover:text-blue-500">Projects</a></li>
-              <li><a href="/#" className="hover:text-blue-500">Resources</a></li>
-              <li><a href="/#" className="hover:text-blue-500">Career</a></li>
-              <li><a href="/contact" className="hover:text-blue-500">Contact us</a></li>
+              <li><a href="/" className="hover:text-blue-500 transition-colors duration-300">Home</a></li>
+              <li><a href="/about" className="hover:text-blue-500 transition-colors duration-300">About us</a></li>
+              <li><a href="/products" className="hover:text-blue-500 transition-colors duration-300">Products</a></li>
+              <li><a href="/projects" className="hover:text-blue-500 transition-colors duration-300">Projects</a></li>
+              <li><a href="/#" className="hover:text-blue-500 transition-colors duration-300">Resources</a></li>
+              <li><a href="/#" className="hover:text-blue-500 transition-colors duration-300">Career</a></li>
+              <li><a href="/contact" className="hover:text-blue-500 transition-colors duration-300">Contact us</a></li>
             </ul>
           </div>
 

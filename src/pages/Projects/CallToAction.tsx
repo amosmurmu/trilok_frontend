@@ -23,7 +23,7 @@ export const CallToActionSection = () => {
             Ready to Secure Your Space with Strength &amp; Style?
           </h2>
 
-          <p className=" font-semibold text-white text-[28px] leading-9 mb-10">
+          <p className=" font-semibold text-white text-[24px] leading-9 mb-10">
             Let&apos;s build your boundary with durable, fast-installing precast
             walls tailored to your needs.
             <br />

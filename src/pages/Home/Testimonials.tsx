@@ -9,30 +9,18 @@ export const ClientTestimonialsSection = () => {
       text: "Working with Trilok Precast was a seamless experience. Their precast products are of exceptional quality and met all our site requirements. The team was professional, responsive, and delivered on time. We look forward to future collaborations.",
       company: "Astral Pipes",
       logoSrc: "./homepage/logo_1.png",
-      logoWidth: "108px",
-      logoHeight: "68px",
-      logoTop: "43px",
-      logoLeft: "22px",
     },
     {
       id: 2,
       text: "Working with Trilok Precast was a seamless experience. Their precast products are of exceptional quality and met all our site requirements. The team was professional, responsive, and delivered on time. We look forward to future collaborations.",
       company: "RFL",
       logoSrc: "./homepage/logo_7.png",
-      logoWidth: "146px",
-      logoHeight: "97px",
-      logoTop: "28px",
-      logoLeft: "4px",
     },
     {
       id: 3,
       text: "Working with Trilok Precast was a seamless experience. Their precast products are of exceptional quality and met all our site requirements. The team was professional, responsive, and delivered on time. We look forward to future collaborations.",
       company: "HIL",
       logoSrc: "./homepage/logo_3.png",
-      logoWidth: "105px",
-      logoHeight: "69px",
-      logoTop: "42px",
-      logoLeft: "24px",
     },
   ];
 
@@ -89,9 +77,9 @@ export const ClientTestimonialsSection = () => {
                       </div>
                     </CardContent>
                   </Card>
-                  <div className="absolute w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36 -bottom-8 md:-bottom-10 lg:-bottom-12 xl:-bottom-14 left-1/2 -translate-x-1/2 bg-white rounded-full border-2 border-solid border-[#1f8ccc] shadow-[4px_4px_12px_#00000026,-4px_-4px_12px_#00000026] flex items-center justify-center z-10">
+                  <div className="absolute w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32 -bottom-8 md:-bottom-10 lg:-bottom-12 xl:-bottom-14 left-1/2 -translate-x-1/2 bg-white rounded-full border-2 border-solid border-[#1f8ccc] shadow-[4px_4px_12px_#00000026,-4px_-4px_12px_#00000026] flex items-center justify-center z-10">
                     <img
-                      className="object-contain max-w-[70%] max-h-[70%] sm:max-w-[75%] sm:max-h-[75%] md:max-w-[80%] md:max-h-[80%]"
+                      className="object-contain max-w-[60%] max-h-[60%] sm:max-w-[65%] sm:max-h-[65%] md:max-w-[70%] md:max-h-[70%]"
                       alt={`${testimonial.company} logo`}
                       src={testimonial.logoSrc}
                     />

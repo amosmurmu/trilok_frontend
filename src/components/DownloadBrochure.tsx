@@ -17,7 +17,7 @@ export const DownloadBrochure = () => {
             Want to Explore TRILOK Precast?
           </h2>
 
-          <p className="font-semibold text-white text-[28px] leading-9 mb-8">
+          <p className="font-semibold text-white text-[24px] leading-9 mb-8">
             Download Our Company Profile &amp; Product Brochure
           </p>
 
