@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Dialog, DialogContent } from "./ui/dialog";
 import { Button } from "./ui/button";
 import { useNavigate } from "react-router-dom";
@@ -12,7 +12,7 @@ interface ProjectModalProps {
     logo: string;
     logoAlt: string;
     description: React.ReactNode;
-    image: string;
+    images: string[];
     imageAlt: string;
   };
 }
@@ -22,18 +22,35 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
   onClose,
   project,
 }) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const [selectedImage, setSelectedImage] = useState(project.images[0]);
+
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="max-w-4xl p-0 overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
           {/* Left side - Project Image */}
-          <div className="relative h-full">
-            <img
-              src={project.image}
-              alt={project.imageAlt}
-              className="w-full h-full object-cover"
-            />
+          <div className="relative h-full flex flex-col">
+            <div className="flex-grow">
+              <img
+                src={selectedImage}
+                alt={project.imageAlt}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="flex gap-2 p-4 bg-white">
+              {project.images.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt={`thumbnail ${index}`}
+                  className={`w-16 h-16 object-cover cursor-pointer rounded-md ${
+                    selectedImage === img ? "border-2 border-blue-500" : ""
+                  }`}
+                  onClick={() => setSelectedImage(img)}
+                />
+              ))}
+            </div>
           </div>
 
           {/* Right side - Project Details */}

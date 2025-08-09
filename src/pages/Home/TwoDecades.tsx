@@ -1,7 +1,78 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { useEffect, useRef } from "react";
+import { animate, useInView } from "motion";
+
+type Stat = {
+  number: string;
+  unit: string;
+  description: string;
+  iconSrc: string;
+};
+
+const StatCard = ({ stat }: { stat: Stat }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const numberRef = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView && numberRef.current) {
+      const node = numberRef.current;
+      const value = stat.number.replace("+", "");
+      const numberValue = parseFloat(value);
+
+      const controls = animate(0, numberValue, {
+        duration: 2,
+        onUpdate(value) {
+          if (node) {
+            if (stat.number.includes('.')) {
+              node.textContent = value.toFixed(1);
+            } else {
+              node.textContent = Math.round(value).toString();
+            }
+          }
+        },
+      });
+
+      return () => controls.stop();
+    }
+  }, [isInView, stat.number]);
+
+  return (
+    <Card
+      ref={ref}
+      className="flex flex-col items-center border-none shadow-none text-center"
+    >
+      <CardContent className="flex flex-col items-center justify-between h-full">
+        {/* Number + Unit in one row, centered */}
+        <div className="flex items-baseline justify-center space-x-2">
+          <span ref={numberRef} className="text-[#1f8ccc] font-extrabold text-5xl sm:text-6xl lg:text-7xl">
+            0
+          </span>
+          {stat.number.includes('+') && <span className="text-[#1f8ccc] font-extrabold text-5xl sm:text-6xl lg:text-7xl">+</span>}
+          <span className="text-[#032534] font-extrabold text-base sm:text-lg md:text-xl">
+            {stat.unit}
+          </span>
+        </div>
+
+        {/* Icon */}
+        <img
+          src={stat.iconSrc}
+          alt="icon"
+          className="mt-6 w-[60px] h-[60px] sm:w-[76px] sm:h-[76px]"
+        />
+
+        {/* Description */}
+        <p className="mt-4 text-[#032534] font-medium text-sm sm:text-base">
+          {stat.description}
+        </p>
+      </CardContent>
+    </Card>
+  );
+};
+
 
 export const TwoDecades = () => {
-  const statsData = [
+  const statsData: Stat[] = [
     {
       number: "82",
       unit: "Lakh + RMT",
@@ -44,38 +115,10 @@ export const TwoDecades = () => {
         {/* Grid of Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {statsData.map((stat, index) => (
-            <Card
-              key={index}
-              className="flex flex-col items-center border-none shadow-none text-center"
-            >
-              <CardContent className="flex flex-col items-center justify-between h-full">
-                {/* Number + Unit in one row, centered */}
-                <div className="flex items-baseline justify-center space-x-2">
-                  <span className="text-[#1f8ccc] font-extrabold text-5xl sm:text-6xl lg:text-7xl">
-                    {stat.number}
-                  </span>
-                  <span className="text-[#032534] font-extrabold text-base sm:text-lg md:text-xl">
-                    {stat.unit}
-                  </span>
-                </div>
-
-                {/* Icon */}
-                <img
-                  src={stat.iconSrc}
-                  alt="icon"
-                  className="mt-6 w-[60px] h-[60px] sm:w-[76px] sm:h-[76px]"
-                />
-
-                {/* Description */}
-                <p className="mt-4 text-[#032534] font-medium text-sm sm:text-base">
-                  {stat.description}
-                </p>
-              </CardContent>
-            </Card>
+            <StatCard key={index} stat={stat} />
           ))}
         </div>
       </div>
     </section>
   );
 };
-

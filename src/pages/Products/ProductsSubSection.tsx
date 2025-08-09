@@ -2,11 +2,10 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export const ProductsSubsection = () => {
   const thumbnails = [
-    // bhai img src add kar dena 
-    { id: 1 },
-    { id: 2 },
-    { id: 3 },
-    { id: "+2", isMore: true },
+    { id: 1, isMore: false, src: "https://picsum.photos/124/124?random=1" },
+    { id: 2, isMore: false, src: "https://picsum.photos/124/124?random=2" },
+    { id: 3, isMore: false, src: "https://picsum.photos/124/124?random=3" },
+    { id: "+2", isMore: true, src: "" },
   ];
 
   return (
@@ -25,19 +24,26 @@ export const ProductsSubsection = () => {
                 {thumbnails.map((thumbnail, index) => (
                   <div
                     key={`thumbnail-${index}`}
-                    className={`w-[124px] h-${thumbnail.isMore ? "72px" : "124px"} rounded-md ${thumbnail.isMore ? "border border-solid border-[#032534] flex items-center justify-center" : "bg-cover bg-[50%_50%]"}`}
+                    className="w-[124px] h-[124px] rounded-md flex items-center justify-center"
+                    style={{
+                      backgroundImage: `url(${thumbnail.src})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }}
                   >
                     {thumbnail.isMore && (
-                      <span className=" font-medium text-[#1a1a1a] text-3xl text-center leading-[54px]">
-                        {thumbnail.id}
-                      </span>
+                      <div className="w-full h-full border border-solid border-[#032534] flex items-center justify-center rounded-md">
+                        <span className="font-medium text-[#1a1a1a] text-3xl text-center">
+                          {thumbnail.id}
+                        </span>
+                      </div>
                     )}
                   </div>
                 ))}
               </div>
 
               {/* Main Image */}
-              <Card className="w-[751px] h-[492px] rounded-xl overflow-hidden shadow-[0px_0px_24px_#0000000f]">
+              <Card className="w-full h-[492px] rounded-xl overflow-hidden shadow-[0px_0px_24px_#0000000f]">
                 <CardContent className="p-0 h-full">
                   <img
                     className="w-full h-full object-cover"

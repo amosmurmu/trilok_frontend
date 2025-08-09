@@ -8,25 +8,21 @@ export const OurProductsSection = () => {
       id: 1,
       title: "Security Cabin",
       image: "./products/product_1.png",
-      isActive: true,
     },
     {
       id: 2,
       title: "Compound Wall",
       image: "./products/product_2.png",
-      isActive: false,
     },
     {
       id: 3,
       title: "Labor Quarter",
       image: "./products/product_3.png",
-      isActive: false,
     },
     {
       id: 4,
       title: "Precast Foundation",
       image: "./products/product_4.png",
-      isActive: false,
     },
   ];
 
@@ -38,7 +34,7 @@ export const OurProductsSection = () => {
           <h2 className=" font-extrabold text-[#032534] text-[42px] leading-[62px]">
             Our Products
           </h2>
-          <Button className="bg-[#1f8ccc] text-white hover:bg-[#1a7ab3] rounded-md px-4 py-2 md:px-8 md:py-3">
+          <Button className="bg-[#1f8ccc] text-white hover:bg-[#1a7ab3] rounded-md px-6 py-4 md:px-10 md:py-5">
             <span className=" font-semibold text-lg md:text-2xl">
               Explore Our Products
             </span>
@@ -80,8 +76,7 @@ export const OurProductsSection = () => {
           {productCards.map((product) => (
             <Card
               key={product.id}
-              className={`rounded-xl overflow-hidden shadow-[0px_0px_25.34px_#0000001f] ${product.isActive ? "bg-[#032534]" : "bg-white"
-                }`}
+              className="group rounded-xl overflow-hidden shadow-[0px_0px_25.34px_#0000001f] bg-white hover:bg-[#032534] transition-colors duration-300"
             >
               <CardContent className="p-4">
                 <div className="bg-white rounded-[9px] overflow-hidden shadow-[0px_0px_25.34px_#0000001f] mb-8">
@@ -92,10 +87,7 @@ export const OurProductsSection = () => {
                   />
                 </div>
                 <div className="flex justify-between items-center">
-                  <span
-                    className={` font-semibold text-base ${product.isActive ? "text-white" : "text-[#1f8ccc]"
-                      }`}
-                  >
+                  <span className="font-semibold text-base text-[#1f8ccc] group-hover:text-white">
                     {product.title}
                   </span>
                   <div className="w-7 h-7 bg-white rounded-full shadow-[0px_0px_25.34px_#0000001f] flex items-center justify-center">

@@ -59,7 +59,7 @@ export function NavBar() {
                       )}
                     >
                       {isActive && (
-                        <CircleDot className="ml-2 h-3 w-3 text-blue-600" />
+                        <CircleDot className="ml-2 h-3 w-3 text-gray-800" />
                       )}
                       <span>{item.name}</span>
                       {item.hasDropdown && (
@@ -111,7 +111,7 @@ export function NavBar() {
                       <ChevronDown className="h-4 w-4 text-muted-foreground" />
                     )}
                     {isActive && (
-                      <CircleDot className="h-3 w-3 text-blue-600" />
+                      <CircleDot className="h-3 w-3 text-gray-800" />
                     )}
                   </div>
                 </Link>
