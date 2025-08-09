@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useRef } from "react";
-import { animate, useInView } from "motion";
+import { animate, inView } from "motion";
 
 type Stat = {
   number: string;
@@ -12,30 +12,35 @@ type Stat = {
 const StatCard = ({ stat }: { stat: Stat }) => {
   const ref = useRef<HTMLDivElement>(null);
   const numberRef = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
-    if (isInView && numberRef.current) {
-      const node = numberRef.current;
-      const value = stat.number.replace("+", "");
-      const numberValue = parseFloat(value);
+    const element = ref.current;
+    if (!element) return;
 
-      const controls = animate(0, numberValue, {
-        duration: 2,
-        onUpdate(value) {
-          if (node) {
-            if (stat.number.includes('.')) {
-              node.textContent = value.toFixed(1);
-            } else {
-              node.textContent = Math.round(value).toString();
+    const stop = inView(element, () => {
+      if (numberRef.current) {
+        const node = numberRef.current;
+        const value = stat.number.replace("+", "");
+        const numberValue = parseFloat(value);
+
+        const controls = animate(0, numberValue, {
+          duration: 2,
+          onUpdate(value) {
+            if (node) {
+              if (stat.number.includes('.')) {
+                node.textContent = value.toFixed(1);
+              } else {
+                node.textContent = Math.round(value).toString();
+              }
             }
-          }
-        },
-      });
+          },
+        });
+        return () => controls.stop();
+      }
+    });
 
-      return () => controls.stop();
-    }
-  }, [isInView, stat.number]);
+    return () => stop();
+  }, [stat.number]);
 
   return (
     <Card
