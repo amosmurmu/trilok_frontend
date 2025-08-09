@@ -1,6 +1,6 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useState, useEffect } from "react";
-import { type EmblaCarouselType } from 'embla-carousel-react';
+import { type EmblaCarouselType } from 'embla-carousel'
 
 export function ProjectGallery() {
   const galleryImages = [
