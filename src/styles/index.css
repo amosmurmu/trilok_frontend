@@ -160,3 +160,15 @@ body {
 .swiper-pagination-bullet {
   display: none;
 }
+
+.swiper-pagination {
+  display: none;
+}
+
+.relationship .swiper-button-prev {
+  display: none;
+}
+
+.relationship .swiper-button-next {
+  display: none;
+}

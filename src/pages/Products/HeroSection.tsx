@@ -4,9 +4,17 @@ export const HeroSection = () => {
       {/* Hero Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="./products/products_bg_trilok.png"
           alt="Products Hero"
           className="w-full h-full object-cover"
+          style={{
+            backgroundImage: `linear-gradient(
+              to right,
+              rgba(0,0,0,0.55) 55%,
+              rgba(0,0,0,0) 100%
+            ), url('./products/products_bg_trilok.png')`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/55 to-transparent"></div>
       </div>
