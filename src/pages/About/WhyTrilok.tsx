@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { motion, animate } from "motion";
+import { animate } from "motion";
 
 const parallaxData = [
   { number: 1, text: "Dummy text for section 1. This is some placeholder content." },
@@ -12,6 +12,7 @@ const parallaxData = [
 export function WhyTrilok() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const numberRef = useRef<HTMLSpanElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -38,6 +39,16 @@ export function WhyTrilok() {
     }
   }, [currentIndex]);
 
+  useEffect(() => {
+    if (textRef.current) {
+      animate(
+        textRef.current,
+        { opacity: [0, 1], y: [20, 0] },
+        { duration: 0.5 }
+      )
+    }
+  }, [currentIndex]);
+
   return (
     <div className="bg-gray-50 py-12 px-4">
       <div className="max-w-4xl mx-auto">
@@ -58,16 +69,11 @@ export function WhyTrilok() {
 
           {/* Content Section */}
           <div className="md:border-l-4 md:border-gray-300 md:pl-8 text-center md:text-left">
-            <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
+            <div ref={textRef}>
               <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
                 {parallaxData[currentIndex].text}
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

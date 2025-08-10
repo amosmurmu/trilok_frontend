@@ -10,7 +10,7 @@ export const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      image: "./projects/project_1.png",
+      images: ["./projects/project_1.png", "./projects/project_2.png", "./projects/project_3.png"],
       imageAlt: "Empty road by building against sky",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-12.png",
       logoAlt: "Godrej logo",
@@ -32,7 +32,7 @@ export const ProjectsSection = () => {
     },
     {
       id: 2,
-      image: "./projects/project_2.png",
+      images: ["./projects/project_2.png", "./projects/project_3.png", "./projects/project_4.png"],
       imageAlt: "Reliance Industries project",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-10.png",
       logoAlt: "Reliance logo",
@@ -52,7 +52,7 @@ export const ProjectsSection = () => {
     },
     {
       id: 3,
-      image: "./projects/project_3.png",
+      images: ["./projects/project_3.png", "./projects/project_4.png", "./projects/project_5.png"],
       imageAlt: "Adani Wilmar project",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-8.png",
       logoAlt: "Adani Wilmar logo",
@@ -73,7 +73,7 @@ export const ProjectsSection = () => {
     },
     {
       id: 4,
-      image: "./projects/project_4.png",
+      images: ["./projects/project_4.png", "./projects/project_5.png", "./projects/project_6.png"],
       imageAlt: "Concrete wall block with trees",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-9.png",
       logoAlt: "TATA Motors logo",
@@ -93,7 +93,7 @@ export const ProjectsSection = () => {
     },
     {
       id: 5,
-      image: "./projects/project_5.png",
+      images: ["./projects/project_5.png", "./projects/project_6.png", "./projects/project_1.png"],
       imageAlt: "NTPC project",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-11.png",
       logoAlt: "NTPC logo",
@@ -114,7 +114,7 @@ export const ProjectsSection = () => {
     },
     {
       id: 6,
-      image: "./projects/project_6.png",
+      images: ["./projects/project_6.png", "./projects/project_1.png", "./projects/project_2.png"],
       imageAlt: "Hindustan Petroleum project",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-14.png",
       logoAlt: "Hindustan Petroleum logo",
@@ -160,7 +160,7 @@ export const ProjectsSection = () => {
                   <img
                     className="w-full h-full object-cover"
                     alt={project.imageAlt}
-                    src={project.image}
+                    src={project.images[0]}
                   />
                 </div>
               </CardContent>
