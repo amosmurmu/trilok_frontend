@@ -40,14 +40,14 @@ export const ContactUsSection = () => {
         {/* Map Card */}
         <Card className="w-full max-w-[788px] h-[300px] md:h-[400px] lg:h-[494px] rounded-xl overflow-hidden shadow-[0px_0px_24px_#0000000f] relative">
           <CardContent className="p-0 h-full">
-            <div className="relative w-full h-full">
-              <img
-                className="w-full h-full object-cover"
-                alt="Map"
-                src="https://c.animaapp.com/mdaqa09ck6xuyI/img/image-239.png"
-              />
-              <div className="absolute inset-0 bg-[#00000033]" />
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.531238865666!2d72.8865664149357!3d21.21074588590059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f4f4ffffff%3A0x4e5a2b0b2b0b2b0b!2sTrilok%20Precast%20Compound%20Wall!5e0!3m2!1sen!2sin!4v1624886919142!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+            ></iframe>
           </CardContent>
         </Card>
 
@@ -57,17 +57,37 @@ export const ContactUsSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* First Name */}
               <div className="relative md:col-span-1">
+                <div className="absolute -top-3 left-[17px] bg-white px-1 z-10">
+                  <div className="inline-flex items-center gap-[3px]">
+                    <span className="font-medium text-[#032534] text-sm">
+                      First Name
+                    </span>
+                    <span className="font-medium text-[#1f8ccc] text-sm">
+                      *
+                    </span>
+                  </div>
+                </div>
                 <Input
                   className="h-[46px] border border-[#1f8ccc] font-medium text-[#1f8ccc] text-base"
-                  placeholder="First Name *"
+                  defaultValue="Jack"
                 />
               </div>
 
               {/* Last Name */}
               <div className="relative md:col-span-1">
+                <div className="absolute -top-3 left-[17px] bg-white px-1 z-10">
+                  <div className="inline-flex items-center gap-[3px]">
+                    <span className="font-medium text-[#032534] text-sm">
+                      Last Name
+                    </span>
+                    <span className="font-medium text-[#1f8ccc] text-sm">
+                      *
+                    </span>
+                  </div>
+                </div>
                 <Input
                   className="h-[46px] font-medium text-[#727272] text-sm"
-                  placeholder="Last Name *"
+                  placeholder="Last Name"
                 />
               </div>
 
@@ -171,11 +191,11 @@ export const ContactUsSection = () => {
       </div>
 
       {/* Contact Information Card */}
-      <Card className="mx-auto mt-6 w-[1600px] rounded-xl shadow-[0px_0px_24px_#0000000f]">
+      <Card className="mx-auto mt-6 w-full max-w-7xl rounded-xl shadow-[0px_0px_24px_#0000000f]">
         <CardContent className="p-9">
-          <div className="flex flex-col space-y-6">
+          <div className="flex flex-col md:flex-row md:space-y-0 md:space-x-6 justify-between items-center">
             {contactInfo.map((item, index) => (
-              <div key={index} className="flex items-center gap-3">
+              <div key={index} className="flex items-center gap-3 w-full md:w-auto">
                 <div className="flex items-center justify-center w-[42px] h-[42px] bg-white rounded-xl shadow-[0px_0px_24px_#00000026]">
                   {item.icon}
                 </div>
