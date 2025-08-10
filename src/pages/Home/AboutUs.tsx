@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 
 export function AboutUs() {
   return (
-
     <section className="relative w-full bg-white py-12">
       <div className="max-w-screen-2xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-8">
@@ -48,17 +47,14 @@ export function AboutUs() {
                 </span>
               </p>
 
-              <Button className="bg-[#1f8ccc] text-white font-semibold text-xl py-6 px-12 rounded-md w-fit hover:bg-[#1a7ab3] transition-colors">
+              <Button className="bg-[#1f8ccc] text-white cursor-pointer font-semibold text-xl py-6 px-12 rounded-md w-fit hover:bg-[#1a7ab3] transition-colors">
                 Learn More
               </Button>
             </div>
           </div>
-          <img src="./homepage/map.svg">
-          </img>
+          <img src="./homepage/map.svg"></img>
         </div>
       </div>
-    </section >
-  )
+    </section>
+  );
 }
-
-

@@ -23,7 +23,7 @@ export const DownloadBrochure = () => {
 
           <Button
             variant="outline"
-            className="bg-white text-[#1a1a1a] text-2xl  font-semibold px-8 py-3 rounded-md border-2 border-[#1f8ccc] hover:bg-gray-100"
+            className="bg-white text-[#1a1a1a] text-2xl cursor-pointer font-semibold px-8 py-3 rounded-md border-2 border-[#1f8ccc] hover:bg-gray-100"
           >
             Download Brochure
           </Button>

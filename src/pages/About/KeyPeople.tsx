@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 
 export const KeyPeopleSection = () => {
@@ -76,7 +75,7 @@ export const KeyPeopleSection = () => {
                         className="group w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
                       >
                         <img
-                          className="w-5 h-5 filter grayscale brightness-0 group-hover:filter-none"
+                          className="w-5 h-5 filter brightness-0 group-hover:filter-none"
                           alt={icon.alt}
                           src={icon.src}
                         />

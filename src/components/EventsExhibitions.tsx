@@ -38,12 +38,12 @@ export const EventsExhibitions = () => {
     },
   ];
 
-interface GalleryItem {
-  id: number;
-  image: string;
-  location: string;
-  date: string;
-}
+  interface GalleryItem {
+    id: number;
+    image: string;
+    location: string;
+    date: string;
+  }
 
   const renderCard = (item: GalleryItem, heightClass: string) => (
     <Card
@@ -72,18 +72,18 @@ interface GalleryItem {
     </Card>
   );
 
-
   return (
     <section className="w-full bg-[#fbfbfb] py-12">
       <div className="container mx-auto px-10">
-        <h2 className="
+        <h2
+          className="
         font-semibold text-[#032534]
   text-[28px] leading-[38px]          // base
   sm:text-[32px] sm:leading-[46px]    // small screens ≥640px
   md:text-[36px] md:leading-[52px]    // medium screens ≥768px
   lg:text-[42px] lg:leading-[62px]    // large screens ≥1024px
-  mb-10">
-
+  mb-10"
+        >
           Event &amp; Exhibitions
         </h2>
 

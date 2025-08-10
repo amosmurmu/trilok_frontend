@@ -1,4 +1,10 @@
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 interface VideoShort {
   id: string;
@@ -12,38 +18,37 @@ interface VideoShort {
 
 const videoShorts: VideoShort[] = [
   {
-    id: '1',
-    thumbnail: './homepage/shorts_1.svg',
-    title: 'TRILOK PRECAST',
-    views: '5000',
-    likes: '8000',
-    comments: '7000',
-    shares: '6000',
+    id: "1",
+    thumbnail: "./homepage/shorts_1.svg",
+    title: "TRILOK PRECAST",
+    views: "5000",
+    likes: "8000",
+    comments: "7000",
+    shares: "6000",
   },
   {
-    id: '2',
-    thumbnail: './homepage/shorts_2.png',
-    title: 'Company Growth',
-    views: '6000',
-    likes: '9000',
-    comments: '8000',
-    shares: '7000',
+    id: "2",
+    thumbnail: "./homepage/shorts_2.png",
+    title: "Company Growth",
+    views: "6000",
+    likes: "9000",
+    comments: "8000",
+    shares: "7000",
   },
   {
-    id: '3',
-    thumbnail: './homepage/shorts_3.png',
-    title: 'Milestone Achieved',
-    views: '7000',
-    likes: '10000',
-    comments: '9000',
-    shares: '8000',
+    id: "3",
+    thumbnail: "./homepage/shorts_3.png",
+    title: "Milestone Achieved",
+    views: "7000",
+    likes: "10000",
+    comments: "9000",
+    shares: "8000",
   },
 ];
 
 const VideoGallery: React.FC = () => {
   return (
     <div className="w-full min-h-fit bg-gray-50 p-4 md:p-6 lg:p-8">
-
       {/* Header */}
       <div className="px-4 sm:px-6 md:px-8 lg:px-10 xl:px-[140px] mb-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -55,13 +60,21 @@ const VideoGallery: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
             <div className="flex items-center gap-3">
               <div className="w-[40px] h-[40px] md:w-[54px] md:h-[54px] bg-[#1f8ccc] rounded-full flex items-center justify-center">
-                <img className="w-6 h-6 md:w-8 md:h-8" alt="Instagram" src="./instagram.svg" />
+                <img
+                  className="w-6 h-6 md:w-8 md:h-8"
+                  alt="Instagram"
+                  src="./instagram.svg"
+                />
               </div>
               <div className="w-[40px] h-[40px] md:w-[54px] md:h-[54px]">
-                <img className="w-full h-full" alt="YouTube" src="./homepage/group-3510.png" />
+                <img
+                  className="w-full h-full"
+                  alt="YouTube"
+                  src="./homepage/group-3510.png"
+                />
               </div>
             </div>
-            <button className="px-4 py-2 bg-transparent border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition-colors font-medium">
+            <button className="px-4 py-2 bg-[#1f8ccc] border cursor-pointer border-blue-500 text-white rounded-lg hover:text-[#1f8ccc] hover:bg-white hover:cursor-pointer transition-colors font-medium">
               Explore More
             </button>
           </div>

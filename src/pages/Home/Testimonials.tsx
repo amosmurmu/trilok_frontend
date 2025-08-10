@@ -1,6 +1,11 @@
-
 import { Card, CardContent } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export const ClientTestimonialsSection = () => {
   const testimonials = [
@@ -89,8 +94,8 @@ export const ClientTestimonialsSection = () => {
             ))}
           </CarouselContent>
           <div className="flex justify-center mt-8 sm:mt-10 md:mt-12 lg:mt-14 xl:mt-16">
-            <CarouselPrevious className="relative static mr-2 sm:mr-3 md:mr-4 h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-[54px] xl:w-[54px] rounded-full" />
-            <CarouselNext className="relative static ml-2 sm:ml-3 md:ml-4 h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-[54px] xl:w-[54px] rounded-full" />
+            <CarouselPrevious className="relative cursor-pointer static mr-2 sm:mr-3 md:mr-4 h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-[54px] xl:w-[54px] rounded-full" />
+            <CarouselNext className="relative cursor-pointer static ml-2 sm:ml-3 md:ml-4 h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-[54px] xl:w-[54px] rounded-full" />
           </div>
         </Carousel>
       </div>

@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 
 export const KeyAchievementsSection = () => {
@@ -44,7 +43,7 @@ export const KeyAchievementsSection = () => {
         </div>
 
         {/* Achievements Grid */}
-        <div className="grid grid-cols-1 gap-12 px-4 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-4 mx-auto">
           {achievements.map((achievement, index) => (
             <div key={index} className="relative group">
               {/* Icon Box */}

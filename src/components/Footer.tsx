@@ -1,4 +1,11 @@
-import { Mail, MapPin, Phone, Linkedin, Instagram, Facebook } from "lucide-react"
+import {
+  Mail,
+  MapPin,
+  Phone,
+  Linkedin,
+  Instagram,
+  Facebook,
+} from "lucide-react";
 
 export function Footer() {
   return (
@@ -7,11 +14,10 @@ export function Footer() {
       style={{
         backgroundImage: "url('./trilok_footer.png')",
         backgroundPosition: "bottom right",
-        backgroundSize: "auto"
+        backgroundSize: "auto",
       }}
     >
-      <div className="max-w-screen-2xl mx-auto px-6 "
-      >
+      <div className="max-w-screen-2xl mx-auto px-6 ">
         <div className="flex flex-row justify-between items-center mb-8">
           <img
             src="/trilok_logo.png"
@@ -22,51 +28,131 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <p className="text-sm mb-4">
-              We are the leaders in precast industry in India since 2005. With 74 manufacturing units across India. We are committed to provide the highest quality.
+              We are the leaders in precast industry in India since 2005. With
+              74 manufacturing units across India. We are committed to provide
+              the highest quality.
             </p>
 
             <h4 className="text-sm font-bold mb-2">Follow Us</h4>
             <div className="flex space-x-3">
-              <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 transition-colors">
+              <a
+                href="#"
+                className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 transition-colors"
+              >
                 <Linkedin className="h-5 w-5 text-gray-700" />
               </a>
-              <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 transition-colors">
+              <a
+                href="#"
+                className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 transition-colors"
+              >
                 <Instagram className="h-5 w-5 text-gray-700" />
               </a>
-              <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 transition-colors">
+              <a
+                href="#"
+                className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 transition-colors"
+              >
                 <Facebook className="h-5 w-5 text-gray-700" />
               </a>
             </div>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-blue-800 mb-2">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-blue-800 mb-2">
+              Quick Links
+            </h3>
             <ul className="space-y-1 text-sm">
-              <li><a href="/" className="hover:text-blue-500 transition-colors duration-300">Home</a></li>
-              <li><a href="/about" className="hover:text-blue-500 transition-colors duration-300">About us</a></li>
-              <li><a href="/products" className="hover:text-blue-500 transition-colors duration-300">Products</a></li>
-              <li><a href="/projects" className="hover:text-blue-500 transition-colors duration-300">Projects</a></li>
-              <li><a href="/#" className="hover:text-blue-500 transition-colors duration-300">Resources</a></li>
-              <li><a href="/#" className="hover:text-blue-500 transition-colors duration-300">Career</a></li>
-              <li><a href="/contact" className="hover:text-blue-500 transition-colors duration-300">Contact us</a></li>
+              <li>
+                <a
+                  href="/"
+                  className="hover:text-blue-500 transition-colors duration-300"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/about"
+                  className="hover:text-blue-500 transition-colors duration-300"
+                >
+                  About us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/products"
+                  className="hover:text-blue-500 transition-colors duration-300"
+                >
+                  Products
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/projects"
+                  className="hover:text-blue-500 transition-colors duration-300"
+                >
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  className="hover:text-blue-500 transition-colors duration-300"
+                >
+                  Resources
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  className="hover:text-blue-500 transition-colors duration-300"
+                >
+                  Career
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  className="hover:text-blue-500 transition-colors duration-300"
+                >
+                  Contact us
+                </a>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-blue-800 mb-2">Our Products</h3>
+            <h3 className="text-lg font-semibold text-blue-800 mb-2">
+              Our Products
+            </h3>
             <ul className="space-y-1 text-sm">
-              <li>Compound Wall</li>
-              <li>Labor Quarter</li>
-              <li>Security Cabin</li>
-              <li>Precast House/ Bungalow</li>
-              <li>Precast Swimming pool</li>
-              <li>Precast Bus Station</li>
-              <li>Precast Road</li>
+              <li className="hover:text-blue-500 transition-colors cursor-pointer duration-300">
+                Compound Wall
+              </li>
+              <li className="hover:text-blue-500 transition-colors cursor-pointer duration-300">
+                Labor Quarter
+              </li>
+              <li className="hover:text-blue-500 transition-colors cursor-pointer duration-300">
+                Security Cabin
+              </li>
+              <li className="hover:text-blue-500 transition-colors cursor-pointer duration-300">
+                Precast House/ Bungalow
+              </li>
+              <li className="hover:text-blue-500 transition-colors cursor-pointer duration-300">
+                Precast Swimming pool
+              </li>
+              <li className="hover:text-blue-500 transition-colors cursor-pointer duration-300">
+                Precast Bus Station
+              </li>
+              <li className="hover:text-blue-500 transition-colors cursor-pointer duration-300">
+                Precast Road
+              </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-blue-800 mb-2">Contact us</h3>
+            <h3 className="text-lg font-semibold text-blue-800 mb-2">
+              Contact us
+            </h3>
             <p className="text-sm flex items-start gap-2 mb-2">
               <Phone className="h-6 w-6 p-1 bg-gray-200 text-blue-800 rounded shadow-md" />
               <span>+91 58565 48526</span>
@@ -77,22 +163,24 @@ export function Footer() {
             </p>
             <p className="text-sm flex items-start gap-2 mb-2">
               <MapPin className="h-7 w-7 p-1 bg-gray-200 rounded text-blue-800 shadow-md" />
-              <span>401, Vikas Shopper, Vraj Chowk Road, Sarthana Jakatnaka, Surat-395006</span>
+              <span>
+                401, Vikas Shopper, Vraj Chowk Road, Sarthana Jakatnaka,
+                Surat-395006
+              </span>
             </p>
           </div>
         </div>
-
       </div>
 
       <hr className="border-t border-gray-700 w-full my-6" />
 
       <div className="mt-5">
         <div className="text-center text-xs text-gray-500">
-          © Copyright {new Date().getFullYear()} – <span className="font-semibold">Trilok Precast Pvt. Ltd.</span> – All Rights Reserved
+          © Copyright {new Date().getFullYear()} –{" "}
+          <span className="font-semibold">Trilok Precast Pvt. Ltd.</span> – All
+          Rights Reserved
         </div>
       </div>
     </footer>
   );
 }
-
-

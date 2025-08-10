@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
@@ -6,7 +5,14 @@ export function HeroSection() {
     <section
       className="relative w-full h-[100vh] min-h-[600px] max-h-[900px] bg-cover bg-center"
       style={{
-        backgroundImage: `url('./homepage/bg_hero.png')`
+        backgroundImage: `linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.65) 55%,  /* Dark overlay until 55% */
+        rgba(0, 0, 0, 0) 100%     /* Transparent after 55% */
+      ),
+        url('./homepage/bg_hero.png')`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
       }}
     >
       {/* Responsive rectangle background shape */}
@@ -14,7 +20,7 @@ export function HeroSection() {
         className="absolute hidden lg:block bottom-[10px] sm:bottom-[15px] md:bottom-[18px] lg:bottom-[80px] left-0 object-cover"
         alt="Rectangle background shape"
         src="./rectangle_cutout.svg"
-        style={{ aspectRatio: '1373/230' }}
+        style={{ aspectRatio: "1373/230" }}
       />
 
       {/* Main content */}
@@ -32,15 +38,13 @@ export function HeroSection() {
 
           {/* Button group - restore absolute positioning for lg screens */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto lg:absolute lg:-bottom-26">
-            <Button
-              className="bg-[#1f8ccc] hover:bg-[#1a7db8] text-white text-sm sm:text-base lg:text-2xl font-semibold py-3 sm:py-3 lg:py-9 px-6 sm:px-8 lg:px-11 rounded-md w-full sm:w-auto"
-            >
+            <Button className="bg-[#1f8ccc] hover:bg-[#1a7db8] hover:cursor-pointer text-white text-sm sm:text-base lg:text-2xl font-semibold py-3 sm:py-3 lg:py-9 px-6 sm:px-8 lg:px-11 rounded-md w-full sm:w-auto">
               Get A Free Quote
             </Button>
 
             <Button
               variant="outline"
-              className="bg-white text-[#1a1a1a] text-sm sm:text-base lg:text-2xl font-semibold py-3 sm:py-3 lg:py-9 px-6 sm:px-8 lg:px-11 rounded-md w-full sm:w-auto border-2 border-[#1f8ccc] hover:bg-gray-50"
+              className="bg-white text-[#1a1a1a] hover:cursor-pointer text-sm sm:text-base lg:text-2xl font-semibold py-3 sm:py-3 lg:py-9 px-6 sm:px-8 lg:px-11 rounded-md w-full sm:w-auto border-2 border-[#1f8ccc] hover:bg-gray-50"
             >
               Book Free Site Visit
             </Button>

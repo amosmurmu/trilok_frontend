@@ -32,7 +32,10 @@ interface VideoGalleryProps {
   videos: VideoCardProps[];
 }
 
-export const VideoGallery: React.FC<VideoGalleryProps> = ({ title, videos }) => {
+export const VideoGallery: React.FC<VideoGalleryProps> = ({
+  title,
+  videos,
+}) => {
   // const [activeIndex, setActiveIndex] = useState(0);
   const activeIndex = 0;
   return (
@@ -64,11 +67,8 @@ export const VideoGallery: React.FC<VideoGalleryProps> = ({ title, videos }) => 
               />
             </motion.div>
 
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button className="bg-[#1f8ccc] text-white px-6 md:px-8 py-2 md:py-3 rounded-md text-xl md:text-2xl font-semibold ">
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button className="bg-[#1f8ccc] text-white cursor-pointer px-6 md:px-8 py-2 md:py-3 rounded-md text-xl md:text-2xl font-semibold ">
                 Explore More
               </Button>
             </motion.div>
@@ -260,7 +260,11 @@ export const VideoGallery: React.FC<VideoGalleryProps> = ({ title, videos }) => 
                             {/* Music icon */}
                             <motion.img
                               whileHover={{ rotate: 360 }}
-                              transition={{ duration: 2, ease: "linear", repeat: Infinity }}
+                              transition={{
+                                duration: 2,
+                                ease: "linear",
+                                repeat: Infinity,
+                              }}
                               className="w-[34px] h-[34px] cursor-pointer"
                               alt="Music"
                               src={
@@ -341,11 +345,15 @@ export const VideoGallery: React.FC<VideoGalleryProps> = ({ title, videos }) => 
             {videos.map((_, index) => (
               <div
                 key={index}
-                className={`w-2 h-2 rounded-full ${activeIndex === index ? 'bg-[#1f8ccc]' : 'bg-gray-300'}`}
+                className={`w-2 h-2 rounded-full ${
+                  activeIndex === index ? "bg-[#1f8ccc]" : "bg-gray-300"
+                }`}
               />
             ))}
             <div
-              className={`w-2 h-2 rounded-full ${activeIndex === videos.length ? 'bg-[#1f8ccc]' : 'bg-gray-300'}`}
+              className={`w-2 h-2 rounded-full ${
+                activeIndex === videos.length ? "bg-[#1f8ccc]" : "bg-gray-300"
+              }`}
             />
           </div>
         </Carousel>

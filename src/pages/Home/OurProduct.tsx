@@ -34,7 +34,7 @@ export const OurProductsSection = () => {
           <h2 className=" font-extrabold text-[#032534] text-[42px] leading-[62px]">
             Our Products
           </h2>
-          <Button className="bg-[#1f8ccc] text-white hover:bg-[#1a7ab3] rounded-md px-6 py-4 md:px-10 md:py-5">
+          <Button className="bg-[#1f8ccc] cursor-pointer text-white hover:bg-[#1a7ab3] rounded-md px-6 py-4 md:px-10 md:py-5">
             <span className=" font-semibold text-lg md:text-2xl">
               Explore Our Products
             </span>
@@ -90,7 +90,7 @@ export const OurProductsSection = () => {
                   <span className="font-semibold text-base text-[#1f8ccc] group-hover:text-white">
                     {product.title}
                   </span>
-                  <div className="w-7 h-7 bg-white rounded-full shadow-[0px_0px_25.34px_#0000001f] flex items-center justify-center">
+                  <div className="w-7 h-7 bg-white cursor-pointer rounded-full shadow-[0px_0px_25.34px_#0000001f] flex items-center justify-center">
                     <img
                       className="w-[13px] h-2.5"
                       alt="Icon"
