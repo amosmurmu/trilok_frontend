@@ -9,7 +9,7 @@ export const HeroSection = () => {
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/55 to-transparent"></div>
       </div>
 
       <div className="absolute left-0 lg:left-[140px] inset-0 flex items-end justify-center lg:justify-start px-4 sm:px-6 md:px-8 lg:px-10 pb-[80px] sm:pb-[90px] md:pb-[95px] lg:pb-[100px]">

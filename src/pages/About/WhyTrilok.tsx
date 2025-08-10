@@ -1,22 +1,74 @@
+import { useState, useEffect, useRef } from "react";
+import { motion, animate } from "motion";
+
+const parallaxData = [
+  { number: 1, text: "Dummy text for section 1. This is some placeholder content." },
+  { number: 2, text: "Dummy text for section 2. This content will change." },
+  { number: 3, text: "Dummy text for section 3. The animation is in progress." },
+  { number: 4, text: "Dummy text for section 4. Almost at the end of the loop." },
+  { number: 5, text: "Dummy text for section 5. Looping back to the start soon." },
+];
 
 export function WhyTrilok() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const numberRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % parallaxData.length);
+    }, 3000); // Change every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    if (numberRef.current) {
+      const node = numberRef.current;
+      const controls = animate(
+        parseInt(node.textContent || "0"),
+        parallaxData[currentIndex].number,
+        {
+          duration: 1,
+          onUpdate(value) {
+            node.textContent = Math.round(value).toString();
+          },
+        }
+      );
+      return () => controls.stop();
+    }
+  }, [currentIndex]);
+
   return (
-    <div
-      className="py-20 px-4 bg-fixed bg-center bg-no-repeat bg-cover"
-      style={{ backgroundImage: "url('./aboutus/why_trilok.png')" }}
-    >
-      <div className="bg-white bg-opacity-80 p-8 md:p-12 rounded-lg max-w-4xl mx-auto shadow-lg">
-        <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6 md:mb-8">
+    <div className="bg-gray-50 py-12 px-4">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
           Why TRILOK Precast
         </h2>
-        <div className="text-center">
-          <h3 className="text-lg md:text-xl font-semibold text-blue-600 mb-2 md:mb-3">
-            Complete Precast Product Range
-          </h3>
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-            Compound Walls, Labor Quarters, Security Cabins, Precast Homes & more —
-            all under one brand
-          </p>
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          {/* Animated Circle Section */}
+          <div className="relative w-48 h-48 md:w-60 md:h-60 flex-shrink-0">
+            <div className="absolute inset-0 rounded-full bg-blue-100 animate-pulse" />
+            <div className="absolute inset-2 rounded-full bg-blue-200" />
+            <div className="absolute inset-4 rounded-full bg-white flex items-center justify-center">
+              <span ref={numberRef} className="text-5xl md:text-7xl font-bold text-blue-600">
+                {parallaxData[currentIndex].number}
+              </span>
+            </div>
+          </div>
+
+          {/* Content Section */}
+          <div className="md:border-l-4 md:border-gray-300 md:pl-8 text-center md:text-left">
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
+                {parallaxData[currentIndex].text}
+              </p>
+            </motion.div>
+          </div>
         </div>
       </div>
     </div>

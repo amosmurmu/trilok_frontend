@@ -8,21 +8,25 @@ export function RelatedProductsSubsection() {
       id: 1,
       title: "Security Cabin",
       imageUrl: "./products/product_1.png",
+      featured: true,
     },
     {
       id: 2,
       title: "Compound Wall",
       imageUrl: "./products/product_2.png",
+      featured: false,
     },
     {
       id: 3,
       title: "Labor Quarter",
       imageUrl: "./products/product_3.png",
+      featured: false,
     },
     {
       id: 4,
       title: "Precast Foundation",
       imageUrl: "./products/product_4.png",
+      featured: false,
     },
   ];
 
@@ -33,23 +37,32 @@ export function RelatedProductsSubsection() {
           Related Products
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="flex flex-wrap gap-4 justify-center">
           {relatedProducts.map((product) => (
             <Card
               key={product.id}
-              className="group w-full rounded-xl overflow-hidden shadow-[0px_0px_25.34px_#0000001f] bg-white hover:bg-[#032534] transition-colors duration-300"
+              className={`w-[382px] rounded-xl overflow-hidden shadow-[0px_0px_25.34px_#0000001f] ${product.featured ? "bg-[#032534]" : "bg-white"
+                }`}
             >
-              <CardContent className="p-4">
-                <div className="bg-white rounded-[9px] overflow-hidden shadow-[0px_0px_25.34px_#0000001f] mb-4">
+              <CardContent className="p-0">
+                <div
+                  className={`${product.featured
+                    ? "m-6 w-[364px] h-[252px]"
+                    : "m-4 w-[350px] h-[242px]"
+                    } bg-white rounded-[9px] overflow-hidden shadow-[0px_0px_25.34px_#0000001f]`}
+                >
                   <img
-                    className="w-full h-[242px] object-cover"
+                    className="w-full h-full object-cover"
                     alt={product.title}
                     src={product.imageUrl}
                   />
                 </div>
 
-                <div className="flex justify-between items-center">
-                  <span className="font-semibold text-base text-[#1f8ccc] group-hover:text-white">
+                <div className="flex justify-between items-center px-6 py-4">
+                  <span
+                    className={` font-semibold text-base ${product.featured ? "text-white" : "text-[#1f8ccc]"
+                      }`}
+                  >
                     {product.title}
                   </span>
                   <Button

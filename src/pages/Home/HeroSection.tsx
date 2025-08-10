@@ -16,10 +16,12 @@ export function HeroSection() {
         src="./rectangle_cutout.svg"
         style={{ aspectRatio: '1373/230' }}
       />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/55 to-transparent" />
+
 
       {/* Main content */}
       <div className="absolute inset-0 flex items-end justify-center lg:justify-start px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24 lg:pb-36 top-12">
-        <div className="relative left-0 lg:left-[180px] w-full max-w-screen-2xl flex flex-col items-center lg:items-start text-center lg:text-left">
+        <div className="relative z-10 left-0 lg:left-[180px] w-full max-w-screen-2xl flex flex-col items-center lg:items-start text-center lg:text-left">
           {/* Heading */}
           <h1 className="font-semibold text-white text-xl sm:text-2xl md:text-3xl lg:text-[46px] leading-tight mb-2 sm:mb-2 lg:mb-3 max-w-3xl">
             India&apos;s Fastest Precast Wall Builder

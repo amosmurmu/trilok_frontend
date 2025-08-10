@@ -1,12 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { useState } from "react";
 
 export const ProductsSubsection = () => {
   const thumbnails = [
-    { id: 1, isMore: false, src: "https://picsum.photos/124/124?random=1" },
-    { id: 2, isMore: false, src: "https://picsum.photos/124/124?random=2" },
-    { id: 3, isMore: false, src: "https://picsum.photos/124/124?random=3" },
-    { id: "+2", isMore: true, src: "" },
+    { id: 1, src: "./products/product_1.png" },
+    { id: 2, src: "./products/product_2.png" },
+    { id: 3, src: "./products/product_3.png" },
+    { id: 4, src: "./products/product_4.png" },
   ];
+
+  const [selectedImage, setSelectedImage] = useState(thumbnails[0].src);
 
   return (
     <section className="w-full py-12 bg-white">
@@ -21,33 +24,27 @@ export const ProductsSubsection = () => {
             <div className="flex">
               {/* Thumbnails */}
               <div className="flex flex-col gap-4 mr-4">
-                {thumbnails.map((thumbnail, index) => (
+                {thumbnails.map((thumbnail) => (
                   <div
-                    key={`thumbnail-${index}`}
-                    className="w-[124px] h-[124px] rounded-md flex items-center justify-center"
-                    style={{
-                      backgroundImage: `url(${thumbnail.src})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                    }}
+                    key={thumbnail.id}
+                    className="w-[124px] h-[124px] rounded-md cursor-pointer"
+                    onClick={() => setSelectedImage(thumbnail.src)}
                   >
-                    {thumbnail.isMore && (
-                      <div className="w-full h-full border border-solid border-[#032534] flex items-center justify-center rounded-md">
-                        <span className="font-medium text-[#1a1a1a] text-3xl text-center">
-                          {thumbnail.id}
-                        </span>
-                      </div>
-                    )}
+                    <img
+                      className="w-full h-full object-cover rounded-md"
+                      src={thumbnail.src}
+                      alt={`Thumbnail ${thumbnail.id}`}
+                    />
                   </div>
                 ))}
               </div>
 
               {/* Main Image */}
-              <Card className="w-full h-[492px] rounded-xl overflow-hidden shadow-[0px_0px_24px_#0000000f]">
+              <Card className="w-full h-[544px] rounded-xl overflow-hidden shadow-[0px_0px_24px_#0000000f]">
                 <CardContent className="p-0 h-full">
                   <img
                     className="w-full h-full object-cover"
-                    src="./products/compound.jpg"
+                    src={selectedImage}
                     alt="Compound Wall"
                   />
                 </CardContent>

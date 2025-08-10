@@ -44,11 +44,14 @@ export const KeyAchievementsSection = () => {
         </div>
 
         {/* Achievements Grid */}
-        <div className="grid grid-cols-1 gap-12 px-4 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-4">
           {achievements.map((achievement, index) => (
-            <div key={index} className="relative group">
+            <div
+              key={index}
+              className="flex flex-col md:flex-row items-center md:items-center"
+            >
               {/* Icon Box */}
-              <div className="absolute -left-4 md:-left-8 top-1/2 -translate-y-1/2 w-[80px] h-[80px] md:w-[100px] md:h-[100px] bg-[#1f8ccc] rounded-[13px] flex items-center justify-center shadow-md z-10 transition-transform duration-300 group-hover:scale-110">
+              <div className="flex-shrink-0 w-[80px] h-[80px] md:w-[100px] md:h-[100px] bg-[#1f8ccc] rounded-[13px] flex items-center justify-center shadow-md -mt-10 md:mt-0 md:mr-6 z-10">
                 <img
                   src={achievement.icon}
                   alt={`Icon ${index + 1}`}
@@ -57,7 +60,7 @@ export const KeyAchievementsSection = () => {
               </div>
 
               {/* Card */}
-              <Card className="w-full border border-[#032534] rounded-xl shadow-[0px_0px_24px_#0000000f] p-6 pl-20 md:pl-24 text-left transition-shadow duration-300 group-hover:shadow-lg">
+              <Card className="w-full -mt-6 md:mt-0 pt-10 md:pt-6 border border-[#032534] rounded-xl shadow-[0px_0px_24px_#0000000f] p-6 md:pl-8 md:pr-8 text-center md:text-left">
                 <h3 className="text-xl md:text-2xl font-bold text-[#032534] mb-4">
                   {achievement.title}
                 </h3>

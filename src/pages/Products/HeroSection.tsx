@@ -8,7 +8,7 @@ export const HeroSection = () => {
           alt="Products Hero"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/55 to-transparent"></div>
       </div>
 
 
