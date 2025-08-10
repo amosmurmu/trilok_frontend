@@ -54,7 +54,7 @@ export const EventsExhibitions = () => {
             {topRowGalleryItems.map((item) => (
               <Card
                 key={item.id}
-                className={`overflow-hidden rounded-[20px] h-[311px] ${
+                className={`overflow-hidden rounded-[20px] !py-0 h-[311px] ${
                   item.id === 1 ? "bg-[#1a1a1a]" : "bg-white"
                 }`}
               >
@@ -69,7 +69,7 @@ export const EventsExhibitions = () => {
                     <>
                       <div className="absolute w-full h-[260px] bottom-0 left-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)]" />
 
-                      <div className="absolute bottom-4 left-4 flex items-center gap-1">
+                      <div className="absolute bottom-4 left-4 flex items-center gap-1 ">
                         <div className="relative w-6 h-6">
                           <MapPinIcon className="w-[17px] h-[21px] absolute top-0.5 left-1 text-white" />
                         </div>
@@ -98,7 +98,7 @@ export const EventsExhibitions = () => {
             {bottomRowGalleryItems.map((item) => (
               <Card
                 key={item.id}
-                className="overflow-hidden rounded-[20px] h-[390px] bg-white"
+                className="overflow-hidden !py-0 rounded-[20px] h-[390px] bg-white"
               >
                 <img
                   className="w-full h-full object-cover"

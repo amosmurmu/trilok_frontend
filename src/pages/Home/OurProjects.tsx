@@ -61,7 +61,7 @@ export const OurProjectsSection = () => {
           <h2 className="font-bold text-[#032534] text-[42px] leading-[62px]">
             Our Recent Projects
           </h2>
-          <Button className="bg-[#1f8ccc] text-white hover:bg-[#1a7ab3] rounded-md px-4 py-2 md:px-8 md:py-3">
+          <Button className="bg-[#1f8ccc] text-white hover:bg-[#1a7ab3] rounded-md px-4 py-2 md:px-8 md:py-6">
             <span className="font-semibold text-lg md:text-2xl">
               Explore Our Products
             </span>
