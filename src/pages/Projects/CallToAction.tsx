@@ -33,7 +33,7 @@ export const CallToActionSection = () => {
 
           <Button
             variant="outline"
-            className="bg-white text-[#1a1a1a] text-2xl  font-semibold px-8 py-3 rounded-md border-2 border-[#1f8ccc] hover:bg-[#f8f8f8]"
+            className="bg-white text-[#1a1a1a] text-2xl font-semibold px-8 py-6 rounded-md border-2 border-[#1f8ccc] hover:bg-[#f8f8f8]"
           >
             Contact Us
           </Button>

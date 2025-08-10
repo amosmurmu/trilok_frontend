@@ -1,22 +1,22 @@
 /* CDN will not use it lol  */
 /* @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap'); */
 
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 /* @import './custom.css'; */
 /* custom try karte hai saale aukat me reh */
 
 @font-face {
-  font-family: 'Mulish';
-  src: url('/fonts/Mulish-VariableFont_wght.ttf') format('truetype');
+  font-family: "Mulish";
+  src: url("/fonts/Mulish-VariableFont_wght.ttf") format("truetype");
   font-weight: 200 1000;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Mulish';
-  src: url('/fonts/Mulish-Italic-VariableFont_wght.ttf') format('truetype');
+  font-family: "Mulish";
+  src: url("/fonts/Mulish-Italic-VariableFont_wght.ttf") format("truetype");
   font-weight: 200 1000;
   font-style: italic;
   font-display: swap;
@@ -24,17 +24,17 @@
 
 /* Explicitly define Mulish for Tailwind */
 .font-mulish {
-  font-family: 'Mulish', ui-sans-serif, system-ui, -apple-system,
+  font-family: "Mulish", ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, sans-serif !important;
 }
 
 body {
-  font-family: 'Mulish', ui-sans-serif, system-ui, -apple-system,
+  font-family: "Mulish", ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, sans-serif;
 }
 
 @theme {
-  --font-family-mulish: 'Mulish', sans-serif;
+  --font-family-mulish: "Mulish", sans-serif;
 }
 @custom-variant dark (&:is(.dark *));
 
@@ -152,4 +152,11 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.mySwiper {
+  padding-bottom: 40px; /* Space for pagination */
+}
+.swiper-pagination-bullet {
+  display: none;
 }

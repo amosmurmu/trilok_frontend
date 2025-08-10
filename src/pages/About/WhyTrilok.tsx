@@ -1,12 +1,25 @@
 import { useState, useEffect, useRef } from "react";
-import { motion, animate } from "motion";
+import { animate } from "motion";
+import { motion } from "motion/react";
 
 const parallaxData = [
-  { number: 1, text: "Dummy text for section 1. This is some placeholder content." },
+  {
+    number: 1,
+    text: "Dummy text for section 1. This is some placeholder content.",
+  },
   { number: 2, text: "Dummy text for section 2. This content will change." },
-  { number: 3, text: "Dummy text for section 3. The animation is in progress." },
-  { number: 4, text: "Dummy text for section 4. Almost at the end of the loop." },
-  { number: 5, text: "Dummy text for section 5. Looping back to the start soon." },
+  {
+    number: 3,
+    text: "Dummy text for section 3. The animation is in progress.",
+  },
+  {
+    number: 4,
+    text: "Dummy text for section 4. Almost at the end of the loop.",
+  },
+  {
+    number: 5,
+    text: "Dummy text for section 5. Looping back to the start soon.",
+  },
 ];
 
 export function WhyTrilok() {
@@ -50,7 +63,10 @@ export function WhyTrilok() {
             <div className="absolute inset-0 rounded-full bg-blue-100 animate-pulse" />
             <div className="absolute inset-2 rounded-full bg-blue-200" />
             <div className="absolute inset-4 rounded-full bg-white flex items-center justify-center">
-              <span ref={numberRef} className="text-5xl md:text-7xl font-bold text-blue-600">
+              <span
+                ref={numberRef}
+                className="text-5xl md:text-7xl font-bold text-blue-600"
+              >
                 {parallaxData[currentIndex].number}
               </span>
             </div>

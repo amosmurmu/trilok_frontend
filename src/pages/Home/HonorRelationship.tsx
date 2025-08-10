@@ -17,10 +17,10 @@ export const OurClientsSection = () => {
   const row1Clients = clients.slice(0, 5);
   const row2Clients = clients.slice(5, 10);
 
-interface Client {
-  id: number;
-  imgSrc: string;
-}
+  interface Client {
+    id: number;
+    imgSrc: string;
+  }
 
   const renderMarqueeRow = (clients: Client[], animationClass: string) => (
     <div className="flex overflow-hidden">

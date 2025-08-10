@@ -1,8 +1,13 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 
@@ -33,8 +38,6 @@ export const ContactUsSection = () => {
           We're just a click away—reach out now!
         </p>
       </div>
-
-
 
       <div className="flex flex-col xl:flex-row justify-center gap-6 md:gap-8 px-4 md:px-6 lg:px-10">
         {/* Map Card */}
@@ -69,7 +72,8 @@ export const ContactUsSection = () => {
                 </div>
                 <Input
                   className="h-[46px] border border-[#1f8ccc] font-medium text-[#1f8ccc] text-base"
-                  defaultValue="Jack"
+                  placeholder="First Name"
+                  defaultValue=""
                 />
               </div>
 
@@ -92,8 +96,7 @@ export const ContactUsSection = () => {
               </div>
 
               {/* Select Your Role */}
-              <div className="relative md:col-span-1"
-              >
+              <div className="relative md:col-span-1">
                 <Select>
                   <SelectTrigger className="w-full font-medium text-[#727272] text-sm">
                     <SelectValue placeholder="Select Your Role" />
@@ -103,7 +106,9 @@ export const ContactUsSection = () => {
                     <SelectItem value="designer">Designer</SelectItem>
                     <SelectItem value="manager">Project Manager</SelectItem>
                     <SelectItem value="analyst">Data Analyst</SelectItem>
-                    <SelectItem value="marketing">Marketing Specialist</SelectItem>
+                    <SelectItem value="marketing">
+                      Marketing Specialist
+                    </SelectItem>
                     <SelectItem value="sales">Sales Representative</SelectItem>
                     <SelectItem value="hr">HR Professional</SelectItem>
                     <SelectItem value="consultant">Consultant</SelectItem>
@@ -162,8 +167,12 @@ export const ContactUsSection = () => {
                   <SelectContent>
                     <SelectItem value="electronics">Electronics</SelectItem>
                     <SelectItem value="home-garden">Home & Garden</SelectItem>
-                    <SelectItem value="sports-outdoors">Sports & Outdoors</SelectItem>
-                    <SelectItem value="office-supplies">Office Supplies</SelectItem>
+                    <SelectItem value="sports-outdoors">
+                      Sports & Outdoors
+                    </SelectItem>
+                    <SelectItem value="office-supplies">
+                      Office Supplies
+                    </SelectItem>
                     <SelectItem value="services">Services</SelectItem>
                     <SelectItem value="other">Other</SelectItem>
                   </SelectContent>
@@ -187,7 +196,6 @@ export const ContactUsSection = () => {
             </div>
           </CardContent>
         </Card>
-
       </div>
 
       {/* Contact Information Card */}
@@ -195,7 +203,10 @@ export const ContactUsSection = () => {
         <CardContent className="p-9">
           <div className="flex flex-col md:flex-row md:space-y-0 md:space-x-6 justify-between items-center">
             {contactInfo.map((item, index) => (
-              <div key={index} className="flex items-center gap-3 w-full md:w-auto">
+              <div
+                key={index}
+                className="flex items-center gap-3 w-full md:w-auto"
+              >
                 <div className="flex items-center justify-center w-[42px] h-[42px] bg-white rounded-xl shadow-[0px_0px_24px_#00000026]">
                   {item.icon}
                 </div>

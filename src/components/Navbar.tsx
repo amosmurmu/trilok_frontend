@@ -1,14 +1,13 @@
-
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "./ui/navigation-menu"
-import { Link, useLocation, useNavigate } from "react-router-dom"
-import { cn } from "@/lib/utils"
-import { ChevronDown, CircleDot, Menu, X } from "lucide-react"
-import { useState } from "react"
+} from "./ui/navigation-menu";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { cn } from "@/lib/utils";
+import { ChevronDown, CircleDot, Menu, X } from "lucide-react";
+import { useState } from "react";
 
 const navItems = [
   { name: "Home", href: "/", hasDropdown: false },
@@ -18,24 +17,25 @@ const navItems = [
   { name: "Resources", href: "#", hasDropdown: false },
   { name: "Career", href: "#", hasDropdown: false },
   { name: "Contact Us", href: "/contact", hasDropdown: false },
-]
+];
 
 export function NavBar() {
-  const location = useLocation()
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <nav className="w-full shadow-sm bg-white fixed top-0 left-0 z-50">
       <div className="max-w-screen-2xl mx-auto px-6 py-3 flex justify-between items-center">
         <div
           onClick={() => navigate("/")}
-          className="flex items-center space-x-3 cursor-pointer">
+          className="flex items-center space-x-3 cursor-pointer"
+        >
           <img
             src="/trilok_logo.png"
             alt="Trilok Logo"
@@ -46,7 +46,7 @@ export function NavBar() {
         <NavigationMenu className="hidden md:block">
           <NavigationMenuList className="flex items-center space-x-6">
             {navItems.map((item) => {
-              const isActive = location.pathname === item.href
+              const isActive = location.pathname === item.href;
 
               return (
                 <NavigationMenuItem key={item.name}>
@@ -55,21 +55,22 @@ export function NavBar() {
                       to={item.href}
                       className={cn(
                         "flex flex-row items-center text-xl font-medium transition-colors",
-                        isActive ? "text-blue-600" : "text-gray-800 hover:text-blue-500"
+                        isActive
+                          ? "text-blue-600"
+                          : "text-gray-800 hover:text-blue-500"
                       )}
                     >
                       {isActive && (
-                        <CircleDot className="ml-2 h-3 w-3 text-blue-600" />
+                        <CircleDot className="ml-2 h-3 w-3 text-gray-800" />
                       )}
                       <span>{item.name}</span>
                       {item.hasDropdown && (
                         <ChevronDown className="ml-2 h-4 w-4 text-muted-foreground" />
                       )}
-
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
-              )
+              );
             })}
           </NavigationMenuList>
         </NavigationMenu>
@@ -85,13 +86,12 @@ export function NavBar() {
             <Menu className="h-6 w-6 text-gray-800" />
           )}
         </button>
-
       </div>
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t shadow-lg max-h-[calc(100vh-80px)] overflow-y-auto">
           <div className="max-w-screen-2xl mx-auto px-6 py-4 space-y-3">
             {navItems.map((item) => {
-              const isActive = location.pathname === item.href
+              const isActive = location.pathname === item.href;
 
               return (
                 <Link
@@ -111,15 +111,15 @@ export function NavBar() {
                       <ChevronDown className="h-4 w-4 text-muted-foreground" />
                     )}
                     {isActive && (
-                      <CircleDot className="h-3 w-3 text-blue-600" />
+                      <CircleDot className="h-3 w-3 text-gray-800" />
                     )}
                   </div>
                 </Link>
-              )
+              );
             })}
           </div>
         </div>
       )}
     </nav>
-  )
+  );
 }

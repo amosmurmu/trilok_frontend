@@ -8,13 +8,11 @@ import { OurProductsSection } from "./OurProduct";
 import { OurProjectsSection } from "./OurProjects";
 import { AboutUs } from "./AboutUs";
 import { ClientTestimonialsSection } from "./Testimonials";
-import { OurClientsSection } from "./HonorRelationship";
 import VideoGallery from "./VideoGallery";
+import OurClientsSection from "./HonorRelationship";
 
 export function HomePage() {
-
   return (
-
     <div className="flex flex-col">
       <NavBar />
       <HeroSection />
@@ -31,5 +29,5 @@ export function HomePage() {
       <EventsExhibitions />
       <Footer />
     </div>
-  )
+  );
 }

@@ -75,7 +75,7 @@ export const KeyPeopleSection = () => {
                         className="group w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
                       >
                         <img
-                          className="w-5 h-5 filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                          className="w-5 h-5 cursor-pointer filter grayscale group-hover:grayscale-0 transition-all duration-300"
                           alt={icon.alt}
                           src={icon.src}
                         />

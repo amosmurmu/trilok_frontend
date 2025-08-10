@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const OurProductsSection = () => {
+  const navigate = useNavigate();
   const productCards = [
     {
       id: 1,
@@ -34,7 +36,10 @@ export const OurProductsSection = () => {
           <h2 className=" font-extrabold text-[#032534] text-[42px] leading-[62px]">
             Our Products
           </h2>
-          <Button className="bg-[#1f8ccc] cursor-pointer text-white hover:bg-[#1a7ab3] rounded-md px-6 py-4 md:px-10 md:py-5">
+          <Button
+            onClick={() => navigate("/products")}
+            className="bg-[#1f8ccc] cursor-pointer text-white hover:bg-[#1a7ab3] rounded-md px-6 py-5 md:px-8 md:py-6"
+          >
             <span className=" font-semibold text-lg md:text-2xl">
               Explore Our Products
             </span>

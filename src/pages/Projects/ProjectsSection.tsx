@@ -10,7 +10,11 @@ export const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      image: "./projects/project_1.png",
+      images: [
+        "./projects/project_1.png",
+        "./projects/project_2.png",
+        "./projects/project_3.png",
+      ],
       imageAlt: "Empty road by building against sky",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-12.png",
       logoAlt: "Godrej logo",
@@ -32,7 +36,11 @@ export const ProjectsSection = () => {
     },
     {
       id: 2,
-      image: "./projects/project_2.png",
+      images: [
+        "./projects/project_2.png",
+        "./projects/project_3.png",
+        "./projects/project_4.png",
+      ],
       imageAlt: "Reliance Industries project",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-10.png",
       logoAlt: "Reliance logo",
@@ -52,7 +60,11 @@ export const ProjectsSection = () => {
     },
     {
       id: 3,
-      image: "./projects/project_3.png",
+      images: [
+        "./projects/project_3.png",
+        "./projects/project_4.png",
+        "./projects/project_5.png",
+      ],
       imageAlt: "Adani Wilmar project",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-8.png",
       logoAlt: "Adani Wilmar logo",
@@ -73,7 +85,11 @@ export const ProjectsSection = () => {
     },
     {
       id: 4,
-      image: "./projects/project_4.png",
+      images: [
+        "./projects/project_4.png",
+        "./projects/project_5.png",
+        "./projects/project_6.png",
+      ],
       imageAlt: "Concrete wall block with trees",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-9.png",
       logoAlt: "TATA Motors logo",
@@ -93,7 +109,11 @@ export const ProjectsSection = () => {
     },
     {
       id: 5,
-      image: "./projects/project_5.png",
+      images: [
+        "./projects/project_5.png",
+        "./projects/project_6.png",
+        "./projects/project_1.png",
+      ],
       imageAlt: "NTPC project",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-11.png",
       logoAlt: "NTPC logo",
@@ -114,7 +134,11 @@ export const ProjectsSection = () => {
     },
     {
       id: 6,
-      image: "./projects/project_6.png",
+      images: [
+        "./projects/project_6.png",
+        "./projects/project_1.png",
+        "./projects/project_2.png",
+      ],
       imageAlt: "Hindustan Petroleum project",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-14.png",
       logoAlt: "Hindustan Petroleum logo",
@@ -143,7 +167,8 @@ export const ProjectsSection = () => {
   };
 
   // Find the selected project
-  const selectedProjectData = projects.find(p => p.id === selectedProject) || null;
+  const selectedProjectData =
+    projects.find((p) => p.id === selectedProject) || null;
 
   return (
     <section className="w-full py-12 bg-white">
@@ -152,24 +177,24 @@ export const ProjectsSection = () => {
           {projects.map((project) => (
             <Card
               key={project.id}
-              className="group flex flex-col lg:flex-row min-h-[406px] lg:h-[406px] rounded-2xl overflow-hidden shadow-[0px_0px_34.3px_#0000001f] border-0 transition-transform duration-300 group-hover:scale-105"
+              className="group flex flex-col lg:flex-row min-h-[406px] lg:h-[406px] rounded-2xl overflow-hidden shadow-[0px_0px_34.3px_#0000001f] border-0"
             >
               {/* Image Section - Hidden on tablets, shown on mobile and desktop */}
               <CardContent className="p-6 flex-1 md:hidden lg:flex">
-                <div className="relative w-full h-[250px] lg:h-[358px] bg-white rounded-xl overflow-hidden shadow-[0px_0px_34.3px_#0000001f]">
+                <div className="relative w-full h-[250px] lg:h-[358px] bg-white rounded-xl overflow-hidden shadow-[0px_0px_34.3px_#0000001f] group-hover:mb-12 transition-transform duration-300 group-hover:scale-105">
                   <img
                     className="w-full h-full object-cover"
                     alt={project.imageAlt}
-                    src={project.image}
+                    src={project.images[0]}
                   />
                 </div>
               </CardContent>
 
               {/* Content Section */}
-              <div className="flex flex-col p-6 flex-1 justify-between">
+              <div className="flex flex-col p-6 pb-8 flex-1 justify-between">
                 <div>
                   <div className="flex items-start mb-4">
-                    <div className="w-[72px] h-[72px] bg-white rounded overflow-hidden border-[0.65px] border-solid border-[#1f8ccc] flex items-center justify-center flex-shrink-0">
+                    <div className="w-[72px] h-[72px] bg-white rounded overflow-hidden border-[0.65px] border-solid border-[#1f8ccc] flex items-center justify-center flex-shrink-0 p-2">
                       <img
                         className="max-w-full max-h-full object-contain"
                         alt={project.logoAlt}
@@ -201,22 +226,23 @@ export const ProjectsSection = () => {
 
                 <div className="mt-6">
                   <Button
-                    className="w-[218px] h-[42px] rounded-lg relative bg-[#1f8ccc] text-white hover:bg-[#1a7ab3]"
+                    variant="outline"
                     onClick={() => {
                       // Only open modal on large screens (lg and above)
                       if (window.innerWidth >= 1024) {
                         openProjectModal(project.id);
                       }
                     }}
+                    className="w-[218px] h-[42px] rounded-lg relative border-[#1f8ccc] cursor-pointer"
                   >
-                    <span className="font-['Roboto',Helvetica] text-base text-justify leading-[18px]">
+                    <span className="font-['Roboto',Helvetica] text-base text-justify leading-[18px] text-[#1f8ccc]">
                       Read More
                     </span>
-                    <div className="absolute w-[30px] h-[30px] top-1.5 right-1.5 rounded flex items-center justify-center bg-transparent">
+                    <div className="absolute w-[30px] h-[30px] top-1.5 right-1.5 rounded flex items-center justify-center bg-[#1f8ccc]">
                       <img
                         className="w-[18px] h-3"
                         alt="Arrow"
-                        src="https://c.animaapp.com/mdahcrcekTrHmF/img/vector-9.svg"
+                        src="./projects/vector-9.svg"
                       />
                     </div>
                   </Button>
