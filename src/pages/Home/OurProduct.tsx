@@ -27,7 +27,7 @@ export const OurProductsSection = () => {
   ];
 
   return (
-    <section className="relative w-full bg-[#fbfbfb] py-12">
+    <section className="relative w-full bg-white py-12">
       <div className="max-w-screen-2xl mx-auto px-6">
         {/* Section Header */}
         <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center mb-12">

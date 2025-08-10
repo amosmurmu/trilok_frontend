@@ -10,7 +10,7 @@ export const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      images: ["./projects/project_1.png", "./projects/project_2.png", "./projects/project_3.png"],
+      image: "./projects/project_1.png",
       imageAlt: "Empty road by building against sky",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-12.png",
       logoAlt: "Godrej logo",
@@ -32,7 +32,7 @@ export const ProjectsSection = () => {
     },
     {
       id: 2,
-      images: ["./projects/project_2.png", "./projects/project_3.png", "./projects/project_4.png"],
+      image: "./projects/project_2.png",
       imageAlt: "Reliance Industries project",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-10.png",
       logoAlt: "Reliance logo",
@@ -52,7 +52,7 @@ export const ProjectsSection = () => {
     },
     {
       id: 3,
-      images: ["./projects/project_3.png", "./projects/project_4.png", "./projects/project_5.png"],
+      image: "./projects/project_3.png",
       imageAlt: "Adani Wilmar project",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-8.png",
       logoAlt: "Adani Wilmar logo",
@@ -73,7 +73,7 @@ export const ProjectsSection = () => {
     },
     {
       id: 4,
-      images: ["./projects/project_4.png", "./projects/project_5.png", "./projects/project_6.png"],
+      image: "./projects/project_4.png",
       imageAlt: "Concrete wall block with trees",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-9.png",
       logoAlt: "TATA Motors logo",
@@ -93,7 +93,7 @@ export const ProjectsSection = () => {
     },
     {
       id: 5,
-      images: ["./projects/project_5.png", "./projects/project_6.png", "./projects/project_1.png"],
+      image: "./projects/project_5.png",
       imageAlt: "NTPC project",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-11.png",
       logoAlt: "NTPC logo",
@@ -114,7 +114,7 @@ export const ProjectsSection = () => {
     },
     {
       id: 6,
-      images: ["./projects/project_6.png", "./projects/project_1.png", "./projects/project_2.png"],
+      image: "./projects/project_6.png",
       imageAlt: "Hindustan Petroleum project",
       logo: "https://c.animaapp.com/mdahcrcekTrHmF/img/image-14.png",
       logoAlt: "Hindustan Petroleum logo",
@@ -152,24 +152,24 @@ export const ProjectsSection = () => {
           {projects.map((project) => (
             <Card
               key={project.id}
-              className="group flex flex-col lg:flex-row min-h-[406px] lg:h-[406px] rounded-2xl overflow-hidden shadow-[0px_0px_34.3px_#0000001f] border-0"
+              className="group flex flex-col lg:flex-row min-h-[406px] lg:h-[406px] rounded-2xl overflow-hidden shadow-[0px_0px_34.3px_#0000001f] border-0 transition-transform duration-300 group-hover:scale-105"
             >
               {/* Image Section - Hidden on tablets, shown on mobile and desktop */}
               <CardContent className="p-6 flex-1 md:hidden lg:flex">
-                <div className="relative w-full h-[250px] lg:h-[358px] bg-white rounded-xl overflow-hidden shadow-[0px_0px_34.3px_#0000001f] transition-transform duration-300 group-hover:scale-105">
+                <div className="relative w-full h-[250px] lg:h-[358px] bg-white rounded-xl overflow-hidden shadow-[0px_0px_34.3px_#0000001f]">
                   <img
                     className="w-full h-full object-cover"
                     alt={project.imageAlt}
-                    src={project.images[0]}
+                    src={project.image}
                   />
                 </div>
               </CardContent>
 
               {/* Content Section */}
-              <div className="flex flex-col p-6 pb-8 flex-1 justify-between">
+              <div className="flex flex-col p-6 flex-1 justify-between">
                 <div>
                   <div className="flex items-start mb-4">
-                    <div className="w-[72px] h-[72px] bg-white rounded overflow-hidden border-[0.65px] border-solid border-[#1f8ccc] flex items-center justify-center flex-shrink-0 p-2">
+                    <div className="w-[72px] h-[72px] bg-white rounded overflow-hidden border-[0.65px] border-solid border-[#1f8ccc] flex items-center justify-center flex-shrink-0">
                       <img
                         className="max-w-full max-h-full object-contain"
                         alt={project.logoAlt}
@@ -201,8 +201,7 @@ export const ProjectsSection = () => {
 
                 <div className="mt-6">
                   <Button
-                    variant="outline"
-                    className="group w-[218px] h-[42px] rounded-lg relative border-[#1f8ccc] bg-white hover:bg-[#1f8ccc] transition-colors duration-300"
+                    className="w-[218px] h-[42px] rounded-lg relative bg-[#1f8ccc] text-white hover:bg-[#1a7ab3]"
                     onClick={() => {
                       // Only open modal on large screens (lg and above)
                       if (window.innerWidth >= 1024) {
@@ -210,10 +209,10 @@ export const ProjectsSection = () => {
                       }
                     }}
                   >
-                    <span className="font-['Roboto',Helvetica] text-base text-justify leading-[18px] text-[#1f8ccc] group-hover:text-white">
+                    <span className="font-['Roboto',Helvetica] text-base text-justify leading-[18px]">
                       Read More
                     </span>
-                    <div className="absolute w-[30px] h-[30px] top-1.5 right-1.5 rounded flex items-center justify-center bg-transparent group-hover:bg-[#1f8ccc]">
+                    <div className="absolute w-[30px] h-[30px] top-1.5 right-1.5 rounded flex items-center justify-center bg-transparent">
                       <img
                         className="w-[18px] h-3"
                         alt="Arrow"

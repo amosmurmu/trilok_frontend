@@ -1,3 +1,4 @@
+
 import { CalendarIcon, MapPinIcon } from "lucide-react";
 import { Card } from "./ui/card";
 
@@ -5,73 +6,35 @@ export const EventsExhibitions = () => {
   const topRowGalleryItems = [
     {
       id: 1,
-      image: "./homepage/event/event_1.png",
+      image:
+        "./homepage/event/event_1.png",
       location: "Ahmedabad",
       date: "25-6-2025",
+      hasOverlay: true,
     },
     {
       id: 2,
       image: "./homepage/event/event_2.png",
-      location: "Mumbai",
-      date: "12-7-2025",
+      hasOverlay: false,
     },
     {
       id: 3,
       image: "./homepage/event/event_3.png",
-      location: "Delhi",
-      date: "18-8-2025",
+      hasOverlay: false,
     },
   ];
 
   const bottomRowGalleryItems = [
     {
       id: 1,
-      image: "./homepage/event/event_4.png",
-      location: "Bangalore",
-      date: "05-9-2025",
+      image: "./homepage/event/event_3.png",
     },
     {
       id: 2,
-      image: "./homepage/event/event_5.png",
-      location: "Chennai",
-      date: "21-10-2025",
+      image:
+        "./homepage/event/event_5.png",
     },
   ];
-
-interface GalleryItem {
-  id: number;
-  image: string;
-  location: string;
-  date: string;
-}
-
-  const renderCard = (item: GalleryItem, heightClass: string) => (
-    <Card
-      key={item.id}
-      className={`group overflow-hidden border border-solid border-[#032534] rounded-[20px] ${heightClass} bg-white`}
-    >
-      <div className="relative h-full">
-        <img
-          className="w-full h-full object-cover"
-          alt="Exhibition image"
-          src={item.image}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-end">
-          <div className="flex justify-between items-center text-white">
-            <div className="flex items-center gap-2">
-              <MapPinIcon className="w-5 h-5" />
-              <span className="font-normal text-xl">{item.location}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CalendarIcon className="w-5 h-5" />
-              <span className="font-normal text-xl">{item.date}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Card>
-  );
-
 
   return (
     <section className="w-full bg-[#fbfbfb] py-12">
@@ -90,12 +53,60 @@ interface GalleryItem {
         <div className="flex flex-col gap-10">
           {/* Top row with three cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
-            {topRowGalleryItems.map((item) => renderCard(item, "h-[311px]"))}
+            {topRowGalleryItems.map((item) => (
+              <Card
+                key={item.id}
+                className={`overflow-hidden rounded-[20px] h-[311px] ${item.id === 1 ? "bg-[#1a1a1a]" : "bg-white"}`}
+              >
+                <div className="relative h-full">
+                  <img
+                    className="w-full h-full object-cover"
+                    alt="Exhibition image"
+                    src={item.image}
+                  />
+
+                  {item.hasOverlay && (
+                    <>
+                      <div className="absolute w-full h-[260px] bottom-0 left-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)]" />
+
+                      <div className="absolute bottom-4 left-4 flex items-center gap-1">
+                        <div className="relative w-6 h-6">
+                          <MapPinIcon className="w-[17px] h-[21px] absolute top-0.5 left-1 text-white" />
+                        </div>
+                        <span className="font-normal text-white text-xl">
+                          {item.location}
+                        </span>
+                      </div>
+
+                      <div className="absolute bottom-4 right-4 flex items-center gap-1">
+                        <div className="relative w-6 h-6">
+                          <CalendarIcon className="w-[19px] h-[21px] absolute top-0.5 left-0.5 text-white" />
+                        </div>
+                        <span className="font-normal text-white text-xl">
+                          {item.date}
+                        </span>
+                      </div>
+                    </>
+                  )}
+                </div>
+              </Card>
+            ))}
           </div>
 
           {/* Bottom row with two cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
-            {bottomRowGalleryItems.map((item) => renderCard(item, "h-[390px]"))}
+            {bottomRowGalleryItems.map((item) => (
+              <Card
+                key={item.id}
+                className="overflow-hidden rounded-[20px] h-[390px] bg-white"
+              >
+                <img
+                  className="w-full h-full object-cover"
+                  alt="Exhibition image"
+                  src={item.image}
+                />
+              </Card>
+            ))}
           </div>
         </div>
       </div>

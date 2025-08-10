@@ -1,4 +1,5 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
 
 interface VideoShort {
   id: string;
@@ -38,6 +39,15 @@ const videoShorts: VideoShort[] = [
     comments: '9000',
     shares: '8000',
   },
+  {
+    id: '4',
+    thumbnail: './homepage/shorts_1.svg',
+    title: 'TRILOK PRECAST 2',
+    views: '5000',
+    likes: '8000',
+    comments: '7000',
+    shares: '6000',
+  },
 ];
 
 const VideoGallery: React.FC = () => {
@@ -61,50 +71,56 @@ const VideoGallery: React.FC = () => {
                 <img className="w-full h-full" alt="YouTube" src="./homepage/group-3510.png" />
               </div>
             </div>
-            <button className="px-4 py-2 bg-transparent border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition-colors font-medium">
+            <Button className="bg-[#1f8ccc] text-white hover:bg-[#1a7ab3] rounded-md px-8 py-3">
               Explore More
-            </button>
+            </Button>
           </div>
         </div>
       </div>
 
-      {/* Video container with navigation */}
-      <Carousel className="w-full max-w-md mx-auto">
+      <Carousel
+        opts={{
+          align: "start",
+        }}
+        className="w-full"
+      >
         <CarouselContent>
           {videoShorts.map((short, index) => (
-            <CarouselItem key={index}>
-              <div className="aspect-[9/14] sm:aspect-[9/16] bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow relative">
-                <img
-                  src={short.thumbnail}
-                  alt={short.title}
-                  className="w-full h-full object-cover"
-                />
+            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <div className="p-1">
+                <div className="aspect-[9/16] bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow relative">
+                  <img
+                    src={short.thumbnail}
+                    alt={short.title}
+                    className="w-full h-full object-cover"
+                  />
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-white font-semibold text-base mb-2">
-                      {short.title}
-                    </h3>
-                    <div className="flex justify-between text-white/80 text-sm">
-                      <span>{short.views} views</span>
-                      <span>{short.likes} likes</span>
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <h3 className="text-white font-semibold text-base mb-2">
+                        {short.title}
+                      </h3>
+                      <div className="flex justify-between text-white/80 text-sm">
+                        <span>{short.views} views</span>
+                        <span>{short.likes} likes</span>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                {/* Play button */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                    <div className="w-0 h-0 border-l-[12px] border-l-white border-y-[8px] border-y-transparent ml-1"></div>
+                  {/* Play button */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                      <div className="w-0 h-0 border-l-[12px] border-l-white border-y-[8px] border-y-transparent ml-1"></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="absolute left-[-20px] top-1/2 transform -translate-y-1/2" />
-        <CarouselNext className="absolute right-[-20px] top-1/2 transform -translate-y-1/2" />
+        <CarouselPrevious />
+        <CarouselNext />
       </Carousel>
     </div>
   );
