@@ -31,7 +31,7 @@ export const ClientTestimonialsSection = () => {
 
   return (
     <section className="w-full py-8 sm:py-10 md:py-12 lg:py-16 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+      <div className="relative mx-10 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
         {/* Header Section */}
         <div className="text-center sm:text-left mb-6 sm:mb-8 md:mb-10">
           <h2 className="font-semibold text-[#032534] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[42px] leading-tight mb-2 sm:mb-3">
@@ -51,7 +51,7 @@ export const ClientTestimonialsSection = () => {
                 className="pl-2 sm:pl-3 md:pl-4 basis-full sm:basis-1/2 md:basis-1/2 lg:basis-1/3"
               >
                 <div className="relative h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[500px] mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16 mt-8 sm:mt-10 md:mt-12">
-                  <Card className="h-full rounded-xl sm:rounded-2xl shadow-[0px_0px_20px_#00000020] relative overflow-visible">
+                  <Card className="h-full rounded-xl sm:rounded-2xl shadow-[0px_0px_20px_#00000020] relative overflow-visible transition-transform duration-300 ease-in-out hover:scale-110">
                     <div className="absolute w-20 h-16 md:w-24 md:h-18 lg:w-28 lg:h-20 xl:w-32 xl:h-22 -top-6 md:-top-8 lg:-top-10 xl:-top-12 left-1/2 -translate-x-1/2 z-20">
                       <img
                         className="w-full h-full object-contain"
@@ -84,7 +84,7 @@ export const ClientTestimonialsSection = () => {
                   </Card>
                   <div className="absolute w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32 -bottom-8 md:-bottom-10 lg:-bottom-12 xl:-bottom-14 left-1/2 -translate-x-1/2 bg-white rounded-full border-2 border-solid border-[#1f8ccc] shadow-[4px_4px_12px_#00000026,-4px_-4px_12px_#00000026] flex items-center justify-center z-10">
                     <img
-                      className="object-contain max-w-[60%] max-h-[60%] sm:max-w-[65%] sm:max-h-[65%] md:max-w-[70%] md:max-h-[70%]"
+                      className="object-contain max-w-[60%] max-h-[60%] sm:max-w-[65%] sm:max-h-[65%] md:max-w-[70%] md:max-h-[70%] transition-transform duration-300 ease-in-out hover:scale-110"
                       alt={`${testimonial.company} logo`}
                       src={testimonial.logoSrc}
                     />

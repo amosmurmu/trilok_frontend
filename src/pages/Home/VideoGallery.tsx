@@ -41,14 +41,15 @@ const VideoGallery: React.FC = () => {
           {/* Social icons + button */}
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-[40px] h-[40px] md:w-[54px] md:h-[54px] bg-[#1f8ccc] rounded-full flex items-center justify-center">
+              <div
+                className="w-[40px] h-[40px] cursor-pointer md:w-[54px] md:h-[54px] bg-[#1f8ccc] rounded-full flex items-center justify-center">
                 <img className="w-6 h-6 md:w-8 md:h-8" alt="Instagram" src="./instagram.svg" />
               </div>
-              <div className="w-[40px] h-[40px] md:w-[54px] md:h-[54px]">
+              <div className="w-[40px] h-[40px] cursor-pointer md:w-[54px] md:h-[54px]">
                 <img className="w-full h-full" alt="YouTube" src="./homepage/group-3510.png" />
               </div>
             </div>
-            <button className="bg-[#1f8ccc] text-white hover:bg-[#1a7ab3] rounded-md px-8 py-3">
+            <button className="bg-[#1f8ccc] text-white cursor-pointer hover:bg-[#1a7ab3] rounded-md px-8 py-3">
               Explore More
             </button>
           </div>
