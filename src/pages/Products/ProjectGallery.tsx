@@ -21,8 +21,8 @@ export function ProjectGallery() {
   const [current, setCurrent] = useState(0);
 
   // refs for navigation buttons
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const prevRef = useRef<HTMLDivElement>(null);
+  const nextRef = useRef<HTMLDivElement>(null);
 
   return (
     <section className="w-full bg-[#fbfbfb] rounded-3xl py-12 px-4 sm:px-8">
@@ -34,9 +34,11 @@ export function ProjectGallery() {
         <Swiper
           modules={[Navigation]}
           onBeforeInit={(swiper) => {
-            // Bind refs before Swiper init
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
+            // Bind refs before Swiper init with proper type checking
+            if (swiper.params.navigation && typeof swiper.params.navigation === 'object') {
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+            }
           }}
           navigation={{
             prevEl: prevRef.current,
