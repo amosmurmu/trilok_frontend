@@ -39,18 +39,19 @@ export const ContactUsSection = () => {
         </p>
       </div>
 
-      <div className="flex flex-col xl:flex-row justify-center gap-6 md:gap-8 px-4 md:px-6 lg:px-10">
+      <div className="flex flex-col xl:flex-row justify-center items-center gap-6 md:gap-8 px-4 md:px-6 lg:px-10">
         {/* Map Card */}
-        <Card className="w-full max-w-[788px] h-[300px] md:h-[400px] lg:h-[494px] rounded-xl overflow-hidden shadow-[0px_0px_24px_#0000000f] relative">
+
+        <Card className="w-full max-w-[788px] h-[250px] sm:h-[300px] md:h-[400px] lg:h-[494px] rounded-xl overflow-hidden shadow-[0px_0px_24px_#0000000f] relative">
           <CardContent className="p-0 h-full">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.531238865666!2d72.8865664149357!3d21.21074588590059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f4f4ffffff%3A0x4e5a2b0b2b0b2b0b!2sTrilok%20Precast%20Compound%20Wall!5e0!3m2!1sen!2sin!4v1624886919142!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen={true}
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.1454816269083!2d72.90014207578126!3d21.22607888097119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0458a532e57c7%3A0xbc06d3f11133a0ab!2sTrilok%20Precast!5e0!3m2!1sen!2sin!4v1754930200472!5m2!1sen!2sin"
+              className="w-full h-full border-0"
               loading="lazy"
-            ></iframe>
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Trilok Precast Location"
+              allowFullScreen
+            />
           </CardContent>
         </Card>
 
@@ -189,7 +190,7 @@ export const ContactUsSection = () => {
 
               {/* Submit Button */}
               <div className="col-span-1 md:col-span-3 mt-2">
-                <Button className="w-full h-[42px] bg-[#1f8ccc] hover:bg-[#1a7ab3]  font-semibold text-white text-xl">
+                <Button className="w-full h-[42px] py-7 bg-[#1f8ccc] hover:bg-[#1a7ab3]  font-semibold text-white text-xl">
                   Submit
                 </Button>
               </div>
@@ -201,7 +202,7 @@ export const ContactUsSection = () => {
       {/* Contact Information Card */}
       <Card className="mx-auto mt-6 w-full max-w-7xl rounded-xl shadow-[0px_0px_24px_#0000000f]">
         <CardContent className="p-9">
-          <div className="flex flex-col md:flex-row md:space-y-0 md:space-x-6 justify-between items-center">
+          <div className="flex flex-col justify-between items-left space-y-3">
             {contactInfo.map((item, index) => (
               <div
                 key={index}

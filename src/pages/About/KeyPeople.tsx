@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 
 export const KeyPeopleSection = () => {
-  // Data for key people cards
   const keyPeople = [
     {
       name: "Mr. Sanjay Shingala",
@@ -20,20 +19,10 @@ export const KeyPeopleSection = () => {
     },
   ];
 
-  // Social media icons
   const socialIcons = [
-    {
-      src: "./linkedin.svg",
-      alt: "LinkedIn",
-    },
-    {
-      src: "./instagram.svg",
-      alt: "Instagram",
-    },
-    {
-      src: "./facebook.svg",
-      alt: "Facebook",
-    },
+    { src: "./linkedin.svg", alt: "LinkedIn" },
+    { src: "./instagram.svg", alt: "Instagram" },
+    { src: "./facebook.svg", alt: "Facebook" },
   ];
 
   return (
@@ -45,12 +34,12 @@ export const KeyPeopleSection = () => {
 
         <div className="flex flex-wrap justify-center gap-8 lg:gap-12">
           {keyPeople.map((person, index) => (
-            <div key={index} className="relative">
-              {/* Profile Image - positioned above the card */}
-              <div className="flex justify-center mb-8">
+            <div key={index} className="relative group">
+              {/* Profile Image with hover zoom */}
+              <div className="flex justify-center mb-8 relative">
                 <div className="w-32 h-32 overflow-hidden border-4 rounded-lg border-white shadow-lg bg-white relative z-10">
                   <img
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     alt={`${person.name} profile`}
                     src={person.image}
                   />
@@ -58,12 +47,16 @@ export const KeyPeopleSection = () => {
               </div>
 
               {/* Card Content */}
-              <Card className="w-80 h-48 rounded-lg border border-gray-300 shadow-md bg-white -mt-16 pt-16">
+              <Card className="w-80 h-48 rounded-lg border border-gray-300 shadow-md bg-white -mt-16 pt-16 relative overflow-hidden">
                 <CardContent className="flex flex-col items-center text-center h-full justify-center">
-                  <h3 className="font-bold text-gray-900 text-lg mb-2">
-                    {person.name}
-                  </h3>
-                  <p className="font-semibold text-gray-700 text-base mb-4">
+                  {/* Name with hover overlay */}
+                  <div className="relative inline-block">
+                    <span className="relative z-10 font-bold text-black text-lg transition-colors duration-300 group-hover:text-black">
+                      {person.name}
+                    </span>
+                  </div>
+
+                  <p className="font-semibold text-gray-700 text-base mb-4 mt-2">
                     {person.title}
                   </p>
 

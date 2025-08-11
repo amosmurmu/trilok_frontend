@@ -24,19 +24,32 @@ export const ProductsSubsection = () => {
             <div className="flex">
               {/* Thumbnails */}
               <div className="flex flex-col gap-4 mr-4">
-                {thumbnails.map((thumbnail) => (
-                  <div
-                    key={thumbnail.id}
-                    className="w-[124px] h-[124px] rounded-md cursor-pointer"
-                    onClick={() => setSelectedImage(thumbnail.src)}
-                  >
-                    <img
-                      className="w-full h-full object-cover rounded-md"
-                      src={thumbnail.src}
-                      alt={`Thumbnail ${thumbnail.id}`}
-                    />
-                  </div>
-                ))}
+                {thumbnails.slice(0, 4).map((thumbnail, index) => {
+                  if (index < 3) {
+                    return (
+                      <div
+                        key={thumbnail.id}
+                        className="w-[124px] h-[124px] rounded-md cursor-pointer"
+                        onClick={() => setSelectedImage(thumbnail.src)}
+                      >
+                        <img
+                          className="w-full h-full object-cover rounded-md"
+                          src={thumbnail.src}
+                          alt={`Thumbnail ${thumbnail.id}`}
+                        />
+                      </div>
+                    );
+                  } else {
+                    return (
+                      <div
+                        key="more-thumbnails"
+                        className="w-[124px] h-[124px] rounded-md border bg-white flex items-center justify-center font-bold text-2xl text-[#032534] cursor-pointer"
+                      >
+                        +2
+                      </div>
+                    );
+                  }
+                })}
               </div>
 
               {/* Main Image */}

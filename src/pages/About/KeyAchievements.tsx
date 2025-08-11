@@ -29,7 +29,7 @@ export const KeyAchievementsSection = () => {
   ];
 
   return (
-    <section className="w-full py-12 bg-white">
+    <section className="w-full py-12 px-8 bg-white">
       <div className="container mx-auto">
         {/* Heading */}
         <div className="flex flex-col items-center mb-10 text-center px-4">

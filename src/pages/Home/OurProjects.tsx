@@ -124,8 +124,8 @@ export const OurProjectsSection = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          {/* <CarouselPrevious /> */}
+          {/* <CarouselNext /> */}
         </Carousel>
       </div>
     </section>

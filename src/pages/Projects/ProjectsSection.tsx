@@ -181,7 +181,7 @@ export const ProjectsSection = () => {
             >
               {/* Image Section - Hidden on tablets, shown on mobile and desktop */}
               <CardContent className="p-6 flex-1 md:hidden lg:flex">
-                <div className="relative w-full h-[250px] lg:h-[358px] bg-white rounded-xl overflow-hidden shadow-[0px_0px_34.3px_#0000001f] group-hover:mb-12 transition-transform duration-300 group-hover:scale-105">
+                <div className="relative w-full h-[250px] lg:h-[300px] bg-white rounded-xl overflow-hidden shadow-[0px_0px_34.3px_#0000001f] group-hover:mb-12 transition-transform duration-300 group-hover:scale-105">
                   <img
                     className="w-full h-full object-cover"
                     alt={project.imageAlt}

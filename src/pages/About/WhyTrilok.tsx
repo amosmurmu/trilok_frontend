@@ -5,20 +5,23 @@ import { motion } from "motion/react";
 const parallaxData = [
   {
     number: 1,
-    text: "Dummy text for section 1. This is some placeholder content.",
+    text: "Welcome to Trilok Precast, where innovation meets reliability in",
   },
-  { number: 2, text: "Dummy text for section 2. This content will change." },
+  {
+    number: 2,
+    text: "Trilok Precast is committed to provide high Quality Products and Services in an environment friendly manner, achieving the zenith level in the Cement Product Industry, meeting the needs of customers and employees whilst adding value to the community."
+  },
   {
     number: 3,
-    text: "Dummy text for section 3. The animation is in progress.",
+    text: "From compound walls and security cabins to full-scale precast homes, swimming pools, and road systems — we build for every sector and every need",
   },
   {
     number: 4,
-    text: "Dummy text for section 4. Almost at the end of the loop.",
+    text: `Our cumulative production has surpassed 4.5 lakh metric tonnes of concrete — reinforcing our position as a large-scale infrastructure enabler`,
   },
   {
     number: 5,
-    text: "Dummy text for section 5. Looping back to the start soon.",
+    text: "East or West Trilok Precast is the Best",
   },
 ];
 
