@@ -70,7 +70,7 @@ export const EventsExhibitions = () => {
             {topRowGalleryItems.map((item) => (
               <Card
                 key={item.id}
-                className="overflow-hidden rounded-[20px] !py-0 h-[311px] bg-white group relative"
+                className="overflow-hidden cursor-pointer rounded-[20px] !py-0 h-[311px] bg-white group relative"
               >
                 <img
                   className="w-full h-full object-cover"
@@ -87,7 +87,7 @@ export const EventsExhibitions = () => {
             {bottomRowGalleryItems.map((item) => (
               <Card
                 key={item.id}
-                className="overflow-hidden rounded-[20px] !py-0 h-[390px] bg-white group relative"
+                className="overflow-hidden cursor-pointer rounded-[20px] !py-0 h-[390px] bg-white group relative"
               >
                 <img
                   className="w-full h-full object-cover"

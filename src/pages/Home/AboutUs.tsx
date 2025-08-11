@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 export function AboutUs() {
+  const navigate = useNavigate();
   return (
     <section className="relative w-full bg-white py-12">
       <div className="max-w-screen-2xl mx-auto px-6">
@@ -47,7 +49,11 @@ export function AboutUs() {
                 </span>
               </p>
 
-              <Button className="bg-[#1f8ccc] text-white cursor-pointer font-semibold text-xl py-6 px-12 rounded-md w-fit hover:bg-[#1a7ab3] transition-colors">
+              <Button
+                onClick={() => {
+                  navigate("/about");
+                }}
+                className="bg-[#1f8ccc] text-white cursor-pointer font-semibold text-xl py-6 px-12 rounded-md w-fit hover:bg-[#1a7ab3] transition-colors">
                 Learn More
               </Button>
             </div>
@@ -55,6 +61,6 @@ export function AboutUs() {
           <img src="./homepage/map.svg"></img>
         </div>
       </div>
-    </section>
+    </section >
   );
 }

@@ -17,13 +17,13 @@ export const DownloadBrochure = () => {
             Want to Explore TRILOK Precast?
           </h2>
 
-          <p className="font-semibold text-white text-[24px] leading-9 mb-8">
+          <p className="font-semibold text-white text-[20px] leading-9 mb-8">
             Download Our Company Profile &amp; Product Brochure
           </p>
 
           <Button
             variant="outline"
-            className="bg-white text-[#1a1a1a] text-2xl cursor-pointer font-semibold px-8 py-6 rounded-md border-2 border-[#1f8ccc] hover:bg-gray-100"
+            className="bg-white text-[#1a1a1a] text-xl cursor-pointer font-semibold px-8 py-7 rounded-md border-2 border-[#1f8ccc] hover:bg-gray-100"
           >
             Download Brochure
           </Button>
