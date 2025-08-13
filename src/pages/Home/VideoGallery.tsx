@@ -85,14 +85,14 @@ const VideoGallery: React.FC = () => {
           {videoShorts.map((short, index) => (
             <SwiperSlide key={short.id}>
               <div
-                className={`transform transition-transform duration-500 ease-in-out ${index === current ? "scale-100" : "scale-95"
+                className={`transform transition-transform duration-500 ease-in-out ${index === (current + 1) ? "scale-100" : "scale-95"
                   }`}
               >
                 <div className="relative bg-white rounded-xl overflow-hidden border border-[#032534] shadow-lg">
                   <img
                     src={short.thumbnail}
                     alt={short.title}
-                    className="w-full object-cover aspect-[9/16] max-h-[350px] sm:max-h-[380px] md:max-h-[700px]"
+                    className="w-full object-cover min-h-[280px] sm:min-h-[350px] md:min-h-[700px] aspect-[9/16]"
                   />
 
                   {/* Overlay */}
